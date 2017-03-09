@@ -1,0 +1,104 @@
+/* --------- adjustment --------- */
+
+$container-width: 1266px;
+$footer-height: 684px;
+$body-font: 'Robotolight','Open Sans', sans-serif;
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	font: 16px/1.41 $body-font;
+    -webkit-font-smoothing: antialiased;
+	width: 100%;
+	height: 100% !important;
+	color: #252525;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none outside none;
+
+	li {
+		padding: 0;
+		left: 0;
+	}
+}
+
+p {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+footer {
+	position: relative;
+	min-width: $container-width + 30;
+	height: $footer-height;
+	margin-top: -$footer-height;
+}
+
+.wrapper {
+    position: relative;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    overflow: hidden;
+	min-width: $container-width + 30px;
+
+	&:after {
+		content: "";
+		display: block;
+		position: relative;
+		height: $footer-height;
+	}
+}
+
+.maincontent {
+	
+}
+
+.container {
+    margin: 0 auto;
+    position: relative;
+    padding: 0 15px;
+    width: $container-width;
+	@include clearfix;
+}
+
+/* --------- placeholder --------- */
+
+::-webkit-input-placeholder {
+	font-size: 14px;
+	color: $grey;
+}
+
+::-moz-placeholder          {
+	font-size: 14px;
+	color: $grey;
+}
+
+:-moz-placeholder           {
+	font-size: 14px;
+	color: $grey;
+}
+
+:-ms-input-placeholder      {
+	font-size: 14px;
+	color: $grey;
+}

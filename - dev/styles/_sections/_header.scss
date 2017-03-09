@@ -1,0 +1,78 @@
+.header {
+	height: 82px;
+}
+
+.header__logo,
+.header__nav,
+.header__search {
+	float: left;
+}
+
+.header__logo {
+	width: 206px;
+	margin-top: 28px;
+}
+
+.header__nav {
+	width: 280px;
+	margin-top: 32px;
+}
+
+.header__search {
+	width: 406px;
+	margin-top: 28px;
+}
+
+.search__form {
+	position: relative;
+}
+
+.search__form-input {
+	width: 100%;
+    padding: 5px 10px;
+	border: 1px solid $grey;
+}
+
+.search__form-submite {
+	position: absolute;
+	top: 50%;
+    right: 0;
+    width: 40px;
+    height: 30px;
+    margin-top: -15px;
+	border: none;
+	background: url(../img/decor/search.png) 10px 5px no-repeat;
+	cursor: pointer;
+}
+
+.header__phone {
+	float: right;
+	margin: 30px 58px 0 0; 
+}
+
+.phone__link {
+	position: relative;
+	margin-left: 18px;
+	font-weight: bold;
+	font-size: 14px;
+	color: $black;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: -10px;
+		margin-top: -6px;
+		width: 2px;
+		height: 12px;
+		background: url(../img/decor/phones.png) no-repeat;
+	}
+
+	&:first-child {
+		margin-left: 0;
+
+		&:before {
+			content: none;
+		}
+	}
+}
