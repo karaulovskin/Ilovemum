@@ -1,26 +1,39 @@
 header.header
 	.container
-		.header__logo.logo
-			a(href="/").logo__link
-						img(src="/img/logos/logo-header.png").logo__img
-		.header__nav.nav
-			ul.nav__list
-				li.nav__item
-					a(href="#").nav__link Каталог
-				li.nav__item
-					a(href="#").nav__link Оплата
-				li.nav__item
-					a(href="#").nav__link Доставка
-		.header__search.search
-			form.search__form
-				input(type="text" placeholder="Найти").search__form-input
-				input(type="submite" value="").search__form-submite
+		include _sidebar-left
+		.header__logo
+			.logo
+				a(href="/").logo__link
+					img(src="/img/logos/logo-header.png").logo__img
+		.header__nav
+			.nav
+				ul.nav__list
+					li.nav__item
+						a(href="catalog.html").nav__link Каталог
+					li.nav__item
+						a(href="#").nav__link Оплата
+					li.nav__item
+						a(href="#").nav__link Доставка
+					li.nav__item
+						a(href="about.html").nav__link О нас
+					li.nav__item
+						a(href="#").nav__link Контакты
+					li.nav__item
+						a(href="#").nav__link Магазины
+		//- .header__search
+		//- 	.search
+		//- 		form.search__form
+		//- 			input(type="text" placeholder="Найти").search__form-input.search-input
+		//- 			input(type="submite" value="").search__form-submite.search-submite
 		.header__phone
 			.phone
-				a(href="tel:+74959881614").phone__link
-					span.phone__number
-						| 8 (495) 988-16-14
-				a(href="tel:+78005505001").phone__link
-					span.phone__number
-						| 8 (800) 550-500-1
-
+				ul.phone__list
+					li.phone__item
+						a(href="tel:+74959881614").phone__link
+							span.phone__number
+								| 8 (495) 988-16-14
+					li.phone__item
+						a(href="tel:+78005505001").phone__link
+							span.phone__number
+								| 8 (800) 550-500-1
+		include _sidebar-right

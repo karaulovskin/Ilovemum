@@ -1,0 +1,100 @@
+.panel {
+	width: 472px;
+	height: 100vh;
+	padding: 18px 84px 30px 42px;
+	background: $panel;
+	@include transition(.1s);
+	z-index: 110;
+}
+
+.panel__wrapp {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.panel__title {
+    margin-bottom: 13px;
+	text-transform: uppercase;
+	font-size: rem(18px);
+	color: $black;
+	font-family: 'Robotomedium';
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 37px;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background: $grey;
+	}
+}
+
+.panel__close {
+	position: absolute;
+	top: 0;
+    right: -67px;
+	width: 20px;
+	height: 20px;
+	font-size: 0;
+}
+
+.panel__close-link {
+	position: relative;
+	display: block;
+	width: 20px;
+	height: 20px;
+	// background: url(../img/decor/close.png) no-repeat; 
+
+	&:before, &:after {
+		content: "";
+		position: absolute;
+		top: 9px;
+		right: 0;
+		width: 22px;
+		height: 2px;
+		background: $black;
+	}
+
+	&:before {
+		@include transform(rotate(45deg));
+	}
+
+	&:after {
+		@include transform(rotate(-45deg));
+	}
+}
+
+.form__btns {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.form__btn {
+	display: inline-block;
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: rem(14px);
+	color: $blue;
+	border: 1px solid $blue;
+	@include border-radius(20px);
+
+	&:hover {
+		color: #fff;
+		background: $blue;
+	}
+}
+
+.form__btn--bottom {
+	width: 100%;
+}
+
+/* ---------- style panel ------------ */
+
+body.panel-blocking {
+	overflow: hidden;
+}

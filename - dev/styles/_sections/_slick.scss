@@ -1,0 +1,79 @@
+.slick-vertical .slick-slide {
+	// border: none;
+}
+
+.slick-slide {
+	outline: none;
+}
+
+.slick-current {
+	border: none;
+}
+
+.catalog__img-list {
+	.slick-arrow {
+		display: none !important;
+		position: absolute;
+		top: 50%;
+		margin-top: -15px;
+		z-index: 1;
+	}
+
+	.slick-prev {
+		left: 0;
+		@include transform(rotate(0deg));
+
+		&:hover {
+			@include transform(rotate(180deg));
+		}
+	}
+
+	.slick-next {
+		right: 0;
+		@include transform(rotate(180deg));
+
+		&:hover {
+			@include transform(rotate(0deg));
+		}
+	}
+}
+
+.slick-arrow {
+	display: block;
+    margin: auto;
+	width: 13px;
+	height: 30px;
+	font-size: 0;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	background-color: transparent;
+}
+
+.slick-prev {
+	background: url(../img/decor/arrow.png) no-repeat;
+	@include transform(rotate(90deg));
+
+	&:hover {
+		background: url(../img/decor/arrow-hover.png) no-repeat;
+		@include transform(rotate(-90deg));
+	}
+}
+
+.slick-next {
+	background: url(../img/decor/arrow.png) no-repeat;
+	@include transform(rotate(-90deg));
+
+	&:hover {
+		background: url(../img/decor/arrow-hover.png) no-repeat;
+		@include transform(rotate(90deg));
+	}
+}
+
+.cboxPhoto {
+	outline: none;
+}
+
+#cboxLoadedContent {
+	outline: none;
+}

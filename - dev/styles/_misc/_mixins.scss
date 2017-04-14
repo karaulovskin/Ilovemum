@@ -5,7 +5,7 @@
 	vertical-align: $valine;
 }
 
-@mixin clearfix {
+%clearfix {
 	&:before,
 	&:after {
 		content: "";
@@ -27,6 +27,12 @@
 	background-clip: padding-box;
 }
 
+@mixin columns($string...) {
+	-webkit-columns: $string;
+	-moz-columns: $string;
+	columns: $string;
+}
+
 @mixin box-shadow($string...) {
 	-webkit-box-shadow: $string;
 	-moz-box-shadow: $string;
@@ -41,30 +47,38 @@
 	transition: $transition;
 }
 
-@mixin placecolor($color: #000000) {
-	&::-webkit-input-placeholder {
-		color: $color;
-	}
-	&:-moz-placeholder {
-		color: $color;
-	}
-	&::-moz-placeholder {
-		color: $color;
-	}
-	&:-ms-input-placeholder {
-		color: $color;
-	}
+@mixin transform($transform...) {
+	-webkit-transform: $transform;
+	-moz-transform: $transform;
+	-ms-transform: $transform;
+	-o-transform: $transform;
+	transform: $transform;
 }
 
-@mixin vertical-gradient($top-color: #ffffff, $bottom-color: #000000) {
-	background-color: $top-color;
-	background-image: -webkit-gradient(linear, left top, left bottom, from($top-color), to($bottom-color)); /* Chrome, Safari 4+ */
-	background-image: -webkit-linear-gradient(top, $top-color, $bottom-color); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
-	background-image: -moz-linear-gradient(top, $top-color, $bottom-color); /* Firefox 3.6-15 */
-	background-image: -o-linear-gradient(top, $top-color, $bottom-color); /* Opera 11.10-12.00 */
-	background-image: linear-gradient(to bottom, $top-color, $bottom-color); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=$top-color, EndColorStr=$bottom-color);
-}
+// @mixin placecolor($color: #000000) {
+// 	&::-webkit-input-placeholder {
+// 		color: $color;
+// 	}
+// 	&:-moz-placeholder {
+// 		color: $color;
+// 	}
+// 	&::-moz-placeholder {
+// 		color: $color;
+// 	}
+// 	&:-ms-input-placeholder {
+// 		color: $color;
+// 	}
+// }
+
+// @mixin vertical-gradient($top-color: #ffffff, $bottom-color: #000000) {
+// 	background-color: $top-color;
+// 	background-image: -webkit-gradient(linear, left top, left bottom, from($top-color), to($bottom-color)); /* Chrome, Safari 4+ */
+// 	background-image: -webkit-linear-gradient(top, $top-color, $bottom-color); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+// 	background-image: -moz-linear-gradient(top, $top-color, $bottom-color); /* Firefox 3.6-15 */
+// 	background-image: -o-linear-gradient(top, $top-color, $bottom-color); /* Opera 11.10-12.00 */
+// 	background-image: linear-gradient(to bottom, $top-color, $bottom-color); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+// 	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=$top-color, EndColorStr=$bottom-color);
+// }
 
 @mixin transform($transforms...) {
 	-moz-transform: $transforms;
@@ -87,22 +101,58 @@
 
 /* --------- compass sprites --------- */
 
-@mixin get-sprite($map, $sprite, $repeat: no-repeat, $height: true, $width: true) {
-	$sprite-image: sprite-file($map, $sprite);
-	$sprite-map: sprite-url($map);
-	$sprite-position: sprite-position($map, $sprite);
-	$sprite-layout: smart;
+// @mixin get-sprite($map, $sprite, $repeat: no-repeat, $height: true, $width: true) {
+// 	$sprite-image: sprite-file($map, $sprite);
+// 	$sprite-map: sprite-url($map);
+// 	$sprite-position: sprite-position($map, $sprite);
+// 	$sprite-layout: smart;
 
-	background: $sprite-map $sprite-position $repeat;
+// 	background: $sprite-map $sprite-position $repeat;
 
-	@if ($height == true) {
-		$sprite-height: image-height($sprite-image);
-		height: $sprite-height;
+// 	@if ($height == true) {
+// 		$sprite-height: image-height($sprite-image);
+// 		height: $sprite-height;
+// 	}
+
+// 	@if ($width == true) {
+// 		$sprite-width: image-width($sprite-image);
+// 		width: $sprite-width;
+// 	}
+// }
+
+/* --------- responsive --------- */
+
+@function rem($px) {
+	@return $px / 16px + 0rem;
+}
+
+@mixin top {
+	@media screen and (max-width: 1224px) {
+		@content;
 	}
+}
 
-	@if ($width == true) {
-		$sprite-width: image-width($sprite-image);
-		width: $sprite-width;
+@mixin desktop {
+	@media screen and (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin laptop {
+	@media screen and (max-width: 992px) {
+		@content;
+	}
+}
+
+@mixin tablets {
+	@media screen and (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin phones {
+	@media screen and (max-width: 480px) {
+		@content;
 	}
 }
 

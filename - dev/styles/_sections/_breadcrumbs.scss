@@ -1,0 +1,41 @@
+.breadcrumbs {
+	margin-bottom: 30px;
+}
+
+.breadcrumbs__list {
+	font-size: 0;
+}
+
+.breadcrumbs__item {
+	position: relative;
+	@include inline-block(middle);
+	margin-right: 16px;
+	font-size: 16px;
+
+	&:before {
+		content: "/";
+		position: absolute;
+		top: 4px;
+		right: -11px;
+		font-size: 11px;
+		color: $grey;
+	}
+}
+
+.breadcrumbs__item.current {
+	margin-right: 0;
+
+	&:before {
+		content: none;
+	}
+
+	.breadcrumbs__link {
+		color: $black;
+		font-size: rem(16px);
+	}
+}
+
+.breadcrumbs__link {
+	color: $grey;
+	font-size: rem(12px);
+}

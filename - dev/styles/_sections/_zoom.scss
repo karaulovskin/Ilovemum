@@ -1,0 +1,54 @@
+.zoomImg {
+	cursor: zoom-in;
+}
+
+#colorbox {
+	outline: none;
+	z-index: 10;
+}
+
+#cboxOverlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(37, 37, 37, .5);
+	z-index: 10;
+}
+
+.cboxPhoto {
+	max-width: 100%;
+	height: auto;
+	border: 1px solid $grey;
+}
+
+#cboxClose {
+	position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+	height: 20px;
+    font-size: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    &:before, &:after {
+		content: "";
+		position: absolute;
+		top: 9px;
+		right: 0;
+		width: 22px;
+		height: 2px;
+		background: $black;
+	}
+
+	&:before {
+		@include transform(rotate(45deg));
+	}
+
+	&:after {
+		@include transform(rotate(-45deg));
+	}
+}

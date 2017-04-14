@@ -11,7 +11,10 @@ html
             block title
 
         meta(name='viewport' content='width=device-width')
+        link(rel="shortcut icon" type="image/x-icon" href="favicon.ico")
         link(rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans:100,400,600,700&subset=latin,cyrillic' media='screen, projection, print')
+        link(rel='stylesheet' type='text/css' href='css/_vendors/slick.css' media='screen, projection, print')
+        link(rel='stylesheet' type='text/css' href='css/_vendors/jscrollpane.css' media='screen, projection, print')
         link(rel='stylesheet' type='text/css' href='css/main.css' media='screen, projection, print')
         //- script(src='/js/_vendors/modernizr-2.6.2-respond-1.1.0.min.js')
 
@@ -23,17 +26,29 @@ html
         .wrapper
             .maincontent
                 include _common/_header
-                //- include _common/_nav
-                //- include _common/_breadcrumbs
 
-                //- block content
+                main.main
+                    .container
+                        block content
+                //- block sidebar
+                //-     include _common/_sidebar
+
 
         include _common/_footer
+        .overlay
 
-        script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+        //- script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
         script.
-            window.jQuery || document.write('<script src="/js/_vendors/jquery-1.11.3.min.js"><\/script>');
+            //- window.jQuery || document.write('<script src="/js/_vendors/jquery-1.11.3.min.js"><\/script>');
             
-        script(src='js/plugins.min.js')
-        script(src='js/main.min.js')
+        script(src='js/_vendors/jquery-1.11.3.min.js')
+        script(src='js/_vendors/slick.min.js')
+        script(src='js/_vendors/jquery.colorbox-min.js')
+        //- script(src='js/_vendors/jquery.jqzoom-core.js')
+        script(src='js/_vendors/zoom.js')
+        script(src='js/_vendors/mousewheel.js')
+        script(src='js/_vendors/jscrollpane.min.js')
+        //- script(src='js/plugins.min.js')
+        script(src='../- dev/scripts/main.js')
+        //- script(src='js/main.min.js')
 

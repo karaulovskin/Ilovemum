@@ -9,60 +9,107 @@
 }
 
 .header__logo {
-	width: 206px;
-	margin-top: 28px;
+	width: 15%;
+	margin-top: 30px;
+
+	@include top {
+		width: 18%;
+	}
+
+	@include desktop {
+		width: 21%;
+	}
+
+	@include laptop {
+		width: auto;
+	}
+}
+
+.logo {
+
+	@include desktop {
+		width: 150px;
+	}
 }
 
 .header__nav {
-	width: 280px;
+	width: 59%;
 	margin-top: 32px;
+
+	@include desktop {
+		width: 53%;
+	}
+
+	@include laptop {
+		display: none;
+	}
 }
 
-.header__search {
-	width: 406px;
-	margin-top: 28px;
+// .header__search {
+// 	width: 36%;
+// 	margin-top: 28px;
+
+// 	@include top {
+// 		width: 25%;
+// 	}
+
+// 	@include laptop {
+// 		display: none;
+// 	}
+// }
+
+.header__phone {
+	float: right;
+    width: 23%;
+	margin-top: 30px;
+    text-align: right;
+
+    @include desktop {
+		width: 26%;
+	}
+
+    @include laptop {
+		width: auto;
+	}
 }
 
 .search__form {
 	position: relative;
 }
 
-.search__form-input {
+.search-input {
 	width: 100%;
-    padding: 5px 10px;
+    padding: 6px 10px;
 	border: 1px solid $grey;
 }
 
-.search__form-submite {
+.search-submite {
 	position: absolute;
-	top: 50%;
+	top: 0;
     right: 0;
     width: 40px;
     height: 30px;
-    margin-top: -15px;
 	border: none;
 	background: url(../img/decor/search.png) 10px 5px no-repeat;
 	cursor: pointer;
 }
 
-.header__phone {
-	float: right;
-	margin: 30px 58px 0 0; 
+.phone__list {
+	font-size: 0;
 }
 
-.phone__link {
+.phone__item {
+	@include inline-block(middle);
 	position: relative;
 	margin-left: 18px;
-	font-weight: bold;
-	font-size: 14px;
-	color: $black;
+	font-size: rem(16px);
 
 	&:before {
 		content: "";
 		position: absolute;
 		top: 50%;
 		left: -10px;
-		margin-top: -6px;
+		margin-top: -5px;
 		width: 2px;
 		height: 12px;
 		background: url(../img/decor/phones.png) no-repeat;
@@ -74,5 +121,20 @@
 		&:before {
 			content: none;
 		}
+	}
+}
+
+.phone__link {
+	display: inline-block;
+	font-weight: bold;
+	font-size: rem(14px);
+	color: $black;
+
+	@include top {
+		font-size: rem(13px);
+	}
+
+	@include desktop {
+		font-size: rem(12px);
 	}
 }

@@ -1,0 +1,145 @@
+.panel-basket {
+	position: absolute;
+    right: -9999px;
+}
+
+.panel-basket.open {
+	position: fixed;
+	top: 0;
+    right: 0;
+}
+
+.panel__basket-list {
+	height: 330px;
+	margin-right: -33px;
+    overflow: auto;
+}
+
+.panel__basket-item {
+	margin-right: 29px;
+	padding: rem(22px) 0;
+	padding: rem(16px) 0;
+	// border-top: 1px solid #b7b7b7;
+	border-bottom: 1px solid #b7b7b7;
+	@extend %clearfix;
+
+	&:first-child {
+		// border: none;
+	}
+}
+
+.panel__basket-left {
+	float: left;
+	width: 71%;
+	padding-right: rem(30px);
+}
+
+.panel__basket-right{ 
+	float: right;
+	width: 29%;
+}
+
+.panel__basket-model {
+	margin-bottom: 6px;
+	font-size: rem(16px);
+}
+
+.panel__basket-size {
+	margin-bottom: 10px;
+	font-weight: bold;
+	font-size: rem(13px);
+}
+
+.panel__basket-switch {
+	margin: 0 0 14px -8px;
+	font-size: 0;
+}
+
+.panel__basket-switch_min,
+.panel__basket-switch_max,
+.panel__basket-switch_input {
+	@include inline-block(middle);
+	font-size: rem(16px);
+}
+
+.panel__basket-switch_min {
+	padding: 4px 8px;
+	color: $pink;
+}
+
+.panel__basket-switch_max {
+	padding: 4px 8px;
+ 	color: $blue;
+}
+
+.panel__basket-switch_input {
+	width: 50px;
+	height: 30px;
+    text-align: center;
+}
+
+.panel__basket-img {
+	width: 100px;
+	height: 130px;
+	background-color: #dfdfdf;
+}
+
+.panel__basket-price_discount {
+	margin-right: 14px;
+	text-decoration: line-through;
+	color: $grey;
+}
+
+.panel__basket-price_value {
+	font-weight: bold;
+}
+
+.form__basket-sale {
+	margin-top: rem(16px);
+	@extend %clearfix;
+}
+
+.form__basket-sale_input {
+	float: left;
+	width: 43%;
+	height: 40px;
+	background-color: #fbf8f8;
+    border: 1px solid #ccccce;
+}
+
+.form__basket-sale_btn {
+	float: right;
+	width: 52%;
+}
+
+.basket-sale,
+.basket-total {
+	@extend %clearfix;
+}
+
+.basket-sale {
+	margin-bottom: 6px;
+}
+
+.basket-sale__text {
+	float: left;
+	font-size: rem(16px);
+}
+
+.basket-sale__value {
+	float: right;
+	font-weight: bold;
+	font-size: rem(18px);
+}
+
+.form__basket-total {
+	margin-top: rem(16px);
+}
+
+.basket-total__text {
+	float: left;
+}
+
+.basket-total__value {
+	float: right;
+}

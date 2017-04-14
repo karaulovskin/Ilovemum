@@ -1,0 +1,282 @@
+.catalog {
+	margin-bottom: 10px;
+	@extend %clearfix;
+}
+
+.catalog__left {
+	float: left;
+	width: 23%;
+}
+
+.catalog__right {
+	float: right;
+	width: 77%;
+}
+
+.catalog__list {
+	margin: 0 -14px;
+	font-size: 0;
+}
+
+.catalog__item-banner {
+	@include inline-block(top);
+	width: 33.3%;
+	height: 422px;
+	padding: 0 14px;
+
+	@include desktop {
+		height: 306px;
+	}
+
+	@include tablets {
+		width: 100%;
+		height: 414px;
+	    margin-bottom: 20px;
+	}
+}
+
+.catalog__link-banner {
+	display: block;
+	height: 100%;
+}
+
+.catalog__img-banner {
+	width: 100%;
+	height: 100%;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: -8px;
+		border: 1px solid $pink;
+	}
+}
+
+.catalog__item {
+	@include inline-block(top);
+	width: 33.3%;
+	// height: 520px;
+	margin-bottom: 20px;
+	font-size: 16px;
+
+	@include desktop {
+		// height: 410px;
+	}
+
+	@include tablets {
+		width: 50%;
+		// height: 414px;
+	}
+}
+
+.catalog__block {
+	position: relative;
+	height: 100%;
+	padding: 0 14px;
+}
+
+.catalog__img {
+	position: relative;
+	width: 100%;
+	height: 422px;
+	height: auto;
+
+	&:hover {
+		.catalog__btns,
+		.slick-arrow {
+			display: block!important;
+		}
+	}
+
+	@include desktop {
+		// height: 306px;
+	}
+
+	@include tablets {
+		// height: 340px;
+	}
+}
+
+.catalog__img-bg {
+	// display: none;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+}
+
+.catalog__btns {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	@extend %clearfix;
+}
+
+.catalog__btns.active {
+	display: block;
+
+	.catalog__size-title {
+
+		&:after {
+			@include transform(rotate(-180deg));
+		}
+	}
+}
+
+.catalog__buy {
+	float: left;
+	display: block;
+	position: relative;
+	width: 60px;
+	height: 51px;
+	text-indent: -9999px;
+	background: #b7b7b7;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 10px;
+		left: 18px;
+		width: 22px;
+		height: 28px;
+		background: url(../img/icons/catalog/basket.png) no-repeat;
+	}
+}
+
+.catalog__size {
+	float: left;
+	position: relative;
+	width: calc(100% - 60px);
+	background: #fff;
+	cursor: pointer;
+}
+
+.catalog__size-title {
+	position: relative;
+	padding: 15px 0;
+	padding-left: 20%;
+	text-transform: uppercase;
+	font-size: 14px;
+	// background: #fff;
+	border: 1px solid #b7b7b7;
+	// border-bottom: transparent;
+
+	&:after {
+		content: "";
+		position:absolute;
+		top: 22px;
+		right: 44px;
+		width: 10px;
+		height: 6px;
+		background: url(../img/icons/catalog/size_arrow.png)no-repeat;
+		@include transition(.3s);
+	}
+}
+
+.catalog__size-title {
+	position: relative;
+	padding: 15px 0;
+	padding-left: 20%;
+	text-transform: uppercase;
+	font-size: 14px;
+	// background: #fff;
+	border: 1px solid #b7b7b7;
+	// border-bottom: transparent;
+
+	&:after {
+		content: "";
+		position:absolute;
+		top: 22px;
+		right: 44px;
+		width: 10px;
+		height: 6px;
+		background: url(../img/icons/catalog/size_arrow.png)
+	}
+}
+
+.catalog__size-list {
+	display: none;
+    position: absolute;
+    top: 49px;
+    left: 0;
+    right: 0;
+	padding-bottom: 15px;
+	text-align: center;
+	background: #fff;
+	border: 1px solid #b7b7b7;
+	border-top: transparent;
+	z-index: 1;
+}
+
+.catalog__size-link {
+	display: block;
+	padding: 2px 0;
+	color: $black;
+	background: #fff;
+
+	&:hover {
+		background: #e9e9e9;
+	}
+}
+
+.catalog__stock-list {
+	position: absolute;
+	bottom: 80px;
+	left: 0;
+	font-size: 0;
+}
+
+.catalog__stock-item {
+	margin-top: 4px;
+	padding: 2px 18px;
+	text-align: center;
+	font-size: 11px;
+	color: $black;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+.catalog__stock-item--last {
+	background: $green;
+}
+
+.catalog__stock-item--sale {
+	background: $red;
+}
+
+.catalog__desc-link {
+	display: block;
+	color: $black;
+}
+
+.catalog__desc-name {
+	margin-top: 10px;
+}
+
+.catalog__desc-price {
+	text-align: right;
+}
+
+.catalog__desc-descount {
+	margin-right: 8px;
+	text-decoration: line-through;
+	color: $grey;
+}
+
+.catalog__desc-value {
+	margin-right: 4px;
+	font-weight: bold;
+}
+
+.catalog__preloader {
+	width: 30px;
+	height: 30px;
+	margin: 26px auto;
+	background: url(../img/decor/preloader.png)no-repeat;
+}

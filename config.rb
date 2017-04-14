@@ -7,7 +7,7 @@ sass_dir = "- dev/styles"
 images_dir = "img"
 javascripts_dir = "js"
 
-output_style = :compressed
+output_style = :expanded
 relative_assets = false
 line_comments = false
 preferred_syntax = :scss

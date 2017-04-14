@@ -1,0 +1,443 @@
+.about__banner {
+	height: 400px;
+
+	@include tablets {
+		height: 250px;
+	}
+
+	@include phones {
+	    height: 180px;
+	}
+}
+
+.about__banner,
+.about__feature,
+.about__half,
+.about__sale {
+	margin-bottom: 56px;
+
+	@include tablets {
+		margin-bottom: 30px;
+	}
+
+	@include phones {
+	    margin-bottom: 20px;
+	}
+}
+
+.about__banner {
+
+	&:before {
+		content: "";
+		@include inline-block(middle);
+		width: 0;
+		height: 100%;
+	}
+
+	.about__title-wrapp {
+		@include inline-block(middle);
+	}
+}
+
+.about__banner--top {
+	text-align: right;
+	background: url(../img/about/banner-top.jpg) center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #76c4b6;
+
+	.about__title-wrapp {
+		width: 420px;
+		margin-right: 90px;
+
+		@include laptop {
+			margin-right: 0;
+		}
+
+		@include tablets {
+			width: 270px;
+		}
+
+		@include phones {
+			width: 210px;
+		}
+
+	}
+
+	@include laptop {
+		text-align: center;
+	}
+
+	@include tablets {
+		background-size: cover;
+	}
+}
+
+.about__banner--second {
+	text-align: center;
+	background: url(../img/about/banner-second.jpg) center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: $pink;
+
+	.about__title-wrapp {
+		width: 560px;
+
+		@include tablets {
+			width: 335px;
+		}
+
+		@include phones {
+			width: 240px;
+			font-size: 8px;
+		}
+	}
+
+	.about__title {
+		padding-right: 4px;
+	}
+}
+
+.about__banner--third {
+	text-align: right;
+	background: url(../img/about/banner-third.jpg) center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #f5f5f5;
+
+	.about__title-wrapp {
+		width: 500px;
+		margin-right: 40px;
+
+		@include tablets {
+			width: 345px;
+			margin-right: 0px;
+		}
+
+		@include phones {
+			width: 240px;
+		}
+	}
+
+	.about__title {
+		text-align: left;
+		color: $black;
+
+		@include laptop {
+			text-align: center;
+		}
+	}
+
+	@include laptop {
+		text-align: center;
+	}
+}
+
+.about__banner--bottom {
+	// margin-bottom: 0;
+	text-align: center;
+	background: url(../img/about/banner-bottom.jpg) 50% 28%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: $purple;
+
+	.about__title-wrapp {
+		width: 450px;
+
+		@include tablets {
+			width: 340px;
+		}
+
+		@include phones {
+		    width: 230px;
+		}
+	}
+
+	.about__title {
+
+		&:last-child {
+			margin-top: 28px;
+		}
+
+		@include phones {
+		    margin-top: 20px;
+		}
+	}
+}
+
+.about__title {
+	display: inline-block;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 28px;
+	color: #fff;
+
+	@include laptop {
+		font-size: 24px;
+	}
+
+	@include tablets {
+		font-size: 18px;
+	}
+
+	@include phones {
+		font-size: 14px;
+	}
+}
+
+.about__title-small {
+	text-transform: lowercase;
+}
+
+.about__feature {
+	text-align: center;
+	.about__title {
+		display: inline-block;
+		margin-bottom: 34px;
+		color: $black;
+
+		@include tablets {
+			margin-bottom: 30px;
+		}
+
+		@include phones {
+		    margin-bottom: 20px;
+		}
+	}
+}
+
+.about__list {
+	margin-bottom: 50px;
+	font-size: 0;
+
+	@include tablets {
+		margin-bottom: 30px;
+	}
+
+	@include phones {
+	    margin-bottom: 20px;
+	    padding-left: 0;
+	}
+}
+
+.about__item {
+	@include inline-block(top);
+	width: 20%;
+	text-align: center;
+	font-size: 16px;
+
+	@include laptop {
+		text-align: center;
+	}
+}
+
+.about__title-big,
+.about__desc-big {
+	text-transform: uppercase;
+	font-size: 48px;
+
+	@include laptop {
+		font-size: 38px;
+	}
+
+	@include tablets {
+		font-size: 24px;
+	}
+
+	@include phones {
+		font-size: 18px;
+	}
+}
+
+.about__desc-small {
+	text-transform: lowercase;
+	font-size: 18px;
+
+	@include laptop {
+		font-size: 16px;
+	}
+
+	@include tablets {
+		font-size: 10px;
+	}
+
+	@include phones {
+		font-size: 8px;
+	}
+}
+
+.about__desc {
+	display: inline-block;
+	width: 290px;
+	font-size: 18px;
+
+	@include laptop {
+		font-size: 16px;
+	}
+
+	@include tablets {
+		width: 160px;
+		font-size: 10px;
+	}
+
+	@include phones {
+		width: 130px;
+		font-size: 8px;
+	}
+}
+
+.about__brands {
+	margin-top: 54px;
+
+	@include tablets {
+		margin-top: 30px;
+	}
+
+	@include phones {
+	    margin-top: 20px;
+	}
+}
+
+.brands__list {
+	text-align: left;
+	font-size: 0;
+
+	@include laptop {
+		padding-left: 0;
+	}
+}
+
+.brands__item {
+	@include inline-block(top);
+	width: 50%;
+	font-size: 16px;
+
+	&:nth-child(2n) {
+		.brands__link {
+			color: #b1d474;
+		}
+	}
+
+	@include laptop {
+		text-align: center;
+	}
+}
+
+.brands__link {
+	display: inline-block;
+	width: 150px;
+	text-transform: uppercase;
+	font-size: 28px;
+	color: #f49765;
+
+	@include tablets {
+		width: 130px;
+		font-size: 18px;
+	}
+
+	@include phones {
+		width: 100px;
+		font-size: 14px;
+	}
+}
+
+.about__half {
+	font-size: 0;
+
+	@include tablets {
+		padding-left: 30px;
+	}
+
+	@include phones {
+		padding-left: 18px;
+	}
+}
+
+.about__half-left,
+.about__half-right {
+	@include inline-block(middle);
+	width: 50%;
+	padding: 80px 0;
+	font-size: 16px;
+
+	@include tablets {
+		width: 100%;
+		padding: 10px 0;
+	}
+}
+
+.about__half-left {
+	position: relative;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 1px;
+		height: 100%;
+		background: $grey;
+
+		@include tablets {
+			content: none;
+		}
+	}
+
+	.about__title {
+		padding-right: 45px;
+		text-align: left;
+		color: $black;
+
+		@include tablets {
+			padding-right: 60px;
+		}
+	}
+}
+
+.about__half-desc {
+	display: inline-block;
+    padding: 8px 30px;
+	font-size: 36px;
+	color: #fff;
+	background: $blue;
+
+	@include laptop {
+		font-size: 26px;
+	}
+
+	@include tablets {
+		font-size: 20px;
+	}
+
+	@include phones {
+		padding: 4px 20px;
+		font-size: 16px;
+	}
+}
+
+.about__sale {
+	padding: 80px 0;
+	text-align: center;
+	background: url(../img/about/banner-sale.jpg) center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	.about__title {
+		width: 550px;
+		color: $black;
+
+		@include tablets {
+			width: 340px;
+		}
+
+		@include phones {
+		    width: 245px;
+    		padding-right: 4px;
+		}
+	}
+
+	@include tablets {
+		padding: 10px 0;
+	}
+}
+

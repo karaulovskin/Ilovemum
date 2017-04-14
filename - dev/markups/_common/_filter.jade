@@ -1,0 +1,104 @@
+.filter
+	.filter__title Фильтр
+	.filter-color
+		a(href="#").filter-color__link Цвет
+		.filter-color__dropdown
+			ul.filter-color__list
+				li.filter-color__item.filter-color__item--white
+					label
+						input.filter-color__input--white(type="checkbox" value="Y")
+						.filter-color__desc Белый
+				li.filter-color__item.filter-color__item--turquoise
+					label
+						input.filter-color__input--turquoise(type="checkbox" value="Y")
+						.filter-color__desc Бирюзовый
+				li.filter-color__item.filter-color__item--green
+					label
+						input.filter-color__input--green(type="checkbox" value="Y")
+						.filter-color__desc Зеленый
+				li.filter-color__item.filter-color__item--red
+					label
+						input.filter-color__input--red(type="checkbox" value="Y")
+						.filter-color__desc Красный
+				li.filter-color__item.filter-color__item--yellow
+					label
+						input.filter-color__input--yellow(type="checkbox" value="Y")
+						.filter-color__desc Желтый
+				li.filter-color__item.filter-color__item--orange
+					label
+						input.filter-color__input--orange(type="checkbox" value="Y")
+						.filter-color__desc Оранжевый
+				li.filter-color__item.filter-color__item--blue
+					label
+						input.filter-color__input--blue(type="checkbox" value="Y")
+						.filter-color__desc Синий
+				li.filter-color__item.filter-color__item--purple
+					label
+						input.filter-color__input--purple(type="checkbox" value="Y")
+						.filter-color__desc Фиолетовый
+				li.filter-color__item.filter-color__item--black
+					label
+						input.filter-color__input--black(type="checkbox" value="Y")
+						.filter-color__desc Черный
+				a.filter-apply__link(href="#") Применить
+	.filter-size
+		a(href="#").filter-size__link Размер
+		.filter-size__dropdown
+			.filter__dropdown-title Взрослый
+			ul.filter-size__list
+				li.filter-size__item
+					label
+						input.filter-size__input(id="" type="checkbox" value="Y") 
+						.filter-size__desc 40
+				li.filter-size__item
+					label
+						input.filter-size__input(id="" type="checkbox" value="Y") 
+						.filter-size__desc 42
+				li.filter-size__item
+					label
+						input.filter-size__input(id="" type="checkbox" value="Y") 
+						.filter-size__desc 44
+				li.filter-size__item
+					label
+						input.filter-size__input(id="" type="checkbox" value="Y") 
+						.filter-size__desc 46
+				li.filter-size__item
+					label
+						input.filter-size__input(id="" type="checkbox" value="Y") 
+						.filter-size__desc 48
+				li.filter-size__item
+					label
+						input.filter-size__input(id="" type="checkbox" value="Y") 
+						.filter-size__desc 50
+				li.filter-size__item
+					label
+						input.filter-size__input(id="" type="checkbox" value="Y") 
+						.filter-size__desc 52+
+				a.filter-apply__link(href="#") Применить
+	.filter-type
+		a(href="#").filter-type__link Тип одежды
+		.filter-type__dropdown
+			ul.filter-type__list
+				li.filter-type__item
+					label
+						input.filter-type__input(id="" type="checkbox" value="Y")
+						.filter-type__desc Одежда для беременных и кормящих
+				li.filter-type__item 
+					label
+						input.filter-type__input(id="" type="checkbox" value="Y")
+						.filter-type__desc Одежда для беременных
+				li.filter-type__item 
+					label
+						input.filter-type__input(id="" type="checkbox" value="Y")
+						.filter-type__desc Одежда для кормящих мам
+				li.filter-type__item
+					label
+						input.filter-type__input(id="" type="checkbox" value="Y") 
+						.filter-type__desc Прочее
+	.filter-clear
+		a.filter-clear__link(href="#") Сбросить
+	.filter-sort
+		span.filter-sort__text Сортировать по:
+		select.filter-sort__select
+			option.filter-sort__option возрастанию цены
+			option.filter-sort__option убыванию цены
