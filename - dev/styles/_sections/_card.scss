@@ -24,6 +24,14 @@
 	@include top {
 		padding: 0 40px 0 0;
 	}
+
+	@include desktop {
+		padding: 0 24px 0 0;
+	}
+
+	@include tablets {
+		padding: 0;
+	}
 }
 
 .gallery {
@@ -252,24 +260,35 @@
 .card__shops {
 	margin-bottom: 20px;
 	padding-right: 10%;
-	font-size: rem(12px);
+	font-size: 0;
 	@extend %clearfix;
+
+	@include laptop {
+		padding-right: 0;
+	}
+
+	@include tablets {
+		padding-right: 10%;
+	}
 }
 
 .card__shops-title {
-	float: left;
-	// @include inline-block(middle);
+	// float: left;
+	@include inline-block(middle);
 	// width: 200px;
-	width: 37%;
+	width: 50%;
+	padding-right: 44px;
+	font-size: rem(12px);
 }
 
 .card__shops-wrapp {
-	float: right;
+	// float: right;
 	position: relative;
-	// @include inline-block(middle);
+	@include inline-block(middle);
 	// width: 260px;
-	width: 54%;
-	margin-left: 16px;
+	width: 50%;
+	// margin-left: 16px;
+	font-size: rem(12px);
 }
 
 .card__shops-wrapp.active {
@@ -300,6 +319,11 @@
 		background: url(../img/icons/catalog/size_arrow.png) no-repeat;
 		@include transition(.3s);
 	}
+
+	.card__shops-dotts,
+	.card__shops-size {
+		padding-right: 20px;
+	}
 }
 
 .card__shops-list {
@@ -307,7 +331,7 @@
 	position: absolute;
 	top: 100%;
 	left: 0;
-	width: 260px;
+	width: 100%;
 	z-index: 10;
 }
 
@@ -400,6 +424,14 @@
 	// width: 480px;
 	margin-bottom: 12px;
 	padding-right: 10%;
+
+	@include laptop {
+		padding-right: 0;
+	}
+
+	@include tablets {
+		padding-right: 10%;
+	}
 }
 
 .card__tabs-list {
@@ -467,6 +499,14 @@
 
 .card__content-list {
 	padding-right: 34px;
+
+	@include laptop {
+		padding-right: 0;
+	}
+
+	@include tablets {
+		padding-right: 34px;
+	}
 }
 
 .card__content-item {
@@ -650,6 +690,7 @@
 }
 
 .card-look__banner {
+	@include inline-block(top);
 	position: relative;
 	height: 332px;
 }
@@ -670,22 +711,34 @@
 	width: 20%;
 	font-size: rem(16px);
 
-	@include tablets {
+	@include top {
+		width: 25%;
+	}
+
+	@include laptop {
 		width: 33.3%;
+	}
+
+	@include tablets {
+		width: 50%;
 	}
 }
 
 .card-look__block {
+	position: relative;
 	padding: 0 12px;
-}
-
-.card-look__item--banner {
-	@include inline-block(top);
 }
 
 .card-look__img {
 	position: relative;
-	height: 332px;
+	height: auto;
+
+	&:hover {
+		.card-look__btns,
+		.slick-arrow {
+			display: block!important;
+		}
+	}
 }
 
 .card-look__img-bg {
@@ -712,18 +765,26 @@
 	display: block;
 	position: relative;
 	width: 50px;
-	height: 45px;
+	height: rem(45px);
 	text-indent: -9999px;
 	background: #b7b7b7;
 
 	&:after {
 		content: "";
 		position: absolute;
-		top: 7px;
-		left: 14px;
-		width: 22px;
-		height: 28px;
+		top: 50%;
+		left: 0;
+		right: 0;
+		width: 18px;
+		height: 26px;
+		margin: auto;
+		@include transform(translateY(-50%));
 		background: url(../img/icons/catalog/basket.png) no-repeat;
+		background-size: contain;
+	}
+
+	@include laptop {
+		width: 48px;
 	}
 }
 
@@ -733,24 +794,31 @@
 	width: calc(100% - 50px);
 	background: #fff;
 	cursor: pointer;
+
+	@include laptop {
+		width: calc(100% - 48px);
+	}
 }
 
 .card-look__size-title {
 	position: relative;
 	padding: 12px 0;
-	padding-left: 10%;
+	padding: rem(14px) 0 rem(13px) 0;
+	padding-left: 8%;
 	text-transform: uppercase;
 	font-size: rem(14px);
+	font-size: rem(12px);
 	border: 1px solid #b7b7b7;
 	// border-bottom: transparent;
 
 	&:after {
 		content: "";
 		position:absolute;
-		top: 19px;
-		right: 17px;
+		top: 50%;
+		right: 12px;
 		width: 10px;
 		height: 6px;
+		@include transform(translateY(-50%));
 		background: url(../img/icons/catalog/size_arrow.png)
 	}
 }
@@ -791,6 +859,7 @@
 	padding: 2px 18px;
 	text-align: center;
 	font-size: rem(11px);
+	font-size: rem(10px);
 	color: $black;
 
 	&:first-child {
@@ -814,14 +883,16 @@
 .card-look__desc-name {
 	display: inline-block;
 	width: 66%;
-	margin-top: 10px;
+	margin-top: 8px;
 	font-size: rem(16px);
+	font-size: rem(14px);
 }
 
 .card-look__desc-price {
 	text-align: right;
 	display: inline-block;
 	width: 32%;
+	font-size: rem(14px);
 }
 
 .card-look__desc-descount {
@@ -833,6 +904,10 @@
 .card-look__desc-value {
 	margin-right: 4px;
 	font-weight: bold;
+}
+
+.card-look__desc-sign {
+	font-size: rem(13px);
 }
 
 .card-look__preloader {

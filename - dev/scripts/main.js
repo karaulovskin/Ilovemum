@@ -323,19 +323,38 @@ $(document).ready(function(){
 	// CARD SLICK
 	(function(){
 
-		$('.gallery-prev__list').slick({
-			asNavFor: '.gallery__list',
-			vertical: true,
-			slidesToShow: 6,
-			focusOnSelect: true
-			// arrows: false
-		});
+		if($(window).width() > '480'){
 
-		$('.gallery__list').slick({
-			asNavFor: '.gallery-prev__list',
-			fade: true,
-			arrows: false
-		});
+			$('.gallery-prev__list').slick({
+				asNavFor: '.gallery__list',
+				vertical: true,
+				slidesToShow: 6,
+				focusOnSelect: true
+				// arrows: false
+			});
+
+			$('.gallery__list').slick({
+				asNavFor: '.gallery-prev__list',
+				fade: true,
+				arrows: false
+			});
+
+		} else if($(window).width() < '480') {
+
+			$('.gallery-prev__list').slick({
+				asNavFor: '.gallery__list',
+				vertical: true,
+				slidesToShow: 4,
+				focusOnSelect: true
+				// arrows: false
+			});
+
+			$('.gallery__list').slick({
+				asNavFor: '.gallery-prev__list',
+				fade: true,
+				arrows: false
+			});
+		};
 
 	}());
 
