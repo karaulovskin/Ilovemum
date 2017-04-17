@@ -3,7 +3,7 @@
 	height: 100vh;
 	padding: 18px 84px 30px 42px;
 	background: $panel;
-	@include transition(.1s);
+	// @include transition(.1s);
 	z-index: 110;
 }
 

@@ -164,15 +164,15 @@ $(document).ready(function(){
 	(function(){
 		var
 			$this          = $(this),
-			list           = $this.closest('.filter'),
-			otherDropdown  = list.find('.filter__dropdown'),
-			otherTitle     = list.find('.filter__link'),
-			color          = $('.filter-color__link'),
-			colorDropdown  = $('.filter-color__dropdown'),
-			size           = $('.filter-size__link'),
-			sizeDropdown   = $('.filter-size__dropdown'),
-			type           = $('.filter-type__link'),
-			typeDropdown   = $('.filter-type__dropdown');
+			list           = $this.closest('.filtr'),
+			otherDropdown  = list.find('.filtr__dropdown'),
+			otherTitle     = list.find('.filtr__link'),
+			color          = $('.filtr-color__link'),
+			colorDropdown  = $('.filtr-color__dropdown'),
+			size           = $('.filtr-size__link'),
+			sizeDropdown   = $('.filtr-size__dropdown'),
+			type           = $('.filtr-type__link'),
+			typeDropdown   = $('.filtr-type__dropdown');
 
 		$(color).click(function(e){
 			e.preventDefault();
@@ -237,7 +237,7 @@ $(document).ready(function(){
 				otherContent.fadeOut(),
 				container.addClass('active'),
 				content.fadeIn();
-				titleIndicator.css()
+				titleIndicator.css();
 			} else {
 				container.removeClass('active'),
 				content.fadeOut();
@@ -290,6 +290,21 @@ $(document).ready(function(){
 	(function(){
 
 		$('.catalog__img-list').slick();
+
+	}());
+
+	// CATALOG FILTR
+	(function(){
+
+		// начальная инициализация отображаемого текста при загрузке страницы
+		$('.filtr-sort__select').each(function(){
+		    $(this).parent().children('.filtr-sort__value').text( $(this).children('option:selected').text() );
+		});
+
+		// изменение текста при изменении select
+		$('.filtr-sort__select').change(function(){
+		    $(this).parent().children('.filtr-sort__value').text( $(this).children('option:selected').text() );
+		});
 
 	}());
 
