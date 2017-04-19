@@ -56,14 +56,15 @@
 				.card__shipping-text Бесплатная доставка*
 			.card__size
 				.card__size-left
-					.card__size-title Выбирете размер
-					ul.card__size-value-list
-						li.card__size-value-item
-							a.card__size-value-link(href="#") 40
-						li.card__size-value-item
-							a.card__size-value-link(href="#") 42
-						li.card__size-value-item 
-							a.card__size-value-link(href="#") 44
+					.card__size-wrapp
+						.card__size-title Выбирете размер
+						ul.card__size-value-list
+							li.card__size-value-item
+								a.card__size-value-link(href="#" rel="40") 40
+							li.card__size-value-item
+								a.card__size-value-link(href="#" rel="42") 42
+							li.card__size-value-item 
+								a.card__size-value-link(href="#" rel="44") 44
 				.card__size-right
 					ul.card__size-watch-list
 						li.card__size-watch-item
@@ -187,10 +188,10 @@
 					li.card__info-item
 						a.card__info-link.card__info-link--gu(href="#") Гарантия качества
 	.card-look
-		ul.card-look__list
+		ul.card-look__list.catalog-list
 			li.card-look__item.card-look__banner
 				.card-look__banner-text Завершите свой образ
-			li.card-look__item
+			li.card-look__item.catalog-item
 				.card-look__block
 					.card-look__img
 						ul.catalog__img-list
@@ -205,17 +206,17 @@
 						ul.card-look__stock-list
 							li.card-look__stock-item.catalog__stock-item--last Последний размер
 							li.card-look__stock-item.catalog__stock-item--sale Распродажа
-						.card-look__btns
+						.card-look__btns.size-btns
 							a.card-look__buy(href="#") Купить
-							.card-look__size
-								.card-look__size-title Выбирете размер
-								ul.card-look__size-list
+							.card-look__size.size-box
+								.card-look__size-title.size-choice Выбирете размер
+								ul.card-look__size-list.size-list
 									li.card-look__size-item
-										a.card-look__size-link(href="#") 40
+										a.card-look__size-link.size-value(href="#" rel="40") 40
 									li.card-look__size-item
-										a.card-look__size-link(href="#") 42
+										a.card-look__size-link.size-value(href="#" rel="42") 42
 									li.card-look__size-item 
-										a.card-look__size-link(href="#") 44
+										a.card-look__size-link.size-value(href="#" rel="44") 44
 					.card-look__desc
 						a.card-look__desc-link(href="card.html")
 							.card-look__desc-name
@@ -223,7 +224,7 @@
 							.card-look__desc-price
 								span.card-look__desc-value 1 650
 								span.card-look__desc-sign руб.
-			li.card-look__item
+			li.card-look__item.catalog-item
 				.card-look__block
 					.card-look__img
 						ul.catalog__img-list
@@ -238,17 +239,17 @@
 						ul.card-look__stock-list
 							li.card-look__stock-item.catalog__stock-item--last Последний размер
 							li.card-look__stock-item.catalog__stock-item--sale Распродажа
-						.card-look__btns
+						.card-look__btns.size-btns
 							a.card-look__buy(href="#") Купить
-							.card-look__size
-								.card-look__size-title Выбирете размер
-								ul.card-look__size-list
+							.card-look__size.size-box
+								.card-look__size-title.size-choice Выбирете размер
+								ul.card-look__size-list.size-list
 									li.card-look__size-item
-										a.card-look__size-link(href="#") 40
+										a.card-look__size-link.size-value(href="#" rel="40") 40
 									li.card-look__size-item
-										a.card-look__size-link(href="#") 42
+										a.card-look__size-link.size-value(href="#" rel="42") 42
 									li.card-look__size-item 
-										a.card-look__size-link(href="#") 44
+										a.card-look__size-link.size-value(href="#" rel="44") 44
 					.card-look__desc
 						a.card-look__desc-link(href="card.html")
 							.card-look__desc-name
@@ -256,7 +257,7 @@
 							.card-look__desc-price
 								span.card-look__desc-value 1 650
 								span.card-look__desc-sign руб.
-			li.card-look__item
+			li.card-look__item.catalog-item
 				.card-look__block
 					.card-look__img
 						ul.catalog__img-list
@@ -271,17 +272,17 @@
 						ul.card-look__stock-list
 							li.card-look__stock-item.catalog__stock-item--last Последний размер
 							li.card-look__stock-item.catalog__stock-item--sale Распродажа
-						.card-look__btns
+						.card-look__btns.size-btns
 							a.card-look__buy(href="#") Купить
-							.card-look__size
-								.card-look__size-title Выбирете размер
-								ul.card-look__size-list
+							.card-look__size.size-box
+								.card-look__size-title.size-choice Выбирете размер
+								ul.card-look__size-list.size-list
 									li.card-look__size-item
-										a.card-look__size-link(href="#") 40
+										a.card-look__size-link.size-value(href="#" rel="40") 40
 									li.card-look__size-item
-										a.card-look__size-link(href="#") 42
+										a.card-look__size-link.size-value(href="#" rel="42") 42
 									li.card-look__size-item 
-										a.card-look__size-link(href="#") 44
+										a.card-look__size-link.size-value(href="#" rel="44") 44
 					.card-look__desc
 						a.card-look__desc-link(href="card.html")
 							.card-look__desc-name
@@ -289,7 +290,7 @@
 							.card-look__desc-price
 								span.card-look__desc-value 1 650
 								span.card-look__desc-sign руб.
-			li.card-look__item
+			li.card-look__item.catalog-item
 				.card-look__block
 					.card-look__img
 						ul.catalog__img-list
@@ -304,17 +305,17 @@
 						ul.card-look__stock-list
 							li.card-look__stock-item.catalog__stock-item--last Последний размер
 							li.card-look__stock-item.catalog__stock-item--sale Распродажа
-						.card-look__btns
+						.card-look__btns.size-btns
 							a.card-look__buy(href="#") Купить
-							.card-look__size
-								.card-look__size-title Выбирете размер
-								ul.card-look__size-list
+							.card-look__size.size-box
+								.card-look__size-title.size-choice Выбирете размер
+								ul.card-look__size-list.size-list
 									li.card-look__size-item
-										a.card-look__size-link(href="#") 40
+										a.card-look__size-link.size-value(href="#" rel="40") 40
 									li.card-look__size-item
-										a.card-look__size-link(href="#") 42
+										a.card-look__size-link.size-value(href="#" rel="42") 42
 									li.card-look__size-item 
-										a.card-look__size-link(href="#") 44
+										a.card-look__size-link.size-value(href="#" rel="44") 44
 					.card-look__desc
 						a.card-look__desc-link(href="card.html")
 							.card-look__desc-name

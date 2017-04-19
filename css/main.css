@@ -919,6 +919,7 @@ footer {
   margin: 1px 1px 4px 1px;
   padding: 3px;
   outline: none;
+  cursor: pointer;
 }
 .gallery-prev__item:last-child {
   margin-bottom: 0;
@@ -944,7 +945,6 @@ footer {
   width: 462px;
   width: 100%;
   height: 690px;
-  background: red;
   height: auto;
 }
 
@@ -1025,6 +1025,10 @@ footer {
   padding: 0 0 0 10px;
 }
 
+.card__size-wrapp {
+  position: relative;
+}
+
 .card__size-title {
   position: relative;
   padding: 1rem 0rem;
@@ -1032,6 +1036,7 @@ footer {
   text-transform: uppercase;
   font-size: 0.875rem;
   border: 1px solid #b7b7b7;
+  cursor: pointer;
 }
 .card__size-title:after {
   content: "";
@@ -1049,12 +1054,12 @@ footer {
   top: 50px;
   left: 0;
   right: 0;
-  width: 255px;
   padding-bottom: 15px;
   text-align: center;
   background: #fff;
   border: 1px solid #b7b7b7;
   border-top: transparent;
+  z-index: 1;
 }
 
 .card__size-value-link {
@@ -1632,6 +1637,7 @@ footer {
 }
 
 .card-look__btns {
+  display: none;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1728,6 +1734,7 @@ footer {
 .card-look__size-link {
   display: block;
   padding: 2px 0;
+  font-size: 0.875rem;
   color: #252525;
   background: #fff;
 }

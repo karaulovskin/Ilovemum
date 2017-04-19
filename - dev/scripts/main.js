@@ -2,7 +2,6 @@ $(document).ready(function(){
 
 	// PANEL
 	(function(){
-
 		var
 			burger   = $('.sidebar__link--burger'),
 			basket   = $('.sidebar__link--basket'),
@@ -15,81 +14,78 @@ $(document).ready(function(){
 			overlay  = $('.overlay'),
 			body     = $('body');
 
-
-
-			$(open).click(function(e){
-				e.preventDefault();
-				if(!body.hasClass('panel-blocking')) {
-					body.addClass('panel-blocking');
-				} else {
-					body.removeClass('panel-blocking');
-				};
-			});
-
-			$(close).click( function(e){
-				e.preventDefault();
+		$(open).click(function(e){
+			e.preventDefault();
+			if(!body.hasClass('panel-blocking')) {
+				body.addClass('panel-blocking');
+			} else {
 				body.removeClass('panel-blocking');
-			});
+			};
+		});
 
-			$(overlay).click(function(e){
-				e.preventDefault();
-					body.removeClass('panel-blocking');
-			});
+		$(close).click( function(e){
+			e.preventDefault();
+			body.removeClass('panel-blocking');
+		});
 
-			$(burger).click(function(e){
-				e.preventDefault();
-				$('.panel-burger').addClass('open');
-				$(overlay).fadeIn();
-			});
+		$(overlay).click(function(e){
+			e.preventDefault();
+			body.removeClass('panel-blocking');
+		});
 
-			$(basket).click(function(e){
-				e.preventDefault();
-				$('.panel-basket').addClass('open');
-				$(overlay).fadeIn();
-			});
+		$(burger).click(function(e){
+			e.preventDefault();
+			$('.panel-burger').addClass('open');
+			$(overlay).fadeIn();
+		});
 
-			$(login).click(function(e){
-				e.preventDefault();
-				$('.panel-login').addClass('open');
-				$(overlay).fadeIn();
-			});
+		$(basket).click(function(e){
+			e.preventDefault();
+			$('.panel-basket').addClass('open');
+			$(overlay).fadeIn();
+		});
 
-			$(search).click(function(e){
-				e.preventDefault();
-				$('.panel-search').addClass('open');
-				$(overlay).fadeIn();
-			});
+		$(login).click(function(e){
+			e.preventDefault();
+			$('.panel-login').addClass('open');
+			$(overlay).fadeIn();
+		});
 
-			$(address).click(function(e){
-				e.preventDefault();
-				$('.panel-address').addClass('open');
-				$(overlay).fadeIn();
-			});
+		$(search).click(function(e){
+			e.preventDefault();
+			$('.panel-search').addClass('open');
+			$(overlay).fadeIn();
+		});
 
-			$(language).click(function(e){
-				e.preventDefault();
-				$('.panel-language').addClass('open');
-				$(overlay).fadeIn();
-			});
+		$(address).click(function(e){
+			e.preventDefault();
+			$('.panel-address').addClass('open');
+			$(overlay).fadeIn();
+		});
 
-			$(open).click(function(e){
-				e.preventDefault();
-				$('.panel-open').addClass('open');
-				$(overlay).fadeIn();
-			});
+		$(language).click(function(e){
+			e.preventDefault();
+			$('.panel-language').addClass('open');
+			$(overlay).fadeIn();
+		});
 
-			$(close).click( function(e){
-				e.preventDefault();
-				$('.panel').removeClass('open');
-				$(overlay).fadeOut();
-			});
+		$(open).click(function(e){
+			e.preventDefault();
+			$('.panel-open').addClass('open');
+			$(overlay).fadeIn();
+		});
 
-			$(overlay).click( function(e){
-				e.preventDefault();
-				$('.panel').removeClass('open');
-				$(overlay).fadeOut();
-			});
+		$(close).click( function(e){
+			e.preventDefault();
+			$('.panel').removeClass('open');
+			$(overlay).fadeOut();
+		});
 
+		$(overlay).click( function(e){
+			e.preventDefault();
+			$('.panel').removeClass('open');
+			$(overlay).fadeOut();
+		});
 	}());
 
 	// ACCORDION
@@ -210,26 +206,25 @@ $(document).ready(function(){
 				typeDropdown.fadeOut();
 			}
 		});
-
 	}());
 
 
 	// CATALOG SIZE
 	(function(){
-		$('.catalog__size').on('click', function(e){
+		$('.size-box').on('click', function(e){
 			e.preventDefault();
 
 			var
 				$this          = $(this),
-				list           = $this.closest('.catalog__list'),
-				otherContainer = list.find('.catalog__btns'),
-				container      = $this.closest('.catalog__btns'),
-				size           = $this.closest('.catalog__size'),
-				otherContent   = list.find('.catalog__size-list'),
+				list           = $this.closest('.catalog-list'),
+				otherContainer = list.find('.size-btns'),
+				container      = $this.closest('.size-btns'),
+				sizeBox        = $this.closest('.size-box'),
+				otherContent   = list.find('.size-list'),
 				choice         = $('.catalog__size-link'),
-				title          = size.closest('.catalog__size-title'),
+				title          = sizeBox.closest('.catalog__size-title'),
 				titleIndicator = $('.catalog__size-title:after'),
-				content        = size.find('.catalog__size-list');
+				content        = sizeBox.find('.size-list');
 				
 
 			if(!container.hasClass('active')) {
@@ -242,25 +237,18 @@ $(document).ready(function(){
 				container.removeClass('active'),
 				content.fadeOut();
 			};
+		});
 
-			// $('.catalog__size-link').click(function(e){
-			// 	console.log(choice.attr('rel'));
-			// 	// $(title).text('выбран размер ' + chice.attr('rel'));
-			// });
+		// производим выбор размера
+		$('.size-value').on('click', function(e){
+			e.preventDefault();
 
-			// var 
-			// 	trigger = document.querySelector('.catalog__size');
-			// 	// title   = document.querySelector('.catalog__size-title');
-
-			// trigger.addEventListener('click', function(e) {
-			// 	if (e.target.tagName == 'A') {
-			// 		e.preventDefault();
-
-			// 		$(title).text('выбран размер ' + e.target.getAttribute('rel'));
-			// 	}
-			// }, true);
-
-
+			var
+				$this   = $(this),
+				size    = $this.closest('.size-value'),
+				sizeBox = size.closest('.size-box'),
+				title   = sizeBox.find('.size-choice');
+			$(title).text('выбран размер ' + $(this).attr('rel'));
 		});
 
 		$('.catalog__buy').click(function(e){
@@ -275,23 +263,34 @@ $(document).ready(function(){
 	}());
 
 
-	// CHOICE SIZE
+	// CARD SIZE
 	(function(){
-
-		$('.catalog__size-link').click(function(e){
+		$('.card__size-title').on('click', function(e){
 			e.preventDefault();
 
-			$('.catalog__size-title').text('выбран размер ' + $(this).attr('rel'));
+			$('.card__size-value-list').fadeToggle();
 		});
 
+		// производим выбор размера
+		$('.card__size-value-link').on('click', function(e){
+			e.preventDefault();
+
+			var
+				$this   = $(this),
+				size    = $this.closest('.card__size-value-link'),
+				sizeBox = size.closest('.card__size-wrapp'),
+				title   = sizeBox.find('.card__size-title');
+			$(title).text('выбран размер ' + $(this).attr('rel'));
+			$('.card__size-value-list').fadeOut();
+		});
 	}());
+
 
 	// CATALOG SLICK
 	(function(){
-
 		$('.catalog__img-list').slick();
-
 	}());
+
 
 	// CATALOG FILTR
 	(function(){
