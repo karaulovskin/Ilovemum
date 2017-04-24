@@ -77,3 +77,36 @@
 #cboxLoadedContent {
 	outline: none;
 }
+
+.slick-dots {
+	@include phones {
+
+		li {
+			@include inline-block(midlle);
+			margin-left: 6px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			&.slick-active {
+
+				button {
+					background: $blue;
+					outline: none;
+				}
+			}
+		}
+
+		button {
+			width: 7px;
+			height: 7px;
+			padding: 0;
+			font-size: 0;
+			background: $grey;
+			border: none;
+			@include border-radius(50%);
+			cursor: pointer;
+		}
+	}
+}

@@ -23,12 +23,20 @@
 	@include laptop {
 		width: auto;
 	}
+
+	@include laptop {
+		width: 100%;
+	}
 }
 
 .logo {
 
 	@include desktop {
 		width: 150px;
+	}
+
+	@include laptop {
+		margin: auto;
 	}
 }
 
@@ -70,6 +78,10 @@
 
     @include laptop {
 		width: auto;
+	}
+
+	@include phones {
+		display: none;
 	}
 }
 

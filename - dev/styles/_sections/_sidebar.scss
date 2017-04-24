@@ -4,20 +4,41 @@
 	width: 50px;
 	height: 750px;
     z-index: 10;
+
+    @include phones {
+    	width: auto;
+    	height: auto;
+    }
 }
 
 .sidebar-left {
 	padding-top: 17px;
 	left: 0;
+
+	@include phones {
+		padding-top: 30px;
+	    left: 14px;
+	}
 }
 
 .sidebar-right {
 	padding-top: 70px;
 	right: 0;
+
+	@include phones {
+	    padding-top: 30px;
+	    right: 10px;
+	}
 }
 
 .sidebar__item {
 	height: 50px;
+
+	@include phones {
+		@include inline-block(top);
+		width: 30px;
+		height: 30px;
+	}
 }
 
 .basket-value {
@@ -33,6 +54,11 @@
 	border: 1px solid $black;
 	@include border-radius(50%);
 	z-index: 2;
+
+	@include phones {
+		bottom: -2px;
+		right: -1px;
+	}
 }
 
 .sidebar__link {
@@ -49,14 +75,22 @@
 	}
 }
 
+.sidebar__item--search,
+.sidebar__item--address,
+.sidebar__item--language {
+	@include phones {
+		display: none;
+	}
+}
+
 .sidebar__link--burger {
 
 	&:after {
 		width: 24px;
 		height: 16px;
-		margin-top: -8px;
-		margin-left: -12px;
+		@include transform(translate(-50%, -50%));
 		background: url(../img/icons/sidebar/burger.png) no-repeat;
+		background-size: contain;
 	}
 }
 
@@ -65,9 +99,9 @@
 	&:after {
 		width: 22px;
 		height: 28px;
-		margin-top: -14px;
-		margin-left: -11px;
-		background: url(../img/icons/sidebar/basket.png) no-repeat; 
+		@include transform(translate(-50%, -50%));
+		background: url(../img/icons/sidebar/basket.png) no-repeat;
+		background-size: contain;
 	}
 }
 
@@ -76,9 +110,14 @@
 	&:after {
 		width: 28px;
 		height: 28px;
-		margin-top: -14px;
-		margin-left: -14px;
+		@include transform(translate(-50%, -50%));
 		background: url(../img/icons/sidebar/login.png) no-repeat;
+		background-size: contain;
+	}
+
+	@include phones {
+		width: 28px;
+		height: 28px;
 	}
 }
 
@@ -87,9 +126,9 @@
 	&:after {
 		width: 28px;
 		height: 28px;
-		margin-top: -14px;
-		margin-left: -14px;
+		@include transform(translate(-50%, -50%));
 		background: url(../img/icons/sidebar/search.png) no-repeat;
+		background-size: contain;
 	}
 }
 
@@ -98,9 +137,9 @@
 	&:after {
 		width: 24px;
 		height: 28px;
-		margin-top: -14px;
-		margin-left: -12px;
+		@include transform(translate(-50%, -50%));
 		background: url(../img/icons/sidebar/address.png) no-repeat;
+		background-size: contain;
 	}
 }
 
@@ -109,9 +148,9 @@
 	&:after {
 		width: 24px;
 		height: 18px;
-		margin-top: -9px;
-		margin-left: -12px;
+		@include transform(translate(-50%, -50%));
 		background: url(../img/icons/sidebar/language-en.png) no-repeat;
+		background-size: contain;
 	}
 }
 
@@ -121,6 +160,10 @@
     left: -52px;
 	width: 150px;
 	@include transform(rotate(-90deg));
+
+	@include phones {
+		display: none;
+	}
 }
 
 .developer__link {

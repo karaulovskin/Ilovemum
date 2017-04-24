@@ -41,11 +41,21 @@
 .gallery__left {
 	float: left;
 	width: 16%;
+
+	@include phones {
+		display: none;
+	}
 }
 
 .gallery__right {
 	float: right;
 	width: 80%;
+
+	@include phones {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
 }
 
 .gallery-prev__list {
@@ -75,6 +85,10 @@
 
 .gallery__list  {
 	margin-right: 38px;
+
+	@include phones {
+		margin-right: 0;
+	}
 }
 
 .gallery__item {
@@ -96,6 +110,10 @@
 .card__article {
 	font-size: rem(14px);
 	color: $grey;
+
+	@include phones {
+		font-size: 14px;
+	}
 }
 
 .card__article-value {
@@ -109,10 +127,19 @@
 
 .card__wrapp-price {
 	margin-bottom: 20px;
+	@extend %clearfix;
+
+	@include phones {
+		margin-bottom: 12px;
+	}
 }
 
 .card__price {
 	@include inline-block(middle);
+
+	@include phones {
+		float: left;
+	}
 }
 
 .card__price-descount {
@@ -135,27 +162,47 @@
 	margin-left: 50px;
 	font-size: rem(12px);
 	border-bottom: 1px solid $grey;
+
+	@include phones {
+		float: right;
+	}
 }
 
 .card__size {
 	margin-bottom: 20px;
 	@extend %clearfix;
+
+	@include phones {
+		margin-bottom: 12px;
+	}
 }
 
 .card__size-left,
 .card__size-right {
 	float: left;
 	width: 50%;
+
+	@include phones {
+		width: 100%;
+	}
 }
 
 .card__size-left {
 	position: relative;
 	padding: 0 10px 0 0;
+
+	@include phones {
+		padding: 0;
+	}
 }
 
 .card__size-right {
 	float: left;
 	padding: 0 0 0 10px;
+
+	@include phones {
+		padding: 0;
+	}
 }
 
 .card__size-wrapp {
@@ -248,6 +295,10 @@
 	@include top {
 		width: 70px;
 	}
+
+	@include phones {
+		width: 76px;
+	}
 }
 
 .card__size-watch-link--learn {
@@ -275,6 +326,10 @@
 	@include tablets {
 		padding-right: 10%;
 	}
+
+	@include phones {
+		padding-right: 0;
+	}
 }
 
 .card__shops-title {
@@ -284,6 +339,12 @@
 	width: 50%;
 	padding-right: 44px;
 	font-size: rem(12px);
+
+	@include phones {
+		width: 100%;
+		margin-bottom: 12px;
+		padding-right: 96px;
+	}
 }
 
 .card__shops-wrapp {
@@ -294,6 +355,10 @@
 	width: 50%;
 	// margin-left: 16px;
 	font-size: rem(12px);
+
+	@include phones {
+		width: 100%;
+	}
 }
 
 .card__shops-wrapp.active {
@@ -356,6 +421,11 @@
 	width: 50%;
 	padding: 0 14px 0 0;
 	text-align: center;
+
+	@include phones {
+		width: 100%;
+		padding: 0;
+	}
 }
 
 .card__buy-link {
@@ -374,6 +444,12 @@
 	margin-top: 12px;
 	padding: 0 0 0 14px;
 	@extend %clearfix;
+
+	@include phones {
+		width: 100%;
+		margin: 0 0 22px 0;
+		padding: 0;
+	}
 }
 
 .card__color-title {
@@ -437,6 +513,10 @@
 	@include tablets {
 		padding-right: 10%;
 	}
+
+	@include phones {
+		display: none;
+	}
 }
 
 .card__tabs-list {
@@ -455,6 +535,10 @@
 .card__tabs-item {
 	@include inline-block(top);
 	font-size: rem(16px);
+
+	@include phones {
+		display: block;
+	}
 }
 
 .card__tabs-item.active {
@@ -499,7 +583,9 @@
 	// width: 480px;
 	width: 90%;
 
-	
+	@include phones {
+		display: none;
+	}
 }
 
 .card__content-list {
@@ -571,12 +657,73 @@
 	margin-right: 34px;
 }
 
+.card__accordion-item {
+	padding: 0 0 0 20px;
+	border-top: 1px solid $grey;
+
+	&:first-child {
+		border-top: none;
+	}
+
+	&.active {
+		// border-top: 1px solid transparent;
+
+		.card__accordion-link {
+			&:after {
+			    @include transform(rotate(-180deg));;
+			}
+		}
+		.card__accordion-content {
+			display: block;
+
+		}
+	}
+}
+
+.card__accordion-link {
+	position: relative;
+	display: block;
+	padding: 16px 0;
+	text-transform: uppercase;
+	font-size: 14px;
+	color: $black;
+
+	&:after {
+	    content: "";
+	    position: absolute;
+	    top: 50%;
+	    right: 20px;
+	    width: 10px;
+	    height: 6px;
+	    @include transform(translateY(-50%));
+	    background: url(../img/icons/catalog/size_arrow.png);
+	    @include transition(.3s);
+	}
+
+	span {
+		@include inline-block(middle);
+	}
+
+	.card-rating__list {
+		margin-left: 8px;
+	}
+}
+
+.card__accordion-content {
+	display: none;
+}
+
 .card__socials {
 	margin-bottom: 6px;
 	padding: 6px 0;
 	border-top: 1px solid $grey;
 	border-bottom: 1px solid $grey;
 	@extend %clearfix;
+
+	@include phones {
+		margin-bottom: 16px;
+		padding: 12px 0;
+	}
 }
 
 .card__socials-title {
@@ -591,6 +738,10 @@
 	float: right;
 	margin-top: 4px;
 	margin-right:12px;
+
+	@include phones {
+		margin-right: 0;
+	}
 }
 
 .card__socials-item {
@@ -599,6 +750,10 @@
 
 	&:first-child {
 		margin-left: 0;
+	}
+
+	@include phones {
+		margin-left: 12px;
 	}
 }
 
@@ -641,6 +796,22 @@
 .card__info-item {
 	@include inline-block(middle);
 	font-size: rem(16px);
+
+	@include phones {
+
+		&:nth-child(2n+1) {
+			width: 42%;
+		}
+
+		&:nth-child(2n) {
+			width: 58%;
+		}
+
+		&:nth-child(1),
+		&:nth-child(2) {
+			margin-bottom: 14px;
+		}
+	}
 }
 
 .card__info-link {
@@ -687,10 +858,14 @@
 
 .card-look {
 	margin-bottom: 58px;
+
+	@include phones {
+		margin-bottom: 34px;
+	}
 }
 
 .card-look__list {
-	margin: 0 -12px;
+	margin: 0 -14px;
 	font-size: 0;
 }
 
@@ -698,6 +873,13 @@
 	@include inline-block(top);
 	position: relative;
 	height: 332px;
+
+	@include phones {
+		display: block !important;
+		width: 100% !important;
+		height: auto !important;
+		margin-bottom: 28px;
+	}
 }
 
 .card-look__banner-text {
@@ -709,6 +891,14 @@
 	text-align: center;
 	text-transform: uppercase;
 	font-size: rem(28px);
+
+	@include phones {
+		position: static;
+		margin-left: 14px;
+		padding: 0;
+		text-align: left;
+		font-size: 18px;
+	}
 }
 
 .card-look__item {
@@ -727,11 +917,25 @@
 	@include tablets {
 		width: 50%;
 	}
+
+	@include phones {
+		&:nth-child(2n) {
+			.card-look__block {
+				padding-right: 7px;
+			} 
+		}
+
+		&:nth-child(2n+1) {
+			.card-look__block {
+				padding-left: 7px;
+			}
+		}
+	}
 }
 
 .card-look__block {
 	position: relative;
-	padding: 0 12px;
+	padding: 0 14px;
 }
 
 .card-look__img {
@@ -892,13 +1096,25 @@
 	margin-top: 8px;
 	font-size: rem(16px);
 	font-size: rem(14px);
+
+	@include phones {
+		width: 100%;
+		margin-top: 20px;
+		font-size: 14px;
+	}
 }
 
 .card-look__desc-price {
-	text-align: right;
 	display: inline-block;
 	width: 32%;
+	text-align: right;
 	font-size: rem(14px);
+
+	@include phones {
+		width: 100%;
+	    margin-top: 3px;
+		text-align: left;
+	}
 }
 
 .card-look__desc-descount {
@@ -910,10 +1126,18 @@
 .card-look__desc-value {
 	margin-right: 4px;
 	font-weight: bold;
+
+	@include phones {
+		font-size: 16px;
+	}
 }
 
 .card-look__desc-sign {
 	font-size: rem(13px);
+
+	@include phones {
+		font-size: 14px;
+	}
 }
 
 .card-look__preloader {

@@ -1,5 +1,9 @@
 .breadcrumbs {
 	margin-bottom: 30px;
+
+	@include phones {
+		display: none;
+	}
 }
 
 .breadcrumbs__list {

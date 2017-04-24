@@ -88,7 +88,7 @@ $(document).ready(function(){
 		});
 	}());
 
-	// ACCORDION
+	// ACCORDION CATALOG
 	(function(){
 		$('.accordion__link').on('click', function(e){
 			e.preventDefault();
@@ -168,7 +168,9 @@ $(document).ready(function(){
 			size           = $('.filtr-size__link'),
 			sizeDropdown   = $('.filtr-size__dropdown'),
 			type           = $('.filtr-type__link'),
-			typeDropdown   = $('.filtr-type__dropdown');
+			typeDropdown   = $('.filtr-type__dropdown'),
+			allDropdown    = $('.filtr__dropdown'),
+			filtrToggle    = $('.filtr__toggle');
 
 		$(color).click(function(e){
 			e.preventDefault();
@@ -206,6 +208,28 @@ $(document).ready(function(){
 				typeDropdown.fadeOut();
 			}
 		});
+
+
+		// $(document).on('click', function(e) {
+		//  	if (!$(e.target).allDropdown) {
+		//    		if (allDropdown.is(':visible'))
+		//     		allDropdown.hide();
+		//     }
+		  
+		//   e.stopPropagation();
+		// });
+
+
+
+		// $(document).on('click', function(e) {
+		//  	if (!$(e.target).closest(".title").length && $("div").is(".title")) {
+		//    		if ($(".data-form-text").is(':visible'))
+		//     	$('.data-form-text').hide();
+		//     }
+		  
+		//   e.stopPropagation();
+		// });
+
 	}());
 
 
@@ -353,20 +377,22 @@ $(document).ready(function(){
 				arrows: false
 			});
 
-		} else if($(window).width() < '480') {
+		} else if($(window).width() < '481') {
 
-			$('.gallery-prev__list').slick({
-				asNavFor: '.gallery__list',
-				vertical: true,
-				slidesToShow: 4,
-				focusOnSelect: true
-				// arrows: false
-			});
+			// $('.gallery-prev__list').slick({
+			// 	asNavFor: '.gallery__list',
+			// 	vertical: true,
+			// 	slidesToShow: 4,
+			// 	focusOnSelect: true,
+			// 	dots: true
+			// 	arrows: false
+			// });
 
 			$('.gallery__list').slick({
-				asNavFor: '.gallery-prev__list',
+				// asNavFor: '.gallery-prev__list',
 				fade: true,
-				arrows: false
+				arrows: false,
+				dots: true
 			});
 		};
 
@@ -375,17 +401,12 @@ $(document).ready(function(){
 
 	// CARD ZOOM
 	(function(){
-
 		$('.gallery__img').zoom();
-
 	}());
 
 
 	// CARD ZOOM
 	(function(){
-
-
-
 
 		$('.gallery__img').on('click', function() {				
 			$('.gallery__img').zoom({
@@ -454,5 +475,70 @@ $(document).ready(function(){
 
 	}());
 
+	// CARD
+	(function(){
+
+		// меняю блоки местами
+		if($(window).width() <= '480'){
+			$('.card__color').insertBefore($('.card__buy'));
+			$('.card__info-item--ma').insertBefore($('.card__info-item--pa'));
+
+	    } else {
+	    	$('.card__buy').insertBefore($('.card__color'));
+	    	$('.card__info-item--pa').insertBefore($('.card__info-item--ma'));
+	    };
+
+	}());
+
+	// CARD ACCORDION
+	(function(){
+		$('.card__accordion-link').on('click', function(e){
+			e.preventDefault();
+
+			var
+				$this = $(this),
+				container = $this.closest('.card__accordion-list'),
+				item = $this.closest('.card__accordion-item'),
+				currentContent = item.find('.card__accordion-content'),
+				duration = 500;
+
+				// currentContent.slideToggle(duration);
+
+
+			if(!item.hasClass('active')) {
+
+				item
+					.addClass('active')
+					.siblings()
+					.removeClass('active')
+					.find('.card__accordion-content')
+					.stop(true, true)
+					.slideUp();
+
+				currentContent.stop(true, true).slideDown(duration);
+			} else {
+
+				item.removeClass('active');
+				currentContent.stop(true, true).slideUp();
+			}
+		});
+	}());
+
+});
+
+
+$(window).resize(function(){
+
+	(function(){
+		// меняю блоки местами 
+		if($(window).width() <= '480'){
+			$('.card__color').insertBefore($('.card__buy'));
+			$('.card__info-item--ma').insertBefore($('.card__info-item--pa'));
+
+	    } else {
+	    	$('.card__buy').insertBefore($('.card__color'));
+	    	$('.card__info-item--pa').insertBefore($('.card__info-item--ma'));
+	    };
+    }());
 });
 

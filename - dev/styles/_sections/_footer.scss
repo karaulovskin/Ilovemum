@@ -1,5 +1,9 @@
 .footer {
 	padding: 0 0 rem(45px);
+
+	@include phones {
+		padding: 0 0 rem(14px);
+	}
 }
 
 .footer__top {
@@ -37,143 +41,29 @@
 	@include laptop {
 		// font-size: 14px;
 	}
+
+	@include phones {
+		padding: 18px 16px;
+		font-size: 16px;
+	}
 }
 
 .footer__socials {
 	margin-bottom: 60px;
 	font-size: 0;
 	@extend %clearfix;
+
+	@include phones {
+		margin-bottom: 14px;
+	}
 }
-
-// .market {
-// 	position: relative;
-// 	float: left;
-// 	width: 40%;
-// 	padding-right: 60px;
-// 	@include clearfix;
-// }
-
-// .market__left {
-// 	position: absolute;
-// 	right: 236px;
-// 	bottom: 0;
-// 	// float: left;
-// 	width: 105px;
-// }
-
-// .market__right {
-// 	float: right;
-// 	width: 170px;
-// 	text-align: center;
-// }
-
-// .market__desc {
-// 	margin-bottom: 12px;
-// 	font-size: 12px;
-// }
-
-// .market__rating {
-// 	border: 1px solid $black;
-// 	@include border-radius(10px);
-// }
-
-// .market__rating-text {
-//     margin-right: 6px;
-// 	padding: 7px 0;
-//     font-size: 10px;
-// 	color: $black;
-// }
-
-// .rating__list {
-// 	@include inlineblock(middle);
-// 	font-size: 0;
-// }
-
-// .rating__item {
-// 	@include inlineblock(middle);
-// }
-
-// .socials {
-// 	float: left;
-// 	width: 60%;
-// }
-
-// .socials__list {
-// 	font-size: 0;
-// }
-
-// .socials__item {
-// 	@include inline-block(top);
-// 	width: 155px;
-// 	margin-left: 60px;
-// 	margin-left: 38px;
-// 	text-align: center;
-// 	font-size: 16px;
-
-// 	&:first-child {
-// 		margin-left: 0;
-// 	}
-// }
-
-// .socials__desc {
-// 	margin-bottom: 10px;
-// 	font-size: 12px;
-// }
-
-// .market__rating-text,
-// .market__rating-icon,
-// .socials__desc-number,
-// .socials__desc-participant {
-// 	@include inline-block();
-// }
-
-// .socials__link {
-// 	display: block;
-// 	@include border-radius(3px);
-// }
-
-// .socials__link--ig {
-// 	background: #515151;
-
-// 	.socials__logo {
-// 		padding: 4px 0 6px!important;
-// 	}
-// }
-
-// .socials__link--vk {
-// 	background: #878787;
-// }
-
-// .socials__link--fb {
-// 	background: #7e7e7e;
-// }
-
-// .socials__logo-icon,
-// .socials__logo-text {
-// 	@include inline-block(middle);
-// }
-
-// .socials__logo-text {
-// 	margin-left: 3px;
-// }
-
-// .socials__logo-icon--ig {
-// 	margin-top: 3px;
-// }
-
-// .socials__logo-icon--vk {
-// 	margin-top: 1px;
-// }
-
-// .socials__logo {
-// 	position: relative;
-// 	padding: 4px 0 8px;
-// 	color: #fff;
-//     font-size: 12px;
-// }
 
 .footer__counter {
 	margin-bottom: rem(58px);
+
+	@include phones {
+		margin-bottom: 28px;
+	}
 }
 
 .counter {
@@ -204,6 +94,19 @@
 		margin-bottom: 14px;
 		padding-right: 0;
 	}
+
+	@include phones {
+		margin-bottom: 18px;
+		.counter__text {
+			padding: 16px 0;
+		}
+	}
+
+	p {
+		&:last-child {
+			display: block;
+		}
+	}
 }
 
 .counter__right {
@@ -216,6 +119,12 @@
 
 	@include tablets {
 		padding-left: 0;
+	}
+
+	@include phones {
+		.counter__text {
+			padding: 14px 0;
+		}
 	}
 }
 
@@ -238,6 +147,10 @@
 
 	@include laptop {
 		font-size: 12px;
+	}
+
+	@include phones {
+		font-size: 18px;
 	}
 }
 
@@ -302,6 +215,19 @@
 			}
 		}
 	}
+
+	@include phones {
+		font-size: 24px;
+		padding: 0 5px;
+
+		&:last-child {
+			padding: 17px 12px 16px 12px;
+
+			&:after {
+				height: 10px;
+			}
+		}
+	}
 }
 
 .footer__nav {
@@ -331,6 +257,10 @@
 	.nav__item {
 		margin-bottom: 14px;
 	}
+
+	@include phones {
+		display: none;
+	}
 }
 
 .footer__bootom {
@@ -348,6 +278,10 @@
 	text-align: center;
 	text-transform: uppercase;
 	font-size: rem(12px);
+
+	@include phones {
+		font-size: 12px;
+	}
 }
 
 
@@ -365,6 +299,11 @@
 	@include laptop {
 		text-align: center;
 	}
+
+	@include phones {
+		width: 100%;
+		margin-bottom: 28px;
+	}
 }
 
 .market__left {
@@ -374,6 +313,11 @@
     @include laptop {
 		display: block;
 		margin: 0 auto;
+	}
+
+	@include phones {
+		@include inline-block(middle);
+		
 	}
 }
 
@@ -385,11 +329,20 @@
 	@include laptop {
 		margin-left: 0;
 	}
+
+	@include phones {
+		margin-left: 10px;
+	}
 }
 
 .market__desc {
 	margin-bottom: 8px;
 	font-size: rem(12px);
+
+	@include phones {
+		margin-left: 0;
+		font-size: 11px;
+	}
 }
 
 .market__rating {
@@ -407,6 +360,8 @@
 		height: 14px;
 		background: url(../img/decor/ya-decor.png) no-repeat;
 	}
+
+
 }
 
 .market__rating-text {
@@ -414,6 +369,10 @@
 	padding: 7px 0 8px 0;
     font-size: rem(10px);
 	color: $black;
+
+	@include phones {
+		font-size: 9px;
+	}
 }
 
 .rating__list {
@@ -432,6 +391,10 @@
 
 	@include top {
 		width: 67%;
+	}
+
+	@include phones {
+		width: 100%;
 	}
 }
 
@@ -465,11 +428,25 @@
 		width: 120px;
 		margin-left: 24px;
 	}
+
+	@include phones {
+		display: block;
+		width: 155px;
+		margin: 0 auto 24px; 
+
+		&:first-child {
+			margin: 0 auto 24px; 
+		}
+	}
 }
 
 .socials__desc {
 	margin-bottom: 10px;
 	font-size: rem(12px);
+
+	@include phones {
+		font-size: 11px;
+	}
 }
 
 .market__rating-text,
@@ -477,6 +454,10 @@
 .socials__desc-number,
 .socials__desc-participant {
 	@include inline-block();
+}
+
+.socials__desc-participant {
+	text-transform: lowercase;
 }
 
 .socials__link {
@@ -507,6 +488,10 @@
 
 .socials__logo-text {
 	margin-left: 3px;
+
+	@include phones {
+		font-size: 14px;
+	}
 }
 
 .socials__logo-icon--ig {
@@ -524,6 +509,10 @@
     font-size: rem(12px);
 
     @include laptop {
+		padding: 6px 0 8px;
+	}
+
+	@include laptop {
 		padding: 6px 0 8px;
 	}
 }
