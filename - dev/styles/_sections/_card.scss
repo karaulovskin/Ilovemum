@@ -58,6 +58,10 @@
 	}
 }
 
+.gallery__right-content {
+	position: relative;
+}
+
 .gallery-prev__list {
 	width: 75px;
 	margin: 0 auto;
@@ -413,6 +417,10 @@
 .card__wrapp-buy {
 	margin-bottom: 20px;
 	@extend %clearfix;
+
+	@include phones {
+		margin-bottom: 0;
+	}
 }
 
 .card__buy {
@@ -633,6 +641,7 @@
 
 .card__desc-notice {
 	margin-bottom: 14px;
+	font-size: rem(14px);
 }
 
 .card__desc-notice span {
@@ -655,6 +664,14 @@
 .card__features-desc {
 	float: right;
 	margin-right: 34px;
+}
+
+.card__accordion {
+	display: none;
+
+	@include phones {
+		display: block;
+	}
 }
 
 .card__accordion-item {
@@ -878,7 +895,7 @@
 		display: block !important;
 		width: 100% !important;
 		height: auto !important;
-		margin-bottom: 28px;
+		margin-bottom: 28px !important;
 	}
 }
 
@@ -919,6 +936,8 @@
 	}
 
 	@include phones {
+		margin-bottom: 20px;
+
 		&:nth-child(2n) {
 			.card-look__block {
 				padding-right: 7px;
@@ -995,6 +1014,16 @@
 	@include laptop {
 		width: 48px;
 	}
+
+	@include phones {
+		width: 32px;
+		height: 32px;
+
+		&:after {
+			width: 14px;
+			height: 20px;
+		}
+	}
 }
 
 .card-look__size {
@@ -1006,6 +1035,10 @@
 
 	@include laptop {
 		width: calc(100% - 48px);
+	}
+
+	@include phones {
+		width: calc(100% - 32px);
 	}
 }
 
@@ -1028,7 +1061,20 @@
 		width: 10px;
 		height: 6px;
 		@include transform(translateY(-50%));
-		background: url(../img/icons/catalog/size_arrow.png)
+		background: url(../img/icons/catalog/size_arrow.png)no-repeat;
+		background-size: contain;
+	}
+
+	@include phones {
+		padding: 10px 10px 9px 0;
+		text-align: center;
+		font-size: 8px;
+
+		&:after {
+			right: 12px;
+			width: 8px;
+			height: 5px;
+		}
 	}
 }
 
@@ -1043,6 +1089,11 @@
 	background: #fff;
 	border: 1px solid #b7b7b7;
 	border-top: transparent;
+
+	@include phones {
+		top: 30px;
+		padding-bottom: 8px;
+	}
 }
 
 .card-look__size-link {
@@ -1062,6 +1113,10 @@
 	bottom: 80px;
 	left: 0;
 	font-size: 0;
+
+	@include phones {
+		bottom: 37px;
+	}
 }
 
 .card-look__stock-item {
@@ -1099,7 +1154,7 @@
 
 	@include phones {
 		width: 100%;
-		margin-top: 20px;
+		margin-top: 10px;
 		font-size: 14px;
 	}
 }

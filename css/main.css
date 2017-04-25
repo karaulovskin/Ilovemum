@@ -938,6 +938,10 @@ footer {
   }
 }
 
+.gallery__right-content {
+  position: relative;
+}
+
 .gallery-prev__list {
   width: 75px;
   margin: 0 auto;
@@ -1309,6 +1313,11 @@ footer {
 .card__wrapp-buy {
   margin-bottom: 20px;
 }
+@media screen and (max-width: 480px) {
+  .card__wrapp-buy {
+    margin-bottom: 0;
+  }
+}
 
 .card__buy {
   float: left;
@@ -1557,6 +1566,7 @@ footer {
 
 .card__desc-notice {
   margin-bottom: 14px;
+  font-size: 0.875rem;
 }
 
 .card__desc-notice span {
@@ -1574,6 +1584,15 @@ footer {
 .card__features-desc {
   float: right;
   margin-right: 34px;
+}
+
+.card__accordion {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .card__accordion {
+    display: block;
+  }
 }
 
 .card__accordion-item {
@@ -1801,7 +1820,7 @@ footer {
     display: block !important;
     width: 100% !important;
     height: auto !important;
-    margin-bottom: 28px;
+    margin-bottom: 28px !important;
   }
 }
 
@@ -1850,6 +1869,9 @@ footer {
   }
 }
 @media screen and (max-width: 480px) {
+  .card-look__item {
+    margin-bottom: 20px;
+  }
   .card-look__item:nth-child(2n) .card-look__block {
     padding-right: 7px;
   }
@@ -1921,6 +1943,16 @@ footer {
     width: 48px;
   }
 }
+@media screen and (max-width: 480px) {
+  .card-look__buy {
+    width: 32px;
+    height: 32px;
+  }
+  .card-look__buy:after {
+    width: 14px;
+    height: 20px;
+  }
+}
 
 .card-look__size {
   float: left;
@@ -1932,6 +1964,11 @@ footer {
 @media screen and (max-width: 992px) {
   .card-look__size {
     width: calc(100% - 48px);
+  }
+}
+@media screen and (max-width: 480px) {
+  .card-look__size {
+    width: calc(100% - 32px);
   }
 }
 
@@ -1957,7 +1994,20 @@ footer {
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  background: url(../img/icons/catalog/size_arrow.png);
+  background: url(../img/icons/catalog/size_arrow.png) no-repeat;
+  background-size: contain;
+}
+@media screen and (max-width: 480px) {
+  .card-look__size-title {
+    padding: 10px 10px 9px 0;
+    text-align: center;
+    font-size: 8px;
+  }
+  .card-look__size-title:after {
+    right: 12px;
+    width: 8px;
+    height: 5px;
+  }
 }
 
 .card-look__size-list {
@@ -1971,6 +2021,12 @@ footer {
   background: #fff;
   border: 1px solid #b7b7b7;
   border-top: transparent;
+}
+@media screen and (max-width: 480px) {
+  .card-look__size-list {
+    top: 30px;
+    padding-bottom: 8px;
+  }
 }
 
 .card-look__size-link {
@@ -1989,6 +2045,11 @@ footer {
   bottom: 80px;
   left: 0;
   font-size: 0;
+}
+@media screen and (max-width: 480px) {
+  .card-look__stock-list {
+    bottom: 37px;
+  }
 }
 
 .card-look__stock-item {
@@ -2026,7 +2087,7 @@ footer {
 @media screen and (max-width: 480px) {
   .card-look__desc-name {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 14px;
   }
 }

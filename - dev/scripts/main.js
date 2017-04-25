@@ -374,7 +374,8 @@ $(document).ready(function(){
 			$('.gallery__list').slick({
 				asNavFor: '.gallery-prev__list',
 				fade: true,
-				arrows: false
+				arrows: false,
+				dots: false
 			});
 
 		} else if($(window).width() < '481') {
