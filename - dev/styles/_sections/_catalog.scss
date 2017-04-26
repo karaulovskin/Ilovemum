@@ -6,11 +6,27 @@
 .catalog__left {
 	float: left;
 	width: 23%;
+
+	@include tablets {
+		float: none;
+		position: absolute;
+		left: -9999px;
+
+		.open {
+			position: fixed;
+		    left: 0;
+		}
+	}
 }
 
 .catalog__right {
 	float: right;
 	width: 77%;
+
+	@include tablets {
+		float: none;
+		width: 100%;
+	}
 }
 
 .catalog__list {
@@ -141,11 +157,25 @@
 	&:after {
 		content: "";
 		position: absolute;
-		top: 10px;
-		left: 18px;
+		top: 50%;
+		left: 0;
+		right: 0;
 		width: 22px;
 		height: 28px;
+		margin: auto;
+		@include transform(translateY(-50%));
 		background: url(../img/icons/catalog/basket.png) no-repeat;
+		background-size: contain;
+	}
+
+	@include phones {
+		width: 32px;
+		height: 32px;
+
+		&:after {
+			width: 14px;
+			height: 20px;
+		}
 	}
 }
 
@@ -155,6 +185,10 @@
 	width: calc(100% - 60px);
 	background: #fff;
 	cursor: pointer;
+
+	@include phones {
+		width: calc(100% - 32px);
+	}
 }
 
 .catalog__size-title {
@@ -170,35 +204,49 @@
 	&:after {
 		content: "";
 		position:absolute;
-		top: 22px;
+		top: 50%;
 		right: 44px;
 		width: 10px;
 		height: 6px;
+		@include transform(translateY(-50%));
 		background: url(../img/icons/catalog/size_arrow.png)no-repeat;
+		background-size: contain;
 		@include transition(.3s);
 	}
-}
 
-.catalog__size-title {
-	position: relative;
-	padding: 15px 0;
-	padding-left: 20%;
-	text-transform: uppercase;
-	font-size: 14px;
-	// background: #fff;
-	border: 1px solid #b7b7b7;
-	// border-bottom: transparent;
+	@include phones {
+	    padding: 10px 10px 9px 0;
+	    text-align: center;
+		font-size: 8px;
 
-	&:after {
-		content: "";
-		position:absolute;
-		top: 22px;
-		right: 44px;
-		width: 10px;
-		height: 6px;
-		background: url(../img/icons/catalog/size_arrow.png)
+		&:after {
+			right: 12px;
+			width: 8px;
+			height: 5px;
+		}
 	}
 }
+
+// .catalog__size-title {
+// 	position: relative;
+// 	padding: 15px 0;
+// 	padding-left: 20%;
+// 	text-transform: uppercase;
+// 	font-size: 14px;
+// 	// background: #fff;
+// 	border: 1px solid #b7b7b7;
+// 	// border-bottom: transparent;
+
+// 	&:after {
+// 		content: "";
+// 		position:absolute;
+// 		top: 22px;
+// 		right: 44px;
+// 		width: 10px;
+// 		height: 6px;
+// 		background: url(../img/icons/catalog/size_arrow.png)
+// 	}
+// }
 
 .catalog__size-list {
 	display: none;
@@ -229,19 +277,28 @@
 	position: absolute;
 	bottom: 80px;
 	left: 0;
+	width: 140px;
 	font-size: 0;
+
+	@include phones {
+		bottom: 37px;
+	}
 }
 
 .catalog__stock-item {
+	display: inline-block;
 	margin-top: 4px;
 	padding: 2px 18px;
 	text-align: center;
 	font-size: 11px;
+	font-size: rem(10px);
 	color: $black;
 
 	&:first-child {
 		margin-top: 0;
 	}
+
+
 }
 
 .catalog__stock-item--last {
@@ -259,6 +316,10 @@
 
 .catalog__desc-name {
 	margin-top: 10px;
+
+	@include phones {
+		font-size: 14px;
+	}
 }
 
 .catalog__desc-price {

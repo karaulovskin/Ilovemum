@@ -1,6 +1,10 @@
 .filtr {
 	margin-bottom: 16px;
 	@extend %clearfix;
+
+	@include tablets {
+	
+	}
 }
 
 .filtr__title {

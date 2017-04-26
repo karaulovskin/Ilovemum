@@ -50,10 +50,12 @@
 .gallery__right {
 	float: right;
 	width: 80%;
+	padding-right: 38px;
 
 	@include phones {
 		float: none;
 		width: 100%;
+		padding-right: 0;
 		text-align: center;
 	}
 }
@@ -88,7 +90,7 @@
 }
 
 .gallery__list  {
-	margin-right: 38px;
+	// margin-right: 38px;
 
 	@include phones {
 		margin-right: 0;
@@ -109,6 +111,30 @@
 .gallery__img-pic {
 	cursor: -webkit-zoom-in;
 	cursor: zoom-in;
+}
+
+.gallery__stock-list {
+    position: absolute;
+    bottom: 54px;
+    right: 0;
+	width: 140px;
+	text-align: right;
+}
+
+.gallery__stock-item {
+	display: inline-block;
+	margin-top: 4px;
+	padding: 2px 18px;
+	font-size: rem(11px);
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+.gallery__stock-link {
+	display: inline-block;
+	color: $black;
 }
 
 .card__article {
@@ -186,7 +212,18 @@
 	float: left;
 	width: 50%;
 
+	@include laptop {
+		float: none;
+		width: 100%;
+	}
+
+	@include tablets {
+		float: left;
+		width: 50%;
+	}
+
 	@include phones {
+		float: none;
 		width: 100%;
 	}
 }
@@ -194,6 +231,14 @@
 .card__size-left {
 	position: relative;
 	padding: 0 10px 0 0;
+
+	@include laptop {
+		padding: 0;
+	}
+
+	@include tablets {
+		padding: 0 10px 0 0;
+	}
 
 	@include phones {
 		padding: 0;
@@ -203,6 +248,14 @@
 .card__size-right {
 	float: left;
 	padding: 0 0 0 10px;
+
+	@include laptop {
+		padding: 0;
+	}
+
+	@include tablets {
+		padding: 0 0 0 10px;
+	}
 
 	@include phones {
 		padding: 0;
@@ -246,6 +299,10 @@
     border: 1px solid #b7b7b7;
     border-top: transparent;
     z-index: 1;
+
+    @include laptop {
+    	top: 46px;
+    }
 }
 
 .card__size-value-link {
@@ -1112,6 +1169,7 @@
 	position: absolute;
 	bottom: 80px;
 	left: 0;
+	width: 130px;
 	font-size: 0;
 
 	@include phones {
@@ -1120,12 +1178,12 @@
 }
 
 .card-look__stock-item {
+	display: inline-block;
 	margin-top: 4px;
 	padding: 2px 18px;
 	text-align: center;
 	font-size: rem(11px);
 	font-size: rem(10px);
-	color: $black;
 
 	&:first-child {
 		margin-top: 0;
@@ -1138,6 +1196,10 @@
 
 .card-look__stock-item--sale {
 	background: $red;
+}
+
+.card-look__stock-link {
+	color: $black;
 }
 
 .card-look__desc-link {

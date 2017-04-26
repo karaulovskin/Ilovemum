@@ -113,6 +113,10 @@ footer {
     box-sizing: content-box;
 	@extend %clearfix;
 
+	@include tablets {
+	    padding: 0 20px;
+	}
+
 	@include phones {
 	    padding: 0 14px;
 	}

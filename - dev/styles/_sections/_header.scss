@@ -24,8 +24,8 @@
 		width: auto;
 	}
 
-	@include laptop {
-		width: 100%;
+	@include phones {
+		// width: 100%;
 	}
 }
 
@@ -77,7 +77,7 @@
 	}
 
     @include laptop {
-		width: auto;
+		float: left;
 	}
 
 	@include phones {

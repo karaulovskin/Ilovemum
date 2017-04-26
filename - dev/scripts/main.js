@@ -525,6 +525,21 @@ $(document).ready(function(){
 		});
 	}());
 
+	// HEADER
+	(function(){
+
+		// меняю блоки местами
+		if($(window).width() <= '768'){
+			$('.sidebar__item--login').insertBefore($('.sidebar__item--basket'));
+			$('.sidebar__item--address').insertBefore($('.sidebar__item--login'));
+
+	    } else {
+	    	$('.sidebar__item--basket').insertBefore($('.sidebar__item--login'));
+			$('.sidebar__item--login').insertBefore($('.sidebar__item--address'));
+	    };
+
+	}());
+
 });
 
 
@@ -541,5 +556,20 @@ $(window).resize(function(){
 	    	$('.card__info-item--pa').insertBefore($('.card__info-item--ma'));
 	    };
     }());
+
+    // HEADER
+	(function(){
+
+		// меняю блоки местами
+		if($(window).width() <= '768'){
+			$('.sidebar__item--login').insertBefore($('.sidebar__item--basket'));
+			$('.sidebar__item--address').insertBefore($('.sidebar__item--login'));
+
+	    } else {
+	    	$('.sidebar__item--basket').insertBefore($('.sidebar__item--address'));
+			$('.sidebar__item--login').insertBefore($('.sidebar__item--address'));
+	    };
+
+	}());
 });
 

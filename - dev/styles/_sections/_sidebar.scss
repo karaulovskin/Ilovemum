@@ -5,7 +5,8 @@
 	height: 750px;
     z-index: 10;
 
-    @include phones {
+    @include tablets {
+    	position: relative;
     	width: auto;
     	height: auto;
     }
@@ -15,9 +16,10 @@
 	padding-top: 17px;
 	left: 0;
 
-	@include phones {
+	@include tablets {
+		float: left;
 		padding-top: 30px;
-	    left: 14px;
+	    left: 0;
 	}
 }
 
@@ -25,16 +27,17 @@
 	padding-top: 70px;
 	right: 0;
 
-	@include phones {
+	@include tablets {
+		float: right;
 	    padding-top: 30px;
-	    right: 10px;
+	    right: 0;
 	}
 }
 
 .sidebar__item {
 	height: 50px;
 
-	@include phones {
+	@include tablets {
 		@include inline-block(top);
 		width: 30px;
 		height: 30px;
@@ -55,7 +58,7 @@
 	@include border-radius(50%);
 	z-index: 2;
 
-	@include phones {
+	@include tablets {
 		bottom: -2px;
 		right: -1px;
 	}
@@ -76,9 +79,8 @@
 }
 
 .sidebar__item--search,
-.sidebar__item--address,
 .sidebar__item--language {
-	@include phones {
+	@include tablets {
 		display: none;
 	}
 }
@@ -161,7 +163,7 @@
 	width: 150px;
 	@include transform(rotate(-90deg));
 
-	@include phones {
+	@include tablets {
 		display: none;
 	}
 }

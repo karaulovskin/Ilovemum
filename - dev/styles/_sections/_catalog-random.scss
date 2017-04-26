@@ -1,5 +1,9 @@
 .catalog-random {
 	margin-bottom: 16px;
+
+	@include phones {
+		display: none;
+	}
 }
 
 .catalog-random__list {
