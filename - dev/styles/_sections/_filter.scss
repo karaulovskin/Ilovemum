@@ -7,10 +7,85 @@
 	}
 }
 
-.filtr__title {
+.filtr-toggle__link {
+	display: none;
+	position: relative;
+	float: left;
+	width: 16px;
+    height: 14px;
+	font-size: 0;
+
+	&:before {
+		content: "";
+	    position: absolute;
+	    top: 50%;
+	    left: 0;
+	    width: 16px;
+	    height: 14px;
+	    margin-top: -6px;
+	    background: url(../img/icons/catalog/filter.png) no-repeat;
+	    background-size: contain;
+	}
+
+	@include tablets {
+		display: block;
+	}
+}
+
+.filtr__wrapp {
+	float: left;
+	width: 74%;
+	@extend %clearfix;
+
+	@include tablets {
+		position: absolute;
+		top: 0;
+		left: -9999px;
+		bottom: 0;
+		width: 300px;
+		height: 100%;
+		background: #fff;
+	    z-index: 11;
+
+		&.open {
+			left: 0;
+		}
+	}
+}
+
+.filtr-close {
+	display: none;
+	position: absolute;
+	top: 20px;
+	right: 17px;
+	width: 16px;
+	height: 14px;
+	font-size: 0;
+	z-index: 1;
+	cursor: pointer;
+
+	@include tablets {
+		display: block;
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 0;
+			width: 16px;
+			height: 14px;
+			@include transform(translateY(-50%));
+			background: url(../img/decor/close.png) no-repeat;
+			background-size: contain;
+		}
+	}
+}
+
+.filtr-title {
 	float: left;
 	position: relative;
 	width: 10%;
+	width: 14%;
 	margin-top: 2px;
 	padding-left: 24px;
 	text-transform: uppercase;
@@ -26,6 +101,16 @@
 		height: 14px;
 		margin-top: -6px;
 		background: url(../img/icons/catalog/filter.png) no-repeat;
+	}
+
+	@include tablets {
+		margin: 0;
+		width: 100%;
+		padding: 16px 55px;
+
+		&:before {
+			left: 20px;
+		}
 	}
 }
 
@@ -44,30 +129,54 @@
 		color: #fff;
 		background: $blue;
 	}
+
+
 }
 
 .filtr-color {
 	position: relative;
 	float: left;
 	width: 16%;
+	width: 22%;
 }
 
 .filtr-size {
 	position: relative;
 	float: left;
 	width: 16%;
+	width: 21%;
 }
 
 .filtr-type {
 	position: relative;
 	float: left;
 	width: 18%;
+	width: 23%;
 }
 
 .filtr-clear {
 	position: relative;
 	float: left;
 	width: 12%;
+	width: 20%;
+
+	@include tablets {
+		float: none;
+		width: 100%;
+	}
+}
+
+.filtr-title,
+.filtr-color,
+.filtr-size,
+.filtr-type {
+
+	@include tablets {
+		float: none;
+		width: 100%;
+		// padding: 0 20px;
+		border-bottom: 1px solid rgba(242, 242, 242, .55);
+	}
 }
 
 .filtr-color__link,
@@ -97,10 +206,23 @@
 	&:after {
 		@include transform(rotate(-45deg));
 	}
+
+	@include tablets {
+		margin: 0 !important;
+		padding: 16px 20px !important;
+
+		&:before {
+			right: 20px !important;
+		}
+
+		&:after {
+			right: 25px !important;
+		}
+	}
 }
 
 .filtr-color__link {
-	padding-left: 26px;
+	margin-left: 26px;
 
 	&:before {
 		right: 37px;
@@ -123,7 +245,7 @@
 }
 
 .filtr-size__link {
-	padding-left: 25px;
+	margin-left: 26px;
 
 	&:before {
 		right: 19px;
@@ -146,7 +268,7 @@
 }
 
 .filtr-type__link {
-	padding-left: 15px;
+	margin-left: 26px;
 
 	&:before {
 		right: 72px;
@@ -190,6 +312,17 @@
 	border: 1px solid #b7b7b7;
 	background: #fff;
 	z-index: 10;
+
+	@include tablets {
+		position: static;
+		width: 100% !important;
+		padding: 0 20px 30px;
+		border: none;
+
+		.filtr-apply__link {
+			display: none;
+		}
+	}
 }
 
 .filtr-type__dropdown {
@@ -350,7 +483,30 @@
 	}
 }
 
-.filtr-clear__link {
+.filtr-clear__list {
+	margin: 20px 0 0 0;
+	font-size: 0;
+}
+
+.filtr-clear__item {
+	&:first-child {
+		display: none;
+	}
+
+	@include tablets {
+		@include inline-block(top);
+		width: 50%;
+		padding: 0 20px 0 10px;
+		font-size: 16px;
+
+		&:first-child {
+			@include inline-block(top);
+			padding: 0 10px 0 20px;
+		}
+	}
+}
+
+.filtr-clear__link--reset {
 	position: relative;
 	top: -3px;
 	display: inline-block;
@@ -381,6 +537,39 @@
 		height: 1px;
 		background: $grey;
 		@include transform(rotate(45deg));
+	}
+
+	&:hover {
+		color: #fff;
+		background: $grey;
+		
+		&:before, &:after {
+			background: #fff;
+
+		}
+	}
+
+	@include tablets {
+		display: block;
+		top: 0;
+		padding: 8px 28px 8px 14px;
+		text-align: center;
+	}	
+}
+
+.filtr-clear__link--apply {
+	display: block;
+	padding: 8px 0;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: rem(12px);
+	color: $blue;
+	border: 1px solid $blue;
+	@include border-radius(16px);
+
+	&:hover {
+		color: #fff;
+		background: $blue;
 	}
 }
 

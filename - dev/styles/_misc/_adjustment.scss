@@ -66,9 +66,9 @@ a {
 
 footer {
 	position: relative;
-	// min-width: $container-width + 50;
+	max-width: 1920px;
 	height: $footer-height;
-	margin-top: -$footer-height;
+	margin: -$footer-height auto 0;
 
 	@include tablets {
 		height: 751px;
@@ -83,11 +83,12 @@ footer {
 
 .wrapper {
     position: relative;
+    max-width: 1920px;
     min-height: 100%;
     height: auto !important;
     height: 100%;
+    margin: auto;
     overflow: hidden;
-	// max-width: $container-width + 50px;
 
 	&:after {
 		content: "";
@@ -106,8 +107,8 @@ footer {
 }
 
 .container {
-    position: relative;
-    max-width: $container-width;
+    // position: relative;
+    max-width: 1820px;
     margin: 0 auto;
     padding: 0 50px;
     box-sizing: content-box;
@@ -160,6 +161,7 @@ footer {
 	bottom: 0;
 	display: none;
 	background: rgba(37, 37, 37, .35);
+	z-index: 10;
 }
 
 

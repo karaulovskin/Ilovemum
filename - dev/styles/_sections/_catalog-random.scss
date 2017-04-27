@@ -1,8 +1,28 @@
 .catalog-random {
 	margin-bottom: 16px;
 
-	@include phones {
+	@include tablets {
 		display: none;
+	}
+}
+
+.catalog-random--panel {
+	display: none;
+
+	@include tablets {
+		display: block;
+		margin-top: 18px;
+		padding: 20px;
+    	text-align: justify;
+
+    	.catalog-random__list {
+    		margin: 0 -15px;
+    	}
+
+    	.catalog-random__item {
+    		padding: 0 15px;
+    		margin: 0 0 10px;
+    	}
 	}
 }
 

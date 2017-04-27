@@ -3,18 +3,29 @@ $(document).ready(function(){
 	// PANEL
 	(function(){
 		var
-			burger   = $('.sidebar__link--burger'),
-			basket   = $('.sidebar__link--basket'),
-			login    = $('.sidebar__link--login'),
-			search   = $('.sidebar__link--search'),
-			address  = $('.sidebar__link--address'),
-			language = $('.sidebar__link--language'),
-			open     = $('.sidebar__link'),
-			close    = $('.panel__close-link'),
-			overlay  = $('.overlay'),
-			body     = $('body');
+			burger      = $('.sidebar__link--burger'),
+			basket      = $('.sidebar__link--basket'),
+			login       = $('.sidebar__link--login'),
+			search      = $('.sidebar__link--search'),
+			address     = $('.sidebar__link--address'),
+			language    = $('.sidebar__link--language'),
+			filtr       = $('.filtr-toggle__link'),
+			open        = $('.sidebar__link'),
+			close       = $('.panel__close-link'),
+			filtrClose  = $('.filtr-close'),
+			overlay  	= $('.overlay'),
+			body     	= $('body');
 
 		$(open).click(function(e){
+			e.preventDefault();
+			if(!body.hasClass('panel-blocking')) {
+				body.addClass('panel-blocking');
+			} else {
+				body.removeClass('panel-blocking');
+			};
+		});
+
+		$(filtr).click(function(e){
 			e.preventDefault();
 			if(!body.hasClass('panel-blocking')) {
 				body.addClass('panel-blocking');
@@ -69,6 +80,12 @@ $(document).ready(function(){
 			$(overlay).fadeIn();
 		});
 
+		$(filtr).click(function(e){
+			e.preventDefault();
+			$('.filtr__wrapp').addClass('open');
+			$(overlay).fadeIn();
+		});
+
 		$(open).click(function(e){
 			e.preventDefault();
 			$('.panel-open').addClass('open');
@@ -81,12 +98,27 @@ $(document).ready(function(){
 			$(overlay).fadeOut();
 		});
 
+		$(filtrClose).click( function(e){
+			e.preventDefault();
+			$('.filtr__wrapp').removeClass('open');
+			$(overlay).fadeOut();
+		});
+
 		$(overlay).click( function(e){
 			e.preventDefault();
 			$('.panel').removeClass('open');
 			$(overlay).fadeOut();
 		});
+
+		$(overlay).click( function(e){
+			e.preventDefault();
+			$('.filtr__wrapp').removeClass('open');
+			$(overlay).fadeOut();
+		});
+
+
 	}());
+
 
 	// ACCORDION CATALOG
 	(function(){
