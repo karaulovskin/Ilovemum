@@ -32,11 +32,20 @@
 	float: left;
 	width: 71%;
 	padding-right: rem(30px);
+
+	@include phones {
+		// width: 56%;
+		// padding: 0;
+	}
 }
 
 .panel__basket-right{ 
 	float: right;
 	width: 29%;
+
+	@include phones {
+		// width: 44%;
+	}
 }
 
 .panel__basket-model {

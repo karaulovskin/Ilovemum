@@ -43,8 +43,9 @@
 		left: -9999px;
 		bottom: 0;
 		width: 300px;
-		height: 100%;
+		height: 100vh;
 		background: #fff;
+		overflow: auto;
 	    z-index: 11;
 
 		&.open {
@@ -600,6 +601,10 @@
 		right: 0px;
 		@include transform(rotate(-45deg));
 	}
+
+	@include tablets {
+		width: 80%;
+	}
 }
 
 .filtr-sort__value {
@@ -614,4 +619,5 @@
 	font-family: 'Robotolight';
 	border: none;
 	opacity: 0;
+	cursor: pointer;
 }

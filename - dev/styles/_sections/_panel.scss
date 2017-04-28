@@ -5,6 +5,11 @@
 	background: $panel;
 	// @include transition(.1s);
 	z-index: 110;
+
+	@include phones {
+		width: 300px;
+		padding: 18px 20px 30px 20px;
+	}
 }
 
 .panel__wrapp {
@@ -38,6 +43,10 @@
 	width: 20px;
 	height: 20px;
 	font-size: 0;
+
+	@include phones {
+		right: 0;
+	}
 }
 
 .panel__close-link {

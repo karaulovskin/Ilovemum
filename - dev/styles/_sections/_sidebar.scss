@@ -21,6 +21,10 @@
 		padding-top: 30px;
 	    left: 0;
 	}
+
+	@include phones {
+		padding-top: 20px;
+	}
 }
 
 .sidebar-right {
@@ -32,6 +36,10 @@
 	    padding-top: 30px;
 	    right: 0;
 	}
+
+	@include phones {
+		padding-top: 20px;
+	}
 }
 
 .sidebar__item {
@@ -41,6 +49,14 @@
 		@include inline-block(top);
 		width: 30px;
 		height: 30px;
+	}
+
+	@include phones {
+		margin-right: 10px;
+
+		&.sidebar__item--basket {
+			margin-right: 0;
+		}
 	}
 }
 
@@ -53,6 +69,7 @@
 	text-align: center;
 	font-size: 12px;
 	line-height: 15px;
+	color: $black;
 	background: #fff;
 	border: 1px solid $black;
 	@include border-radius(50%);
@@ -93,6 +110,10 @@
 		@include transform(translate(-50%, -50%));
 		background: url(../img/icons/sidebar/burger.png) no-repeat;
 		background-size: contain;
+	}
+
+	@include phones {
+		width: 30px;
 	}
 }
 

@@ -48,6 +48,7 @@ $(document).ready(function(){
 			e.preventDefault();
 			$('.panel-burger').addClass('open');
 			$(overlay).fadeIn();
+			$('.header').css('position', 'relative');
 		});
 
 		$(basket).click(function(e){

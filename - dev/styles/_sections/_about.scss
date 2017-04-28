@@ -49,27 +49,29 @@
 	.about__title-wrapp {
 		width: 420px;
 		margin-right: 90px;
-
-		@include laptop {
-			margin-right: 0;
-		}
-
-		@include tablets {
-			width: 270px;
-		}
-
-		@include phones {
-			width: 210px;
-		}
-
 	}
 
 	@include laptop {
 		text-align: center;
+
+		.about__title-wrapp {
+			margin: 0;
+		}
 	}
 
 	@include tablets {
-		background-size: cover;
+
+		.about__title-wrapp {
+			width: 270px;
+		}
+	}
+
+	@include tablets {
+
+		.about__title-wrapp {
+			width: 180px;
+			margin: 0 -33% 0 0;
+		}
 	}
 }
 
