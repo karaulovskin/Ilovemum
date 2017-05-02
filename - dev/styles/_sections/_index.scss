@@ -32,6 +32,15 @@
 		margin-top: -120px;
 	}
 
+	@include tablets {
+
+		.banner__desc {
+			top: 66%;
+			right: 8%;
+			margin-top: -120px;
+		}
+	}
+
 	@include phones {
 		width: 100%;
 		margin: 0 0 8px 0;
@@ -74,6 +83,16 @@
 		padding: 0 30px;
 	}
 
+	@include tablets {
+		.banner__desc {
+			top: 64%;
+			left: 6%;
+		}
+		.banner__desc-text {
+			padding: 0 10px;
+		}
+	}
+
 	@include phones {
 		.banner__desc {
 			top: 62%;
@@ -104,6 +123,16 @@
 		padding: 0 40px;
 	}
 
+	@include tablets {
+		.banner__desc {
+			top: 66%;
+			right: 1%;
+		}
+		.banner__desc-title {
+			padding: 0 26px;
+		}
+	}
+
 	@include phones {
 		.banner__desc {
 			top: 66%;
@@ -125,6 +154,10 @@
 	text-align: center;
 	color: #fff;
 
+	@include tablets {
+		width: 140px;
+	}
+
 	@include phones {
 		width: 140px;
 	}
@@ -132,6 +165,10 @@
 
 .banner__desc-title {
 	font-size: rem(28px);
+
+	@include tablets {
+		font-size: 16px;
+	}
 
 	@include phones {
 		font-size: 16px;
@@ -155,6 +192,16 @@
 		background: #fff;
 	}
 
+	@include tablets {
+		margin-top: 30px;
+		font-size: 10px;
+
+		&:after {
+			width: 75px;
+			top: -15px;
+		}
+	}
+
 	@include phones {
 		margin-top: 30px;
 		font-size: 10px;
@@ -175,6 +222,12 @@
 	background: #fff;
 	@include border-radius(20px);
 
+	@include tablets {
+	    margin-top: 15px;
+   		padding: 8px 14px 6px;
+	    font-size: 8px;
+	}
+
 	@include phones {
 	    margin-top: 15px;
    		padding: 8px 14px 6px;
@@ -191,6 +244,11 @@
 	top: 135px;
     left: 245px;
 
+    @include tablets {
+    	top: 63px;
+    	left: 38%;
+    }
+
     @include phones {
     	top: 63px;
     	left: 35%;
@@ -201,6 +259,11 @@
 	position: absolute;
 	bottom: 115px;
     left: 7px;
+
+    @include tablets {
+    	bottom: 48px;
+    	left: 7px;
+    }
 
     @include phones {
     	bottom: 53px;
@@ -214,6 +277,11 @@
     bottom: 40px;
     color: $black;
 
+    @include tablets {
+    	left: 32%;
+    	bottom: 6px;
+    }
+
     @include phones {
     	left: 29%;
     	bottom: 20px;
@@ -223,6 +291,10 @@
 .banner__price-name {
 	font-size: rem(14px);
 
+	@include tablets {
+    	font-size: 10px;
+    }
+
 	@include phones {
     	font-size: 10px;
     }
@@ -230,6 +302,10 @@
 
 .banner__price-value {
 	font-size: rem(24px);
+
+	@include tablets {
+    	font-size: 16px;
+    }
 
 	@include phones {
     	font-size: 14px;

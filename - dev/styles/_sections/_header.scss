@@ -12,6 +12,11 @@
 	}
 }
 
+.header--panel-open {
+	position: relative;
+	z-index: auto;
+}
+
 .header__logo,
 .header__nav,
 .header__search {
@@ -32,6 +37,10 @@
 
 	@include laptop {
 		width: auto;
+	}
+
+	@include laptop {
+		margin: 28px 0 0 16px;
 	}
 
 	@include phones {
@@ -93,6 +102,10 @@
 
     @include laptop {
 		float: left;
+	}
+
+	@include tablets {
+		width: 35%;
 	}
 
 	@include phones {

@@ -1,6 +1,10 @@
 .panel-basket {
 	position: absolute;
     right: -9999px;
+
+    @include tablets {
+    	overflow: auto;
+    }
 }
 
 .panel-basket.open {
@@ -13,6 +17,11 @@
 	height: 330px;
 	margin-right: -33px;
     overflow: auto;
+
+    @include phones {
+    	// height: 284px;
+    	margin-right: -8px;
+    }
 }
 
 .panel__basket-item {
@@ -26,6 +35,11 @@
 	&:first-child {
 		// border: none;
 	}
+
+	@include phones {
+		margin-right: 27px;
+		margin-right: 8px;
+	}
 }
 
 .panel__basket-left {
@@ -34,8 +48,8 @@
 	padding-right: rem(30px);
 
 	@include phones {
-		// width: 56%;
-		// padding: 0;
+		width: 61%;
+		// padding: 0 rem(10px) 0 0;
 	}
 }
 
@@ -44,7 +58,7 @@
 	width: 29%;
 
 	@include phones {
-		// width: 44%;
+		width: 39%;
 	}
 }
 
@@ -90,7 +104,11 @@
 .panel__basket-img {
 	width: 100px;
 	height: 130px;
-	background-color: #dfdfdf;
+	// background-color: #dfdfdf;
+
+	@include phones {
+		// width: auto;
+	}
 }
 
 .panel__basket-price_discount {
@@ -103,8 +121,12 @@
 	font-weight: bold;
 }
 
-.form__basket-sale {
+.form__basket {
 	margin-top: rem(16px);
+}
+
+.form__basket-sale {
+	// margin-top: rem(16px);
 	@extend %clearfix;
 }
 
@@ -114,11 +136,22 @@
 	height: 40px;
 	background-color: #fbf8f8;
     border: 1px solid #ccccce;
+
+    @include phones {
+    	float: none;
+    	width: 100%;
+    }
 }
 
 .form__basket-sale_btn {
 	float: right;
 	width: 52%;
+
+	@include phones {
+    	float: none;
+    	width: 100%;
+    	margin-top: rem(16px);
+    }
 }
 
 .basket-sale,
@@ -143,6 +176,10 @@
 
 .form__basket-total {
 	margin-top: rem(16px);
+
+	@include phones {
+		margin-top: rem(30px);
+	}
 }
 
 .basket-total__text {

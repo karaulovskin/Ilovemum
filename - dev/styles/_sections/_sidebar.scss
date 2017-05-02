@@ -12,14 +12,17 @@
     }
 }
 
+.sidebar--panel-open {
+	z-index: auto;
+}
+
 .sidebar-left {
 	padding-top: 17px;
 	left: 0;
 
 	@include tablets {
 		float: left;
-		padding-top: 30px;
-	    left: 0;
+		padding-top: 26px;
 	}
 
 	@include phones {
@@ -33,8 +36,7 @@
 
 	@include tablets {
 		float: right;
-	    padding-top: 30px;
-	    right: 0;
+	    padding-top: 26px;
 	}
 
 	@include phones {

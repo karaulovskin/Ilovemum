@@ -1,6 +1,10 @@
 .panel-search {
 	position: absolute;
     right: -9999px;
+
+    @include tablets {
+    	overflow: auto;
+    }
 }
 
 .panel-search.open {
