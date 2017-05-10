@@ -390,6 +390,22 @@ $(document).ready(function(){
 	}());
 
 
+	// ORDER SELECT
+	(function(){
+
+		// начальная инициализация отображаемого текста при загрузке страницы
+		$('.order-country__select').each(function(){
+		    $(this).parent().children('.order-country__value').text( $(this).children('option:selected').text() );
+		});
+
+		// изменение текста при изменении select
+		$('.order-country__select').change(function(){
+		    $(this).parent().children('.order-country__value').text( $(this).children('option:selected').text() );
+		});
+
+	}());
+
+
 	// TABS
 	(function(){
 		$('.card__tabs-item').on('click', function(e){
@@ -398,6 +414,31 @@ $(document).ready(function(){
 			var
 				$this = $(this);
 				member = $('.card__content-item');
+				ndx = $this.index();
+
+			console.log(ndx);
+
+			$this
+				.addClass('active')
+				.siblings()
+				.removeClass('active');
+
+			member.eq(ndx)
+				.addClass('active')
+				.siblings()
+				.removeClass('active');
+
+		});
+	}());
+
+	// TABS ORDER
+	(function(){
+		$('.order-tabs__item').on('click', function(e){
+			e.preventDefault();
+
+			var
+				$this = $(this);
+				member = $('.order-content__item');
 				ndx = $this.index();
 
 			console.log(ndx);

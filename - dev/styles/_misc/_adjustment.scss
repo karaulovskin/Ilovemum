@@ -163,8 +163,25 @@ footer {
 	max-width: 100%;
 }
 
+.input {
+	width: 100%;
+	padding: 12px;
+	font-size: 14px;
+	color: $black;
+	border: 1px solid $grey-line;
+}
+
+.textarea {
+	width: 100%;
+	padding: 12px;
+	font-size: 14px;
+	color: $black;
+	border: 1px solid $grey-line;
+	resize: none;
+}
+
 .overlay {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -180,26 +197,34 @@ footer {
 }
 
 
+/*---------- placeholder  -----------*/
+
+::-webkit-input-placeholder {color: $black; font-size: 14px; font-family: 'Robotolight';}
+::-moz-placeholder          {color: $black; font-size: 14px; font-family: 'Robotolight';}/* Firefox 19+ */
+:-moz-placeholder           {color: $black; font-size: 14px; font-family: 'Robotolight';}/* Firefox 18- */
+:-ms-input-placeholder      {color: $black; font-size: 14px; font-family: 'Robotolight';}
+
+
+
 /*---------- checkbox -----------*/
 
 .checkbox {
 	display: block;
 	position: relative;
-	overflow: hidden;
 	cursor: pointer;
 }
 
 .checkbox__input {
 	position: absolute;
 	top: 0;
-	left: -40px;
+	left: -50px;
 }
 
 .checkbox__input:checked + .checkbox__fake {
 
-	&::before {
-	    display: block;
-	}
+	// &::before {
+	//     display: block;
+	// }
 }
 
 .checkbox__input:checked + .checkbox__fake--radio {

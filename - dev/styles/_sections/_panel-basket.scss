@@ -29,7 +29,7 @@
 	padding: rem(22px) 0;
 	padding: rem(16px) 0;
 	// border-top: 1px solid #b7b7b7;
-	border-bottom: 1px solid #b7b7b7;
+	border-bottom: 1px solid $grey-line;
 	@extend %clearfix;
 
 	&:first-child {
@@ -99,6 +99,7 @@
 	width: 50px;
 	height: 30px;
     text-align: center;
+    border: 1px solid $grey-line;
 }
 
 .panel__basket-img {
@@ -117,7 +118,11 @@
 	color: $grey;
 }
 
-.panel__basket-price_value {
+.panel__basket-price_value,
+.basket-coupon__value,
+.panel__basket-price_value,
+.basket-order__value,
+.basket-pay__value {
 	font-weight: bold;
 }
 
@@ -134,7 +139,7 @@
 	float: left;
 	width: 43%;
 	height: 40px;
-	background-color: #fbf8f8;
+	background-color: inherit;
     border: 1px solid #ccccce;
 
     @include phones {
@@ -155,13 +160,20 @@
 }
 
 .basket-sale,
-.basket-total {
+.basket-total,
+.basket-coupon,
+.basket-order,
+.basket-pay {
 	@extend %clearfix;
-}
-
-.basket-sale {
 	margin-bottom: 6px;
 }
+
+// .basket-sale,
+// .basket-coupon,
+// .basket-order,
+// .basket-pay {
+// 	margin-bottom: 6px;
+// }
 
 .basket-sale__text {
 	float: left;
@@ -182,10 +194,16 @@
 	}
 }
 
-.basket-total__text {
+.basket-total__text, 
+.basket-coupon__text,
+.basket-order__text,
+.basket-pay__text {
 	float: left;
 }
 
-.basket-total__value {
+.basket-total__value,
+.basket-coupon__value,
+.basket-order__value,
+.basket-pay__value {
 	float: right;
 }
