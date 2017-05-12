@@ -1,0 +1,121 @@
+.panel-login {
+	position: absolute;
+    right: -9999px;
+
+    @include tablets {
+    	overflow: auto;
+    }
+}
+
+.panel-login.open {
+	position: fixed;
+	top: 0;
+    right: 0;
+}
+
+.form__login {
+	margin-top: 54px;
+}
+
+.form__login-checkbox {
+	margin-top: 24px;
+	@extend %clearfix;
+	overflow: hidden;
+
+	label {
+		float: left;
+	}
+}
+
+.form__login-remember {
+	float: right;
+	margin-top: 4px;
+}
+
+.form__login-label {
+	position: relative;
+	margin-bottom: 30px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.form__login-remember {
+	display: inline-block;
+	font-size: 12px;
+	color: $black;
+}
+
+.form__login-btns {
+	margin-top: 30px;
+	@extend %clearfix;
+}
+
+.form__login-btn {
+	float: left;
+	width: 48%;
+	cursor: pointer;
+
+	&:last-child {
+		float: right;
+		display: block;
+		padding: 10px 0;
+		text-align: center;
+	}
+}
+
+.login-socials {
+	margin-top: 24px;
+	text-align: center;
+}
+
+.login-socials__title {
+	margin-bottom: 26px;
+	font-size: 12px;
+}
+
+.login-socials__list {
+	margin: 0 -12px;
+	font-size: 0;
+
+	@include phones {
+		padding: 0 -8px;
+	}
+}
+
+.login-socials__item {
+	@include inline-block(top);
+	width: 33.3%;
+	padding: 0 12px;
+	font-size: 16px;
+
+	@include phones {
+		padding: 0 8px;
+	}
+}
+
+.login-socials__link {
+	display: block;
+	width: 100px;
+	height: 40px;
+
+	@include phones {
+		width: 100%;
+	}
+}
+
+.login-socials__link--vk {
+	background: url(../img/icons/socials/login-vk.png)no-repeat;
+	background-size: contain;
+}
+
+.login-socials__link--fb {
+	background: url(../img/icons/socials/login-fb.png)no-repeat;
+	background-size: contain;
+}
+
+.login-socials__link--ic {
+	background: url(../img/icons/socials/login-ic.png)no-repeat;
+	background-size: contain;
+}

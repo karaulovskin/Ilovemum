@@ -1,0 +1,32 @@
+.panel.panel-login
+	.panel__wrapp
+		.panel__close
+			a.panel__close-link(href="#") Закрыть
+		.panel__title Войти
+		form.form__login
+			.login-wrapp
+				.form__login-label
+					input.form__login-input.input(id="email" type="text" placeholder="E-mail")
+					label.label(for="email") E-mail
+				.form__login-label
+					input.form__login-input.input(id="password" type="text" placeholder="Пароль")
+					label.label(for="password") Пароль
+
+			.form__login-checkbox
+				label.order-info__checkbox
+					input.order-info__checkbox-input.checkbox__input(type="checkbox")
+					.order-info__checkbox-fake.checkbox__fake
+					.order-info__checkbox-text Запомнить меня
+				a.form__login-remember(href="#") Забыли пароль?
+			.form__login-btns
+				input.form__login-btn.input-btn(type="submit" value="Войти")
+				a.form__login-btn.btn(href="#") Регистрация
+			.form__login-socials.login-socials
+				.login-socials__title Войти через соцсеть
+				ul.login-socials__list
+					li.login-socials__item
+						a.login-socials__link.login-socials__link--vk(href="#")
+					li.login-socials__item
+						a.login-socials__link.login-socials__link--fb(href="#")
+					li.login-socials__item
+						a.login-socials__link.login-socials__link--ic(href="#")

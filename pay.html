@@ -6,7 +6,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>Оформить заказ</title>
+		<title>Оплата</title>
 		<meta name="viewport" content="width=device-width">
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:100,400,600,700&amp;subset=latin,cyrillic" media="screen, projection, print">
@@ -328,371 +328,94 @@
 								<li class="breadcrumbs__item current"><a href="#" class="breadcrumbs__link">Леггинсы утепленные «Инфинити»</a></li>
 							</ul>
 						</div>
-						<div class="order">
-							<div class="order__left">
-								<ul class="order__list">
-									<li class="order__item">
-										<div class="order__item-title">
-											<div class="order__item-title__text">1. Выберите пункт доставки</div>
-										</div>
-										<div class="order-country">
-											<div class="order-country__value"></div>
-											<select class="order-country__select">
-												<option class="order-country__option">Россия</option>
-												<option class="order-country__option">Украина</option>
-												<option class="order-country__option">Казахстан</option>
-											</select>
-										</div>
-										<div class="order-city">
-											<div class="order-city__left">
-												<div class="order__label">
-													<input type="text" placeholder="Населенный пункт, город, улица, дом, квартира" class="order__input input">
-												</div>
-											</div>
-											<div class="order-city__right">
-												<div class="order__label">
-													<input type="text" placeholder="Индекс" class="order__input input">
-												</div>
-											</div>
-										</div>
-										<div class="order__label">
-											<textarea type="text" placeholder="Ваш комментарий к заказу" class="order__textarea textarea"></textarea>
+						<div class="pay">
+							<div class="pay__banner">
+								<div class="pay__banner-title">Оплата</div>
+							</div>
+							<div class="pay__section pay__section--msk">
+								<div class="pay__shipping-title">При доставке по Москве</div>
+								<ul class="pay__shipping-list">
+									<li class="pay__shipping-item">
+										<div class="pay__shipping-img"><img src="../img/icons/pay/pay_1.png" class="pay__shipping-pic"></div>
+										<div class="pay__shipping-desc">Курьеру <br>наличными</div>
+									</li>
+									<li class="pay__shipping-item">
+										<div class="pay__shipping-img"><img src="../img/icons/pay/pay_2.png" class="pay__shipping-pic"></div>
+										<div class="pay__shipping-desc">Курьеру картой <br>VISA / MASTERCARD</div>
+									</li>
+									<li class="pay__shipping-item">
+										<div class="pay__shipping-img"><img src="../img/icons/pay/pay_3.png" class="pay__shipping-pic"></div>
+										<div class="pay__shipping-desc">Картой VISA / MASTERCARD <br>через интернет</div>
+									</li>
+								</ul>
+							</div>
+							<div class="pay__section pay__section--region">
+								<div class="pay__shipping-title">При доставке в регионы</div>
+								<ul class="pay__shipping-list">
+									<li class="pay__shipping-item--region">
+										<div class="pay__shipping-img"><img src="../img/icons/pay/pay_visa.png" class="pay__shipping-pic"></div>
+										<div class="pay__shipping-desc">Картой VISA / MASTERCARD через интернет</div>
+									</li>
+									<li class="pay__shipping-item--region">
+										<div class="pay__shipping-img"><img src="../img/icons/pay/pay_sber.png" class="pay__shipping-pic"></div>
+										<div class="pay__shipping-desc">Сбербанк <br>России</div><a href="#" class="pay__shipping-link">Ближайшее отделение</a>
+									</li>
+									<li class="pay__shipping-item--region">
+										<div class="pay__shipping-img"><img src="../img/icons/pay/pay_evro.png" class="pay__shipping-pic"></div>
+										<div class="pay__shipping-desc">Салоны <br>«Евросеть»</div><a href="#" class="pay__shipping-link">Ближайший салон связи</a>
+									</li>
+									<li class="pay__shipping-item--region">
+										<div class="pay__shipping-img"><img src="../img/icons/pay/pay_sv.png" class="pay__shipping-pic"></div>
+										<div class="pay__shipping-desc">Салоны <br>«Связной»</div><a href="#" class="pay__shipping-link">Ближайший салон связи</a>
+									</li>
+									<li class="pay__shipping-item--region">
+										<div class="pay__shipping-img"><img src="../img/icons/pay/pay_rbk.png" class="pay__shipping-pic"></div>
+										<div class="pay__shipping-desc">Через провайдера  <br>«rbk money»</div><a href="#" class="pay__shipping-link">Найти терминалы оплаты</a>
+									</li>
+								</ul>
+							</div>
+							<div class="pay__section">
+								<div class="pay__shipping-title">При доставке в другие страны</div>
+								<ul class="pay__shipping-list">
+									<li class="pay__shipping-item">
+										<div class="pay__shipping-img"><img src="../img/icons/pay/pay_3.png" class="pay__shipping-pic"></div>
+										<div class="pay__shipping-desc">Картой VISA / MASTERCARD <br>через интернет</div>
+									</li>
+									<li class="pay__shipping-item">
+										<div class="pay__shipping-img"><img src="../img/icons/pay/pay_pal.png" class="pay__shipping-pic"></div>
+										<div class="pay__shipping-desc">Оплата через <br>Paypal</div>
+									</li>
+								</ul>
+							</div>
+							<div class="pay__section pay__section--bg">
+								<div class="pay__shipping-title">Возврат товара </div>
+								<ul class="pay__return-list">
+									<li class="pay__return-item">
+										<div class="pay__return-img"><img src="../img/icons/pay/city-msk.png" class="pay__return-pic"></div>
+										<div class="pay__return-title">Москва</div>
+										<div class="pay__return">
+											<p>Приобретая товар с курьерской доставкой, вернуть не подошедший товар можно только с вызовом курьера в течении 14 дней со дня покупки.</p>
+											<p>Стоимость вызова курьера в пределах МКАД-250 руб. Стоимость вызова курьера за МКАД определяется полной стоимостью доставки. Стоимость доставки за МКАД <a href="#">смотреть здесь</a></p>
+											<p>К возврату принимается товар, который не был в носке, а так же с сохранением всех бирок и ярлыков. Необходимые документы для возврата: чек, товарная накладная, паспорт.</p>
 										</div>
 									</li>
-									<li class="order__item">
-										<div class="order__item-title">
-											<div class="order__item-title__text">2. Выберите  способ доставки</div><a href="#" class="order__item-title__link"></a>
-										</div>
-										<div class="order-tabs">
-											<ul class="order-tabs__list">
-												<li class="order-tabs__item"><a href="#" class="order-tabs__link">
-														<div class="order-tabs__big-text">Бесплатно с примеркой</div>
-														<div class="order-tabs__small-text">От 3 000 руб.</div></a></li>
-												<li class="order-tabs__item active"><a href="#" class="order-tabs__link">
-														<div class="order-tabs__big-text">С примеркой</div>
-														<div class="order-tabs__small-text">Постоплата</div></a></li>
-												<li class="order-tabs__item"><a href="#" class="order-tabs__link">
-														<div class="order-tabs__big-text">Без примерки</div>
-														<div class="order-tabs__small-text">Он-лайн оплата</div></a></li>
-											</ul>
-										</div>
-										<div class="order-content">
-											<ul class="order-content__list">
-												<li class="order-content__item">
-													<ul class="order-get__list">
-														<li class="order-get__item">
-															<label class="order-get__checkbox">
-																<input type="radio" name="orderGet" class="order-get__checkbox-input checkbox__input">
-																<div class="order-get__checkbox-fake checkbox__fake"></div>
-																<div class="order-get__checkbox-title">
-																	<div class="order-get__checkbox__big-text">Курьером СДЭК до двери</div>
-																	<div class="order-get__checkbox__small-text">2-3 рабочих дня от 150 руб.</div>
-																</div>
-															</label>
-														</li>
-														<li class="order-get__item">
-															<label class="order-get__checkbox">
-																<input type="radio" name="orderGet" class="order-get__checkbox-input checkbox__input">
-																<div class="order-get__checkbox-fake checkbox__fake"></div>
-																<div class="order-get__checkbox-title">
-																	<div class="order-get__checkbox__big-text">Получение на складе СДЭК</div>
-																	<div class="order-get__checkbox__small-text">2-5 рабочих дня от 100 руб.</div>
-																</div>
-															</label>
-														</li>
-														<li class="order-get__item">
-															<label class="order-get__checkbox">
-																<input type="radio" name="orderGet" class="order-get__checkbox-input checkbox__input">
-																<div class="order-get__checkbox-fake checkbox__fake"></div>
-																<div class="order-get__checkbox-title">
-																	<div class="order-get__checkbox__big-text">Получение на складе СДЭК</div>
-																	<div class="order-get__checkbox__small-text">4-12 рабочих дня от 120 руб.</div>
-																</div>
-															</label>
-														</li>
-													</ul>
-													<div class="order-get__options">
-														<div class="order-get__options-title"><span>Дополнительные опции</span>
-															<label class="order-get__options-checkbox order-info__checkbox">
-																<input type="checkbox" class="order-info__checkbox-input checkbox__input">
-																<div class="order-info__checkbox-fake checkbox__fake"></div>
-																<div class="order-info__checkbox-text">Примерка, дополнительные 15 мин. ожидания</div>
-															</label>
-														</div>
-														<div class="order-get__options-desc">Оплата на сайте при выборе данного вида доставки осуществляется только за доставку. Вы оплачиваете курьеру (наличными) только понравившийся товар.</div>
-													</div>
-												</li>
-												<li class="order-content__item active">
-													<ul class="order-get__list">
-														<li class="order-get__item">
-															<label class="order-get__checkbox">
-																<input type="radio" name="orderGet" class="order-get__checkbox-input checkbox__input">
-																<div class="order-get__checkbox-fake checkbox__fake"></div>
-																<div class="order-get__checkbox-title">
-																	<div class="order-get__checkbox__big-text">Курьером СДЭК до двери</div>
-																	<div class="order-get__checkbox__small-text">2-3 рабочих дня от 150 руб.</div>
-																</div>
-															</label>
-														</li>
-														<li class="order-get__item">
-															<label class="order-get__checkbox">
-																<input type="radio" name="orderGet" class="order-get__checkbox-input checkbox__input">
-																<div class="order-get__checkbox-fake checkbox__fake"></div>
-																<div class="order-get__checkbox-title">
-																	<div class="order-get__checkbox__big-text">Получение на складе СДЭК</div>
-																	<div class="order-get__checkbox__small-text">2-5 рабочих дня от 100 руб.</div>
-																</div>
-															</label>
-														</li>
-														<li class="order-get__item">
-															<label class="order-get__checkbox">
-																<input type="radio" name="orderGet" class="order-get__checkbox-input checkbox__input">
-																<div class="order-get__checkbox-fake checkbox__fake"></div>
-																<div class="order-get__checkbox-title">
-																	<div class="order-get__checkbox__big-text">Получение на складе СДЭК</div>
-																	<div class="order-get__checkbox__small-text">4-12 рабочих дня от 120 руб.</div>
-																</div>
-															</label>
-														</li>
-													</ul>
-													<div class="order-get__options">
-														<div class="order-get__options-title"><span>Дополнительные опции</span>
-															<label class="order-get__options-checkbox order-info__checkbox">
-																<input type="checkbox" class="order-info__checkbox-input checkbox__input">
-																<div class="order-info__checkbox-fake checkbox__fake"></div>
-																<div class="order-info__checkbox-text">Примерка, дополнительные 15 мин. ожидания</div>
-															</label>
-														</div>
-														<div class="order-get__options-desc">Оплата на сайте при выборе данного вида доставки осуществляется только за доставку. Вы оплачиваете курьеру (наличными) только понравившийся товар.</div>
-													</div>
-												</li>
-												<li class="order-content__item">
-													<ul class="order-get__list">
-														<li class="order-get__item">
-															<label class="order-get__checkbox">
-																<input type="radio" name="orderGet" class="order-get__checkbox-input checkbox__input">
-																<div class="order-get__checkbox-fake checkbox__fake"></div>
-																<div class="order-get__checkbox-title">
-																	<div class="order-get__checkbox__big-text">Курьером СДЭК до двери</div>
-																	<div class="order-get__checkbox__small-text">2-3 рабочих дня от 150 руб.</div>
-																</div>
-															</label>
-														</li>
-														<li class="order-get__item">
-															<label class="order-get__checkbox">
-																<input type="radio" name="orderGet" class="order-get__checkbox-input checkbox__input">
-																<div class="order-get__checkbox-fake checkbox__fake"></div>
-																<div class="order-get__checkbox-title">
-																	<div class="order-get__checkbox__big-text">Получение на складе СДЭК</div>
-																	<div class="order-get__checkbox__small-text">2-5 рабочих дня от 100 руб.</div>
-																</div>
-															</label>
-														</li>
-														<li class="order-get__item">
-															<label class="order-get__checkbox">
-																<input type="radio" name="orderGet" class="order-get__checkbox-input checkbox__input">
-																<div class="order-get__checkbox-fake checkbox__fake"></div>
-																<div class="order-get__checkbox-title">
-																	<div class="order-get__checkbox__big-text">Получение на складе СДЭК</div>
-																	<div class="order-get__checkbox__small-text">4-12 рабочих дня от 120 руб.</div>
-																</div>
-															</label>
-														</li>
-													</ul>
-													<div class="order-get__options">
-														<div class="order-get__options-title"><span>Дополнительные опции</span>
-															<label class="order-get__options-checkbox order-info__checkbox">
-																<input type="checkbox" class="order-info__checkbox-input checkbox__input">
-																<div class="order-info__checkbox-fake checkbox__fake"></div>
-																<div class="order-info__checkbox-text">Примерка, дополнительные 15 мин. ожидания</div>
-															</label>
-														</div>
-														<div class="order-get__options-desc">Оплата на сайте при выборе данного вида доставки осуществляется только за доставку. Вы оплачиваете курьеру (наличными) только понравившийся товар.</div>
-													</div>
-												</li>
-											</ul>
-										</div>
-									</li>
-									<li class="order__item">
-										<div class="order__item-title">
-											<div class="order__item-title__text">3. Введите Персональные данные</div>
-										</div>
-										<div class="order__item-desc"><span class="order__item-desc__text">Если вы уже зарегистрированы, пожалуйста</span><a href="#" class="order__item-desc__link">Войдите</a></div>
-										<div class="order-data">
-											<div class="order-data__left">
-												<div class="order__label">
-													<input type="text" placeholder="ФИО*" class="order__input input">
-												</div>
-											</div>
-											<div class="order-data__right">
-												<div class="order__label">
-													<input type="text" placeholder="Телефон*" class="order__input input">
-												</div>
-												<div class="order__label">
-													<input type="text" placeholder="E-Mail*" class="order__input input">
-												</div>
-											</div>
-										</div>
-									</li>
-									<li class="order__item">
-										<div class="order__item-title">
-											<div class="order__item-title__text">4. Выберите способ оплаты</div><a href="#" class="order__item-title__link"> </a>
-										</div>
-										<div class="order-pay">
-											<ul class="order-pay__list">
-												<li class="order-pay__item">
-													<label class="order-pay__checkbox">
-														<input type="radio" name="orderPay" class="order-pay__checkbox-input checkbox__input">
-														<div class="order-pay__checkbox-fake checkbox__fake">
-															<div class="order-pay__checkbox-text">Наличными<br> курьеру</div>
-														</div>
-													</label>
-												</li>
-												<li class="order-pay__item">
-													<label class="order-pay__checkbox">
-														<input type="radio" name="orderPay" class="order-pay__checkbox-input checkbox__input">
-														<div class="order-pay__checkbox-fake checkbox__fake">
-															<div class="order-pay__checkbox-text">Банковской картой<br> Visa/MasterCard</div>
-														</div>
-													</label>
-												</li>
-												<li class="order-pay__item">
-													<label class="order-pay__checkbox">
-														<input type="radio" name="orderPay" class="order-pay__checkbox-input checkbox__input">
-														<div class="order-pay__checkbox-fake checkbox__fake">
-															<div class="order-pay__checkbox-text">По квитанции<br> через банк</div>
-														</div>
-													</label>
-												</li>
-												<li class="order-pay__item">
-													<label class="order-pay__checkbox">
-														<input type="radio" name="orderPay" class="order-pay__checkbox-input checkbox__input">
-														<div class="order-pay__checkbox-fake checkbox__fake">
-															<div class="order-pay__checkbox-text">Салоны «Евросеть»</div>
-														</div>
-													</label>
-												</li>
-												<li class="order-pay__item">
-													<label class="order-pay__checkbox">
-														<input type="radio" name="orderPay" class="order-pay__checkbox-input checkbox__input">
-														<div class="order-pay__checkbox-fake checkbox__fake">
-															<div class="order-pay__checkbox-text">Салоны «Связной»</div>
-														</div>
-													</label>
-												</li>
-												<li class="order-pay__item">
-													<label class="order-pay__checkbox">
-														<input type="radio" name="orderPay" class="order-pay__checkbox-input checkbox__input">
-														<div class="order-pay__checkbox-fake checkbox__fake">
-															<div class="order-pay__checkbox-text">Платежные<br> терминалы</div>
-														</div>
-													</label>
-												</li>
-											</ul>
+									<li class="pay__return-item">
+										<div class="pay__return-img"><img src="../img/icons/pay/city-region.png" class="pay__return-pic"></div>
+										<div class="pay__return-title">Другие города</div>
+										<div class="pay__return">
+											<p>Приобретая товар по почте или через транспортную компанию, вернуть не подошедший товар можно в течении 14 дней с момента получения посылки.</p>
+											<p>После получения возврата мы можем отправить взамен другой товар или вернуть деньги на банковскую карту.</p>
+											<p>В случае возврата не подошедшего товара, почтовые расходы оплачиваются отправителем.</p>
 										</div>
 									</li>
 								</ul>
 							</div>
-							<div class="order__right">
-								<div class="order__item-title">Ваш заказ</div>
-								<ul class="panel__basket-list">
-									<li class="panel__basket-item">
-										<div class="panel__basket-left">
-											<div class="panel__basket-desc">
-												<div class="panel__basket-model">Туника «Ника» белый деним</div>
-												<div class="panel__basket-size">Размер: 44</div>
-												<div class="panel__basket-switch switch"><a href="#" class="panel__basket-switch_min">&#215;</a>
-													<input type="text" value="1" class="panel__basket-switch_input"><a href="#" class="panel__basket-switch_max">&#43;</a>
-												</div>
-												<div class="panel__basket-price"><span class="panel__basket-price_discount">1850&#8381;</span><span class="panel__basket-price_value">1650&#8381;</span></div>
-											</div>
-										</div>
-										<div class="panel__basket-right">
-											<div style="background-image: url(./img/model/model-basket.png);" class="panel__basket-img img-contain"><img src="./img/model/model-basket.png" class="panel__basket-img_pic img-fake"></div>
-										</div>
-									</li>
-									<li class="panel__basket-item">
-										<div class="panel__basket-left">
-											<div class="panel__basket-desc">
-												<div class="panel__basket-model">Туника «Ника» белый деним</div>
-												<div class="panel__basket-size">Размер: 44</div>
-												<div class="panel__basket-switch switch"><a href="#" class="panel__basket-switch_min">&#215;</a>
-													<input type="text" value="1" class="panel__basket-switch_input"><a href="#" class="panel__basket-switch_max">&#43;</a>
-												</div>
-												<div class="panel__basket-price"><span class="panel__basket-price_discount">1850&#8381;</span><span class="panel__basket-price_value">1650&#8381;</span></div>
-											</div>
-										</div>
-										<div class="panel__basket-right">
-											<div style="background-image: url(./img/model/model-basket.png);" class="panel__basket-img img-contain"><img src="./img/model/model-basket.png" class="panel__basket-img_pic img-fake"></div>
-										</div>
-									</li>
-									<li class="panel__basket-item">
-										<div class="panel__basket-left">
-											<div class="panel__basket-desc">
-												<div class="panel__basket-model">Туника «Ника» белый деним</div>
-												<div class="panel__basket-size">Размер: 44</div>
-												<div class="panel__basket-switch switch"><a href="#" class="panel__basket-switch_min">&#215;</a>
-													<input type="text" value="1" class="panel__basket-switch_input"><a href="#" class="panel__basket-switch_max">&#43;</a>
-												</div>
-												<div class="panel__basket-price"><span class="panel__basket-price_discount">1850&#8381;</span><span class="panel__basket-price_value">1650&#8381;</span></div>
-											</div>
-										</div>
-										<div class="panel__basket-right">
-											<div style="background-image: url(./img/model/model-basket.png);" class="panel__basket-img img-contain"><img src="./img/model/model-basket.png" class="panel__basket-img_pic img-fake"></div>
-										</div>
-									</li>
-									<li class="panel__basket-item">
-										<div class="panel__basket-left">
-											<div class="panel__basket-desc">
-												<div class="panel__basket-model">Туника «Ника» белый деним</div>
-												<div class="panel__basket-size">Размер: 44</div>
-												<div class="panel__basket-switch switch"><a href="#" class="panel__basket-switch_min">&#215;</a>
-													<input type="text" value="1" class="panel__basket-switch_input"><a href="#" class="panel__basket-switch_max">&#43;</a>
-												</div>
-												<div class="panel__basket-price"><span class="panel__basket-price_discount">1850&#8381;</span><span class="panel__basket-price_value">1650&#8381;</span></div>
-											</div>
-										</div>
-										<div class="panel__basket-right">
-											<div style="background-image: url(./img/model/model-basket.png);" class="panel__basket-img img-contain"><img src="./img/model/model-basket.png" class="panel__basket-img_pic img-fake"></div>
-										</div>
-									</li>
-								</ul>
-								<form class="form__basket">
-									<div class="form__basket-sale">
-										<input class="form__basket-sale_input"><a href="#" class="form__basket-sale_btn form__btn">Рассчитать скидку</a>
-									</div>
-									<div class="form__basket-total">
-										<div class="basket-sale">
-											<div class="basket-sale__text">Скидка VIP:</div>
-											<div class="basket-sale__value">24% (650 руб.)</div>
-										</div>
-										<div class="basket-coupon">
-											<div class="basket-coupon__text">Купон (день рождения):</div>
-											<div class="basket-coupon__value">10% (265 руб.)</div>
-										</div>
-										<div class="basket-total">
-											<div class="basket-total__text">Итого (3 товара):</div>
-											<div class="basket-total__value"><span class="panel__basket-price_discount">1850 руб.</span><span class="panel__basket-price_value">1650 руб.</span></div>
-										</div>
-										<div class="basket-order">
-											<div class="basket-order__text">Доставка:</div>
-											<div class="basket-order__value">265 руб.</div>
-										</div>
-										<div class="basket-pay">
-											<div class="basket-pay__text">К оплате:</div>
-											<div class="basket-pay__value">2 265 руб.</div>
-										</div>
-									</div>
-									<div class="order-info">
-										<label class="order-info__checkbox">
-											<input type="checkbox" name="orderPay" class="order-info__checkbox-input checkbox__input">
-											<div class="order-info__checkbox-fake checkbox__fake"></div>
-											<div class="order-info__checkbox-text">Информировать по СМС о статусе заказа</div>
-										</label>
-									</div>
-									<div class="form__btns form__btns--order"><a href="#" class="form__btn form__btn--bottom">Оформить заказ</a></div>
-								</form>
-								<div class="order__desc">Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки</div>
+							<div class="pay__section">
+								<div class="pay__shipping-title">Возврат денежных средств</div>
+								<div class="pay__return-desc"> 
+									<p>В случае, если после оплаты заказа Вы уменьшили заказ или отказались от заказа, мы вернем вам денежные средства в кратчайшие сроки, согласно требованиям законодательства РФ, на вашку кредитную карту с которой была произведена оплата.</p>
+									<p>Просим учесть что в случае если заказ уже отправлен, деньги возвращаются только после возврата заказа продавцу.</p>
+								</div>
 							</div>
 						</div>
 					</div>

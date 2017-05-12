@@ -405,7 +405,8 @@
 	@include inline-block(middle);
 	width: 16px;
 	height: 16px;
-	background: $blue;
+	background: #fff;
+	border: 1px solid $blue;
 
 	&::before {
 		content: "";
@@ -423,6 +424,7 @@
 }
 
 .checkbox__input:checked + .order-info__checkbox-fake {
+	background: $blue;
 
 	&:before {
 	    display: block;

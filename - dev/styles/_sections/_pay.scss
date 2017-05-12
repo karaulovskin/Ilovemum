@@ -1,0 +1,116 @@
+.pay__banner {
+	position: relative;
+	width: 100%;
+	height: 400px;
+	background: url(../img/banner/banner-pay.jpg) 50% 50%;
+	background-size: cover;
+}
+
+.pay__banner-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, .3);
+}
+
+.pay__section {
+	padding: 80px 0;
+	text-align: center;
+}
+
+.pay__section--msk {
+	padding: 80px 120px;
+}
+
+.pay__section--region {
+	padding: 80px 50px;
+	background: #f5f5f5;
+}
+
+.pay__section--bg {
+	text-align: center;
+	background: #f5f5f5;
+}
+
+.pay__shipping-title  {
+	margin-bottom: 65px;
+	text-transform: uppercase;
+	font-size: 28px;
+}
+
+.pay__shipping-list {
+	font-size: 0;
+}
+
+.pay__shipping-item {
+	@include inline-block(top);
+	width: 33.3%;
+	font-size: 16px;
+}
+
+.pay__shipping-item--region {
+	@include inline-block(top);
+	width: 20%;
+	font-size: 16px;
+}
+
+.pay__shipping-img {
+	margin-bottom: 22px;
+}
+
+.pay__shipping-desc {
+	text-transform: uppercase;
+	font-size: 18px;
+	font-family: 'Robotomedium';
+}
+
+.pay__shipping-link {
+	font-size: 14px;
+	color: $blue;
+}
+
+.pay__return-list {
+	font-size: 0;
+}
+
+.pay__return-item {
+	@include inline-block(top);
+	width: 50%;
+	padding: 0 97px 0 125px;
+	text-align: left;
+	font-size: 16px;
+}
+
+.pay__return-img {
+	margin-bottom: 18px;
+}
+
+.pay__return-title {
+	margin-bottom: 14px;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-family: 'Robotomedium';
+}
+
+.pay__return {
+
+	p {
+		margin-bottom: 20px;
+	}
+
+	a {
+		text-decoration: underline;
+		color: $blue;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.pay__return-desc {
+	width: 57%;
+	margin: auto;
+}

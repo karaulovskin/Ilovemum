@@ -18,6 +18,13 @@
 	padding-top: rem(26px);
 }
 
+.form__search-input {
+	width: 100%;
+    padding: 6px 10px;
+    background: inherit;
+	border: 1px solid $grey-line;
+}
+
 .form__search-list {
     height: 374px;
     margin-top: 18px;
