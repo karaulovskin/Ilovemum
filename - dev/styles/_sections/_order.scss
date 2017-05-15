@@ -7,12 +7,31 @@
 	width: 65%;
 	padding: 25px 45px;
 	background: #f0f0f0;
+
+	@include tablets {
+		float: none;
+		width: 100%;
+	}
+
+	@include phones {
+		padding: 25px 20px;
+	}
 }
 
 .order__right {
 	float: left;
 	width: 35%;
 	padding: 0 36px 0 54px;
+
+	@include tablets {
+		float: none;
+		width: 100%;
+		padding: 36px 0 0 0;
+	}
+
+	@include phones {
+
+	}
 }
 
 .order__item {
@@ -62,7 +81,11 @@
 
 .order-country {
 	position: relative;
-    margin: 0 0 28px 0; 
+    margin: 0 0 28px 0;
+
+    @include phones {
+    	margin: 0 0 14px 0;
+    } 
 }
 
 .order-country__value {
@@ -71,7 +94,7 @@
 	left: 0;
 	right: 0;
 	padding: 10px;
-	font-size: 14px;
+	font-size: rem(14px);
 	border: 1px solid $grey-line;
 
 	&:after {
@@ -92,6 +115,14 @@
 	background: inherit;
 	border: none;
 	opacity: 0;
+}
+
+.order__comment {
+	margin: 28px 0 0 0;
+
+	@include phones {
+		margin: 14px 0 0 0;
+	}
 }
 
 .order-city {
@@ -133,7 +164,7 @@
 	@include inline-block(top);
 	width: 33.3%;
 	padding: 0 14px;
-	font-size: 16px;
+	font-size: rem(16px);
 
 	&.active {
 		
@@ -156,6 +187,10 @@
 			}
 		}
 	}
+
+	@include tablets {
+		padding: 0 8px;
+	}
 }
 
 .order-tabs__link {
@@ -163,7 +198,7 @@
 	display: block;
 	padding: 10px 0;
 	text-align: center;
-	font-size: 14px;
+	font-size: rem(14px);
 	color: $blue;
 	border: 1px solid $blue;
 
@@ -212,7 +247,7 @@
 	@include inline-block(top);
 	width: 33.3%;
 	padding: 0 14px;
-	font-size: 14px;
+	font-size: rem(14px);
 	overflow: hidden;
 }
 
@@ -257,7 +292,7 @@
 
 	span {
 		text-transform: uppercase;
-		font-size: 14px;
+		font-size: rem(14px);
 	}
 
 	.checkbox__input {
@@ -276,12 +311,12 @@
 
 .order-info__checkbox-text,
 .order-get__options-desc {
-	font-size: 12px;
+	font-size: rem(12px);
 }
 
 .order__item-desc {
 	margin: 0 0 18px 0;
-	font-size: 14px;
+	font-size: rem(14px);
 }
 
 .order__item-desc__link {
@@ -302,6 +337,17 @@
 	float: left;
 	width: 42%;
 	padding: 0 14px 0 0;
+
+	@include tablets {
+		padding: 0 8px 0 0;
+	}
+
+	@include phones {
+		float: none;
+		width: 100%;
+		margin: 0 0 14px 0;
+		padding: 0;
+	}
 }
 
 .order-data__right {
@@ -324,6 +370,30 @@
 			padding-left: 14px;
 		}
 	}
+
+	@include tablets {
+		padding: 0 0 0 8px;
+
+		.order__label {
+			width: 50%;
+
+			&:first-child {
+				float: left;
+				padding-right: 8px;
+			}
+
+			&:last-child {
+				float: right;
+				padding-left: 8px;
+			}
+		}
+	}
+
+	@include phones {
+		float: none;
+		width: 100%;
+		padding: 0;
+	}
 }
 
 .order-pay__list {
@@ -335,8 +405,12 @@
 	@include inline-block(top);
 	width: 33.3%;
 	padding: 14px;
-	font-size: 16px;
+	font-size: rem(16px);
 	overflow: hidden;
+
+	@include tablets {
+		padding: 8px;
+	}
 }
 
 .order-pay__checkbox {
@@ -386,7 +460,7 @@
 .order-pay__checkbox-text {
 	@include inline-block(middle);
 	text-transform: uppercase;
-	font-size: 14px;
+	font-size: rem(14px);
 	color: $blue;
 }
 
@@ -433,12 +507,48 @@
 
 .order-info__checkbox-text {
 	@include inline-block(middle);
-	font-size: 12px;
+	font-size: rem(12px);
 }
 
 .order__desc {
 	margin: 28px 0 0 0;
-	font-size: 12px;
+	font-size: rem(12px);
+}
+
+.order__basket-list {
+	height: 330px;
+    margin-right: -33px;
+    overflow: auto;
+}
+
+.order__basket-item {
+    margin-right: 29px;
+    padding: 1.375rem 0;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ccccce;
+	@extend %clearfix;
+}
+
+.order__basket-left {
+	float: left;
+	width: 70%;
+
+	@include tablets {
+
+	}
+}
+
+.order__basket-right {
+	float: right;
+	width: 29%;
+
+	@include tablets {
+		
+	}
+}
+
+.order__basket-img_pic {
+	max-width: 100%;
 }
 
 

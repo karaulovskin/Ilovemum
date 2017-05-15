@@ -569,8 +569,8 @@ $(document).ready(function(){
 	(function(){
 		if($(window).width() >= '768'){
 			$('.panel__basket-list').jScrollPane({
-				verticalDragMinHeight: 160,
-				verticalDragMaxHeight: 160
+				// verticalDragMinHeight: 160,
+				// verticalDragMaxHeight: 160
 			});
 		};
 	}());
