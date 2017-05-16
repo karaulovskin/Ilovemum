@@ -83,6 +83,7 @@
 .panel__basket-switch_input {
 	@include inline-block(middle);
 	font-size: rem(16px);
+	font-family: 'Robotoregular';
 }
 
 .panel__basket-switch_min {
@@ -114,6 +115,10 @@
 
 .panel__basket-img_pic {
 	max-width: 100%;
+}
+
+.panel__basket-price {
+	font-family: 'Robotoregular';
 }
 
 .panel__basket-price_discount {

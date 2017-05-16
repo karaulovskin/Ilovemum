@@ -1,5 +1,9 @@
 .order {
 	@extend %clearfix;
+
+	@include phones {
+		margin: 0 -15px;
+	}
 }
 
 .order__left {
@@ -30,7 +34,7 @@
 	}
 
 	@include phones {
-
+		padding: 25px 20px;
 	}
 }
 
@@ -158,6 +162,10 @@
 .order-tabs__list {
 	margin: 0 -14px;
 	font-size: 0;
+
+	@include phones {
+		margin: 0 -8px;
+	}
 }
 
 .order-tabs__item {
@@ -220,6 +228,10 @@
 	// 		@include transform(translate(50%, -50%));
 	// 	}
 	// }
+
+	@include phones {
+		font-size: 10px;
+	}
 }
 
 .order-tabs__big-text {
@@ -241,6 +253,10 @@
 .order-get__list {
 	margin: 0 -14px 26px;
 	font-size: 0;
+
+	@include phones {
+		margin: 0 -8 26px;
+	}
 }
 
 .order-get__item {
@@ -249,6 +265,11 @@
 	padding: 0 14px;
 	font-size: rem(14px);
 	overflow: hidden;
+
+	@include phones {
+		padding: 0 8px;
+		font-size: 10px;
+	}
 }
 
 .order-get__checkbox {
@@ -298,10 +319,21 @@
 	.checkbox__input {
 		left: -9999px;
 	}
+
+	@include phones {
+
+		span {
+			display: block;
+		}
+	}
 }
 
 .order-get__options-checkbox {
 	margin: 0 0 0 50px;
+
+	@include phones {
+		margin: 0;
+	} 
 }
 
 .order-get__options-desc {
@@ -397,8 +429,12 @@
 }
 
 .order-pay__list {
-	margin: -14px;
+	margin: 0 -14px;
 	font-size: 0;
+
+	@include phones {
+		margin: 0 -8px;
+	}
 }
 
 .order-pay__item {
@@ -410,6 +446,10 @@
 
 	@include tablets {
 		padding: 8px;
+	}
+
+	@include phones {
+		width: 50%;
 	}
 }
 
@@ -462,6 +502,10 @@
 	text-transform: uppercase;
 	font-size: rem(14px);
 	color: $blue;
+
+	@include phones {
+		font-size: 10px;
+	}
 }
 
 .order-info {

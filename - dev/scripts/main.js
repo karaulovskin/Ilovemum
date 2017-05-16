@@ -16,32 +16,32 @@ $(document).ready(function(){
 			overlay  	= $('.overlay'),
 			body     	= $('body');
 
-		$(open).click(function(e){
-			e.preventDefault();
-			if(!body.hasClass('panel-blocking')) {
-				body.addClass('panel-blocking');
-			} else {
-				body.removeClass('panel-blocking');
-			};
-		});
+		// $(open).click(function(e){
+		// 	e.preventDefault();
+		// 	if(!body.hasClass('panel-blocking')) {
+		// 		body.addClass('panel-blocking');
+		// 	} else {
+		// 		body.removeClass('panel-blocking');
+		// 	};
+		// });
 
-		$(filtr).click(function(e){
-			e.preventDefault();
-			if(!body.hasClass('panel-blocking')) {
-				body.addClass('panel-blocking');
-			} else {
-				body.removeClass('panel-blocking');
-			};
-		});
+		// $(filtr).click(function(e){
+		// 	e.preventDefault();
+		// 	if(!body.hasClass('panel-blocking')) {
+		// 		body.addClass('panel-blocking');
+		// 	} else {
+		// 		body.removeClass('panel-blocking');
+		// 	};
+		// });
 
 		$(close).click( function(e){
 			e.preventDefault();
-			body.removeClass('panel-blocking');
+			// body.removeClass('panel-blocking');
 		});
 
 		$(overlay).click(function(e){
 			e.preventDefault();
-			body.removeClass('panel-blocking');
+			// body.removeClass('panel-blocking');
 		});
 
 		$(burger).click(function(e){
@@ -141,7 +141,6 @@ $(document).ready(function(){
 			// $('.header').css('z-index', '10');
 			// $('.sidebar').css('z-index', '10');
 		});
-
 
 	}());
 
@@ -584,8 +583,8 @@ $(document).ready(function(){
 			$('.card__info-item--ma').insertBefore($('.card__info-item--pa'));
 
 	    } else {
-	    	$('.card__buy').insertBefore($('.card__color'));
-	    	$('.card__info-item--pa').insertBefore($('.card__info-item--ma'));
+	    	// $('.card__buy').insertBefore($('.card__color'));
+	    	// $('.card__info-item--pa').insertBefore($('.card__info-item--ma'));
 	    };
 
 	}());

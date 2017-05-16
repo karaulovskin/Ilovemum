@@ -156,19 +156,35 @@
 			content: none;
 		}
 	}
+
+	a {
+		display: inline-block;
+		// font-weight: bold;
+		font-size: rem(14px);
+		color: $black;
+		font-family: 'Robotoregular';
+
+		@include top {
+			font-size: rem(13px);
+		}
+
+		@include desktop {
+			font-size: rem(12px);
+		}
+	}
 }
 
-.phone__link {
-	display: inline-block;
-	font-weight: bold;
-	font-size: rem(14px);
-	color: $black;
+// .phone__link {
+// 	display: inline-block;
+// 	font-weight: bold;
+// 	font-size: rem(14px);
+// 	color: $black;
 
-	@include top {
-		font-size: rem(13px);
-	}
+// 	@include top {
+// 		font-size: rem(13px);
+// 	}
 
-	@include desktop {
-		font-size: rem(12px);
-	}
-}
+// 	@include desktop {
+// 		font-size: rem(12px);
+// 	}
+// }

@@ -323,7 +323,38 @@
 }
 
 .catalog__desc-price {
+	font-size: 0;
+}
+
+.catalog__desc-price--en,
+.catalog__desc-price--ru {
+	@include inline-block(middle);
+	width: 50%;
+	font-size: 16px;
+}
+
+.catalog__desc-price--en {
+	font-size: 12px;
+}
+
+.catalog__desc-price--ru {
 	text-align: right;
+}
+
+.catalog__desc-usd {
+	&:after {
+		content: "$";
+		font-size: 10px;	
+	}
+}
+
+.catalog__desc-eur {
+	margin-left: 10px;
+
+	&:after {
+		content: "$";
+		font-size: 10px;
+	}
 }
 
 .catalog__desc-descount {

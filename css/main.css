@@ -3,9 +3,14 @@
 /* -------- fonts ---------*/
 /* font-family: 'robotolight'; */
 @font-face {
+  font-family: 'Robotoregular';
+  src: url("../fonts/roboto.regular-webfont.woff2") format("woff2"), url("../fonts/roboto.regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: 'Robotolight';
-  src: url("../fonts/roboto-light-webfont.eot");
-  src: url("../fonts/roboto-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-light-webfont.woff2") format("woff2"), url("../fonts/roboto-light-webfont.woff") format("woff"), url("../fonts/roboto-light-webfont.svg#robotolight") format("svg");
+  src: url("../fonts/roboto-light-webfont.woff2") format("woff2"), url("../fonts/roboto-light-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -2664,7 +2669,39 @@ footer {
 }
 
 .catalog__desc-price {
+  font-size: 0;
+}
+
+.catalog__desc-price--en,
+.catalog__desc-price--ru {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 50%;
+  font-size: 16px;
+}
+
+.catalog__desc-price--en {
+  font-size: 12px;
+}
+
+.catalog__desc-price--ru {
   text-align: right;
+}
+
+.catalog__desc-usd:after {
+  content: "$";
+  font-size: 10px;
+}
+
+.catalog__desc-eur {
+  margin-left: 10px;
+}
+.catalog__desc-eur:after {
+  content: "$";
+  font-size: 10px;
 }
 
 .catalog__desc-descount {
@@ -3235,8 +3272,12 @@ footer {
 }
 
 .filtr-clear__list {
-  margin: 20px 0 0 0;
   font-size: 0;
+}
+@media screen and (max-width: 768px) {
+  .filtr-clear__list {
+    margin: 20px 0 0 0;
+  }
 }
 
 .filtr-clear__item:first-child {
@@ -4156,20 +4197,19 @@ footer {
 .phone__item:first-child:before {
   content: none;
 }
-
-.phone__link {
+.phone__item a {
   display: inline-block;
-  font-weight: bold;
   font-size: 0.875rem;
   color: #252525;
+  font-family: 'Robotoregular';
 }
 @media screen and (max-width: 1224px) {
-  .phone__link {
+  .phone__item a {
     font-size: 0.8125rem;
   }
 }
 @media screen and (max-width: 1024px) {
-  .phone__link {
+  .phone__item a {
     font-size: 0.75rem;
   }
 }
@@ -4508,6 +4548,12 @@ footer {
   background: #fbf8f8 !important;
 }
 
+@media screen and (max-width: 480px) {
+  .order {
+    margin: 0 -15px;
+  }
+}
+
 .order__left {
   float: left;
   width: 65%;
@@ -4536,6 +4582,11 @@ footer {
     float: none;
     width: 100%;
     padding: 36px 0 0 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .order__right {
+    padding: 25px 20px;
   }
 }
 
@@ -4671,6 +4722,11 @@ footer {
   margin: 0 -14px;
   font-size: 0;
 }
+@media screen and (max-width: 480px) {
+  .order-tabs__list {
+    margin: 0 -8px;
+  }
+}
 
 .order-tabs__item {
   display: inline-block;
@@ -4723,6 +4779,11 @@ footer {
   color: #7ac8f0;
   border: 1px solid #7ac8f0;
 }
+@media screen and (max-width: 480px) {
+  .order-tabs__link {
+    font-size: 10px;
+  }
+}
 
 .order-tabs__big-text {
   text-transform: uppercase;
@@ -4743,6 +4804,11 @@ footer {
   margin: 0 -14px 26px;
   font-size: 0;
 }
+@media screen and (max-width: 480px) {
+  .order-get__list {
+    margin: 0 -8 26px;
+  }
+}
 
 .order-get__item {
   display: inline-block;
@@ -4754,6 +4820,12 @@ footer {
   padding: 0 14px;
   font-size: 0.875rem;
   overflow: hidden;
+}
+@media screen and (max-width: 480px) {
+  .order-get__item {
+    padding: 0 8px;
+    font-size: 10px;
+  }
 }
 
 .order-get__checkbox {
@@ -4806,9 +4878,19 @@ footer {
 .order-get__options-title .checkbox__input {
   left: -9999px;
 }
+@media screen and (max-width: 480px) {
+  .order-get__options-title span {
+    display: block;
+  }
+}
 
 .order-get__options-checkbox {
   margin: 0 0 0 50px;
+}
+@media screen and (max-width: 480px) {
+  .order-get__options-checkbox {
+    margin: 0;
+  }
 }
 
 .order-get__options-desc {
@@ -4896,8 +4978,13 @@ footer {
 }
 
 .order-pay__list {
-  margin: -14px;
+  margin: 0 -14px;
   font-size: 0;
+}
+@media screen and (max-width: 480px) {
+  .order-pay__list {
+    margin: 0 -8px;
+  }
 }
 
 .order-pay__item {
@@ -4914,6 +5001,11 @@ footer {
 @media screen and (max-width: 768px) {
   .order-pay__item {
     padding: 8px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .order-pay__item {
+    width: 50%;
   }
 }
 
@@ -4976,6 +5068,11 @@ footer {
   text-transform: uppercase;
   font-size: 0.875rem;
   color: #7ac8f0;
+}
+@media screen and (max-width: 480px) {
+  .order-pay__checkbox-text {
+    font-size: 10px;
+  }
 }
 
 .order-info {
@@ -5148,6 +5245,7 @@ footer {
   *zoom: 1;
   *display: inline;
   font-size: 1rem;
+  font-family: 'Robotoregular';
 }
 
 .panel__basket-switch_min {
@@ -5174,6 +5272,10 @@ footer {
 
 .panel__basket-img_pic {
   max-width: 100%;
+}
+
+.panel__basket-price {
+  font-family: 'Robotoregular';
 }
 
 .panel__basket-price_discount {
