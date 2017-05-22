@@ -129,6 +129,13 @@ footer {
 	}
 }
 
+.title {
+	text-transform: uppercase;
+	font-size: 18px;
+	font-family: 'Robotomedium';
+	color: $black;
+}
+
 .main--panel-open {
 	margin-top: 0;
 }
@@ -178,9 +185,14 @@ footer {
     top: -24px;
     left: 12px;
     font-size: 14px;
+    white-space: nowrap;
 }
 
 .input:focus + label {
+    display: block;
+}
+
+.textarea:focus + label {
     display: block;
 }
 

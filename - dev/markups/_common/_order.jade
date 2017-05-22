@@ -14,24 +14,22 @@
 					.order-data__left
 						.order__label
 							input.order__input.input(type="text" placeholder="Населенный пункт, город, улица, дом")
+							label.label Населенный пункт, город, улица, дом
 					.order-data__right
 						.order__label
 							input.order__input.input(type="text" placeholder="Квартира")
+							label.label Квартира
 						.order__label
 							input.order__input.input(type="text" placeholder="Индекс")
-				//- .order-city
-				//- 	.order-city__left
-				//- 		.order__label
-				//- 			input.order__input.input(type="text" placeholder="Населенный пункт, город, улица, дом")
-				//- 	.order-city__right
-				//- 		.order__label
-				//- 			input.order__input.input(type="text" placeholder="Индекс")
+							label.label Индекс
 				.order__comment
 					textarea.order__textarea.textarea(type="text" placeholder="Ваш комментарий к заказу")
+					label.label Ваш комментарий к заказу
 			li.order__item
 				.order__item-title
 					.order__item-title__text 2. Выберите  способ доставки
 					a.order__item-title__link(href="#")
+						.order__item-title__link-popup После оформления заказа Вы получите квитанцию, которую можно будет распечатать и использовать при оплате в отделениях Сбербанка России. Уважаемые покупатели, просим обратить ваше внимание, что интернет-магазин не высылает посылки наложенным платежом.
 				.order-tabs
 					ul.order-tabs__list
 						li.order-tabs__item
@@ -55,21 +53,21 @@
 										input.order-get__checkbox-input.checkbox__input(type="radio" name="orderGet")
 										.order-get__checkbox-fake.checkbox__fake
 										.order-get__checkbox-title
-											.order-get__checkbox__big-text Курьером СДЭК до двери
+											.order-get__checkbox__big-text 1 Курьером СДЭК до двери
 											.order-get__checkbox__small-text 2-3 рабочих дня от 150 руб.
 								li.order-get__item
 									label.order-get__checkbox
 										input.order-get__checkbox-input.checkbox__input(type="radio" name="orderGet")
 										.order-get__checkbox-fake.checkbox__fake
 										.order-get__checkbox-title
-											.order-get__checkbox__big-text Получение на складе СДЭК
+											.order-get__checkbox__big-text 1 Получение на складе СДЭК
 											.order-get__checkbox__small-text 2-5 рабочих дня от 100 руб.
 								li.order-get__item
 									label.order-get__checkbox
 										input.order-get__checkbox-input.checkbox__input(type="radio" name="orderGet")
 										.order-get__checkbox-fake.checkbox__fake
 										.order-get__checkbox-title
-											.order-get__checkbox__big-text Получение на складе СДЭК
+											.order-get__checkbox__big-text 1 Получение на складе СДЭК
 											.order-get__checkbox__small-text 4-12 рабочих дня от 120 руб.
 							.order-get__options
 								.order-get__options-title
@@ -86,21 +84,21 @@
 										input.order-get__checkbox-input.checkbox__input(type="radio" name="orderGet")
 										.order-get__checkbox-fake.checkbox__fake
 										.order-get__checkbox-title
-											.order-get__checkbox__big-text Курьером СДЭК до двери
+											.order-get__checkbox__big-text 2 Курьером СДЭК до двери
 											.order-get__checkbox__small-text 2-3 рабочих дня от 150 руб.
 								li.order-get__item
 									label.order-get__checkbox
 										input.order-get__checkbox-input.checkbox__input(type="radio" name="orderGet")
 										.order-get__checkbox-fake.checkbox__fake
 										.order-get__checkbox-title
-											.order-get__checkbox__big-text Получение на складе СДЭК
+											.order-get__checkbox__big-text 2 Получение на складе СДЭК
 											.order-get__checkbox__small-text 2-5 рабочих дня от 100 руб.
 								li.order-get__item
 									label.order-get__checkbox
 										input.order-get__checkbox-input.checkbox__input(type="radio" name="orderGet")
 										.order-get__checkbox-fake.checkbox__fake
 										.order-get__checkbox-title
-											.order-get__checkbox__big-text Получение на складе СДЭК
+											.order-get__checkbox__big-text 2 Получение на складе СДЭК
 											.order-get__checkbox__small-text 4-12 рабочих дня от 120 руб.
 							.order-get__options
 								.order-get__options-title
@@ -117,29 +115,21 @@
 										input.order-get__checkbox-input.checkbox__input(type="radio" name="orderGet")
 										.order-get__checkbox-fake.checkbox__fake
 										.order-get__checkbox-title
-											.order-get__checkbox__big-text Курьером СДЭК до двери
+											.order-get__checkbox__big-text 3 Курьером СДЭК до двери
 											.order-get__checkbox__small-text 2-3 рабочих дня от 150 руб.
 								li.order-get__item
 									label.order-get__checkbox
 										input.order-get__checkbox-input.checkbox__input(type="radio" name="orderGet")
 										.order-get__checkbox-fake.checkbox__fake
 										.order-get__checkbox-title
-											.order-get__checkbox__big-text Получение на складе СДЭК
+											.order-get__checkbox__big-text 3 Получение на складе СДЭК
 											.order-get__checkbox__small-text 2-5 рабочих дня от 100 руб.
-									.order-get__options
-										.order-get__options-title
-											span Дополнительные опции
-											label.order-get__options-checkbox.order-info__checkbox
-												input.order-info__checkbox-input.checkbox__input(type="checkbox")
-												.order-info__checkbox-fake.checkbox__fake
-												.order-info__checkbox-text Примерка, дополнительные 15 мин. ожидания
-										.order-get__options-desc Оплата на сайте при выборе данного вида доставки осуществляется только за доставку. Вы оплачиваете курьеру (наличными) только понравившийся товар.
 								li.order-get__item
 									label.order-get__checkbox
 										input.order-get__checkbox-input.checkbox__input(type="radio" name="orderGet")
 										.order-get__checkbox-fake.checkbox__fake
 										.order-get__checkbox-title
-											.order-get__checkbox__big-text Получение на складе СДЭК
+											.order-get__checkbox__big-text 3 Получение на складе СДЭК
 											.order-get__checkbox__small-text 4-12 рабочих дня от 120 руб.
 						
 					
@@ -152,17 +142,21 @@
 				.order-data
 					.order-data__left
 						.order__label
-							input.order__input.input(type="text" placeholder="ФИО*")
+							input.order__input.input(type="text" required placeholder="ФИО*")
+							label.label ФИО*
 					.order-data__right
 						.order__label
-							input.order__input.input(type="text" placeholder="Телефон*")
+							input.order__input.input(type="text" required placeholder="Телефон*")
+							label.label Телефон*
 						.order__label
-							input.order__input.input(type="text" placeholder="E-Mail*")
+							input.order__input.input(type="text" required placeholder="E-Mail*")
+							label.label E-Mail*
 
 			li.order__item
 				.order__item-title
 					.order__item-title__text 4. Выберите способ оплаты
 					a.order__item-title__link(href="#") 
+						.order__item-title__link-popup После оформления заказа Вы получите квитанцию, которую можно будет распечатать и использовать при оплате в отделениях Сбербанка России. Уважаемые покупатели, просим обратить ваше внимание, что интернет-магазин не высылает посылки наложенным платежом.
 				.order-pay
 					ul.order-pay__list
 						li.order-pay__item
@@ -295,72 +289,5 @@
 					.order-info__checkbox-fake.checkbox__fake
 					.order-info__checkbox-text Информировать по СМС о статусе заказа
 			.form__btns.form__btns--order
-				a.form__btn.form__btn--bottom(href="#") Оформить заказ
+				a.form__btn.form__btn--bottom(href="personal.html") Оформить заказ
 		.order__desc Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки
-
-//- .order
-//- 	ul.order__list
-//- 		li.order__item
-//- 			.order__content
-//- 				.order__item-title Персональные данные
-//- 				.order__label
-//- 					input.order__input.input(type="text" placeholder="Фамилия*")
-//- 				.order__label
-//- 					input.order__input.input(type="text" placeholder="Имя*")
-//- 				.order__label
-//- 					input.order__input.input(type="text" placeholder="Отчество*")
-//- 				.order__label
-//- 					input.order__input.input(type="text" placeholder="Телефон*")
-//- 				.order__label
-//- 					input.order__input.input(type="text" placeholder="E-Mail*")
-//- 				.order__label
-//- 					input.order__input.input(type="text" placeholder="Город/насел. пункт*")
-//- 				.order__label
-//- 					input.order__input.input(type="text" placeholder="Улица*")
-//- 				.order__label.order__label--width-half
-//- 					input.order__input.input(type="text" placeholder="Дом*")
-//- 					input.order__input.input(type="text" placeholder="Корпус")
-//- 				.order__label.order__label--width-half
-//- 					input.order__input.input(type="text" placeholder="Квартира")
-//- 					input.order__input.input(type="text" placeholder="Индекс*")
-//- 				.order__label
-//- 					textarea.order__textarea.textarea(type="text" placeholder="Ваш комментарий к заказу")
-//- 		li.order__item
-//- 			.order__content
-//- 				.order__item-title Cпособ доставки
-//- 					form.order-form
-//- 						.order-form__content
-//- 							label.order-form__checkbox
-//- 								input.order-form__checkbox-input.checkbox__input(type="checkbox")
-//- 								.order-form__checkbox-fake.checkbox__fake
-//- 								.order-form__checkbox-title СДЭК. Получение с примеркой на складе СДЭК
-//- 							.order-form__desc Примерка. Возможность возврата. Оплата <span> наличными</span> после примерки.
-//- 							a.order-form__link(href="#") Рассчитать стоимость
-//- 						.order-form__content
-//- 							label.order-form__checkbox
-//- 								input.order-form__checkbox-input.checkbox__input(type="checkbox")
-//- 								.order-form__checkbox-fake.checkbox__fake
-//- 								.order-form__checkbox-title СДЭК. Доставка курьером до двери с примеркой
-//- 							.order-form__desc Примерка. Возможность возврата. Оплата <span> наличными</span> курьеру. Примерка 15 мин.
-//- 							a.order-form__link(href="#") Рассчитать стоимость
-//- 						.order-form__content
-//- 							label.order-form__checkbox
-//- 								input.order-form__checkbox-input.checkbox__input(type="checkbox")
-//- 								.order-form__checkbox-fake.checkbox__fake
-//- 								.order-form__checkbox-title СДЭК. Доставка (получение на складе СДЭК)
-//- 							a.order-form__link(href="#") Рассчитать стоимость
-//- 						.order-form__content
-//- 							label.order-form__checkbox
-//- 								input.order-form__checkbox-input.checkbox__input(type="checkbox")
-//- 								.order-form__checkbox-fake.checkbox__fake
-//- 								.order-form__checkbox-title СДЭК. Доставка (доставка курьером до двери)
-//- 							a.order-form__link(href="#") Рассчитать стоимость
-//- 						.order-form__content
-//- 							label.order-form__checkbox
-//- 								input.order-form__checkbox-input.checkbox__input(type="checkbox")
-//- 								.order-form__checkbox-fake.checkbox__fake
-//- 								.order-form__checkbox-title Почта России. Простой посылкой
-//- 							a.order-form__link(href="#") Рассчитать стоимость
-//- 		li.order__item
-//- 			.order__content
-//- 				.order__item-title Ваш заказ

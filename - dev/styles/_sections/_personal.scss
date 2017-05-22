@@ -1,0 +1,253 @@
+
+
+.personal__left {
+	float: left;
+	width: 65%;
+	padding: 25px 45px;
+	background: #f0f0f0;
+
+	@include tablets {
+		float: none;
+		width: 100%;
+	}
+
+	@include phones {
+		padding: 25px 20px;
+	}
+}
+
+.personal__right {
+	float: left;
+	width: 35%;
+	padding: 0 36px 0 54px;
+
+	@include tablets {
+		float: none;
+		width: 100%;
+		padding: 36px 0 0 0;
+	}
+
+	@include phones {
+		padding: 25px 20px;
+	}
+}
+
+.personal__title-wrapp {
+	position: relative;
+	@extend %clearfix;
+}
+
+.personal__title-vip {
+	position: absolute;
+	padding: 5px 10px;
+	top: 0;
+	right: 0;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 16px;
+	color: #fff;
+	background: $blue;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -10px;
+		background: #fff;
+		border-left: 12px solid #fff;
+		border-right: 0 solid $blue;
+		border-top: 16px solid $blue;
+		border-bottom: 16px solid $blue;
+	}
+}
+
+.personal__title {
+	margin-bottom: 20px;
+}
+
+.personal__desc {
+	font-size: 18px;
+}
+
+.personal__right-wrapp {
+	margin-bottom: 20px;
+
+	&:first-child {
+		margin-bottom: 42px;
+	}
+}
+
+.personal__tabs-list {
+	font-size: 0;
+	background: #fff;
+}
+
+.personal__tabs-item {
+	@include inline-block(top);
+	margin: 1px 0 1px 1px;
+	text-align: center;
+	font-size: 16px;
+	background: #f0f0f0;
+
+	&:last-child {
+		margin: 1px;
+	}
+
+	&.active {
+		background: #fff;
+
+		.personal__tabs-link {
+			color: $black;
+		}
+	}
+}
+
+.personal__tabs-item--active {
+	width: 16%;
+}
+
+.personal__tabs-item--all {
+	width: 8%;
+}
+
+.personal__tabs-item--done {
+	width: 18%;
+}
+
+.personal__tabs-item--cancel {
+	width: 18%;
+}
+
+.personal__tabs-item--sale {
+	width: 39%;
+}
+
+.personal__tabs-link {
+	display: block;
+	padding: 10px 0;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-family: 'Robotoregular';
+	color: $blue;
+
+	&.active {
+		color: $black;
+	}
+}
+
+.personal__content-item {
+	margin-bottom: 20px;
+	background: #fff;
+}
+
+.personal__content-header {
+	text-transform: uppercase;
+	font-size: 14px;
+	font-family: 'Robotoregular';
+	border-bottom: 1px solid #f0f0f0;
+	@extend %clearfix;
+}
+
+.personal__content-body {
+	padding: 7px 0;
+	font-size: 12px;
+	@extend %clearfix;
+}
+
+.personal__content-order {
+	float: left;
+	width: 10%;
+	padding: 10px 0 10px 12px;
+}
+
+.personal__content-date {
+	float: left;
+	width: 12%;
+	padding: 10px 0 10px 12px;
+}
+
+.personal__content-payment {
+	float: left;
+	width: 23%;
+	padding: 10px 0 10px 12px;
+}
+
+.personal__content-shipping {
+	float: left;
+	width: 26%;
+	padding: 10px 0 10px 12px;
+}
+
+.personal__content-amount {
+	float: left;
+	width: 12%;
+	padding: 10px 0 10px 12px;
+}
+
+.personal__content-status {
+	float: right;
+	width: 15%;
+	padding: 10px 0 10px 12px;
+
+	&.take {
+		color: #45e9d0;
+	}
+
+	&.picked {
+		color: #a63cf0;
+	}
+
+	&.cancel {
+		color: #f19da3
+	}
+
+	&.sent {
+		color: #42e85a;
+	}
+
+	&.buy {
+		padding: 0 0 0 12px;
+	}
+}
+
+.personal__content-status_buy {
+	display: inline-block;
+	margin-top: 3px;
+	padding: 7px 11px;
+	text-transform: uppercase;
+	color: #fff;
+	background: $blue;
+	@include border-radius(20px);
+}
+
+.personal__right-item {
+	margin-bottom: 12px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}	
+}
+
+.personal__right-link {
+	display: inline-block;
+	font-size: 18px;
+	color: $blue;
+}
+
+.personal__status-item {
+	@extend %clearfix;
+}
+
+.personal__status-left {
+	float: left;
+}
+
+.personal__status-right {
+	float: right;
+	font-family: 'Robotomedium';
+}
+
+.personal__status-currency {
+	margin-left: 6px;
+	font-family: 'Robotolight';
+}

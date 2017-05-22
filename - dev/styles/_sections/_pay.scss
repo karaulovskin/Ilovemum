@@ -132,6 +132,7 @@
 }
 
 .pay__shipping-item--region {
+	position: relative;
 	@include inline-block(top);
 	width: 20%;
 	padding: 0 10px;
@@ -175,6 +176,38 @@
 .pay__shipping-link {
 	font-size: 14px;
 	color: $blue;
+}
+
+.pay__shipping-popup {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	width: 500px;
+	margin-top: 10px;
+	margin-left: -142px;
+	padding: 15px 15px;
+	font-size: 16px;
+	background: #fff;
+	border: 1px solid $blue;
+	z-index: 1;
+
+	&:after {
+		content: "";
+		position: absolute;
+		left: 50%;
+		bottom: 100%;
+		margin-bottom: -5px;
+		width: 10px;
+		height: 10px;
+		background: #fff;
+		border-left: 1px solid $blue;
+		border-top: 1px solid $blue;
+		border-right: 1px solid transparent;
+		border-bottom: 1px solid transparent;
+		@include transform(rotate(45deg));
+	}
 }
 
 .pay__return-list {

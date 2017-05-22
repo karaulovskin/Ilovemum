@@ -80,24 +80,6 @@ $(document).ready(function(){
 			$('.sidebar').addClass('sidebar--panel-open');
 		});
 
-		$(address).click(function(e){
-			e.preventDefault();
-			$('.panel-address').addClass('open');
-			$(overlay).fadeIn();
-			$('.header').addClass('header--panel-open');
-			$('.main').addClass('main--panel-open');
-			$('.sidebar').css('z-index', 'auto');
-		});
-
-		$(language).click(function(e){
-			e.preventDefault();
-			$('.panel-language').addClass('open');
-			$(overlay).fadeIn();
-			$('.header').addClass('header--panel-open');
-			$('.main').addClass('main--panel-open');
-			$('.sidebar').addClass('sidebar--panel-open');
-		});
-
 		$(filtr).click(function(e){
 			e.preventDefault();
 			$('.filtr__wrapp').addClass('open');
@@ -668,6 +650,16 @@ $(window).resize(function(){
 			$('.sidebar__item--login').insertBefore($('.sidebar__item--address'));
 	    };
 
+	}());
+
+	// Страница оплата
+	(function(){
+		$('#paySb').on('click', function(e){
+			e.preventDefault();
+			console.log('!!!');
+			$('.pay__shipping-popup').fadeIn();
+			console.log('!!!');
+		});
 	}());
 });
 
