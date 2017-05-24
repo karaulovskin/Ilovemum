@@ -157,6 +157,10 @@
 .counter__list {
 	display: inline-block;
 	font-size: 0;
+
+	@include phones {
+		margin: 0 6px 0 2px;
+	}
 }
 
 .counter__item {

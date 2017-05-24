@@ -76,13 +76,12 @@
 															<li class="panel-subburger__item"><a href="#" class="panel-subburger__link">Юбки, шорты</a></li>
 														</ul>
 													</li>
-													<li class="panel-topburger__item width-50"><a href="#" class="panel-topburger__link margin-bottom">Детям</a>
-														<ul class="panel-topburger__list">
-															<li class="panel-topburger__item"><a href="#" class="panel-topburger__link">Хиты</a></li>
-															<li class="panel-topburger__item"><a href="#" class="panel-topburger__link">Распродажа</a></li>
-															<li class="panel-topburger__item"><a href="#" class="panel-topburger__link">Последний размер</a></li>
-															<li class="panel-topburger__item"><a href="#" class="panel-topburger__link">Удобно для кормления</a></li>
-														</ul>
+													<li class="panel-topburger__item width-50"><a href="#" class="panel-topburger__link">Детям</a>
+														<ul class="panel-subburger__list">
+															<li class="panel-subburger__item"><a href="#" class="panel-subburger__link">Детям 2 уровень</a></li>
+															<li class="panel-subburger__item"><a href="#" class="panel-subburger__link">Детям 2 уровень</a></li>
+															<li class="panel-subburger__item"><a href="#" class="panel-subburger__link">Детям 2 уровень</a></li>
+														</ul><a href="#" class="panel-topburger__link width-100 margin-top">Хиты</a><a href="#" class="panel-topburger__link width-100">Распродажа</a><a href="#" class="panel-topburger__link width-100">Последний размер</a><a href="#" class="panel-topburger__link width-100">Удобно для кормления</a>
 													</li>
 												</ul>
 											</li>
@@ -309,12 +308,20 @@
 											<div class="order__item-title__text">1. Выберите пункт доставки</div>
 										</div>
 										<div class="order-country">
-											<div class="order-country__value"></div>
-											<select class="order-country__select">
-												<option class="order-country__option">Россия</option>
-												<option class="order-country__option">Украина</option>
-												<option class="order-country__option">Казахстан</option>
-											</select>
+											<div class="order-country-left">
+												<div class="order-country__value"></div>
+												<select class="order-country__select">
+													<option class="order-country__option">Россия</option>
+													<option class="order-country__option">Украина</option>
+													<option class="order-country__option">Казахстан</option>
+												</select>
+											</div>
+											<div class="order-country-right">
+												<div class="order__label">
+													<input type="text" placeholder="Индекс" class="order__input input">
+													<label class="label">Индекс</label>
+												</div>
+											</div>
 										</div>
 										<div class="order-data">
 											<div class="order-data__left">
@@ -328,10 +335,12 @@
 													<input type="text" placeholder="Квартира" class="order__input input">
 													<label class="label">Квартира</label>
 												</div>
-												<div class="order__label">
-													<input type="text" placeholder="Индекс" class="order__input input">
-													<label class="label">Индекс</label>
-												</div>
+											</div>
+										</div>
+										<div class="order-data--full">
+											<div class="order__label">
+												<input type="text" placeholder="Населенный пункт, город, улица, дом, квартира" class="order__input input">
+												<label class="label">Населенный пункт, город, улица, дом, квартира</label>
 											</div>
 										</div>
 										<div class="order__comment">
@@ -341,20 +350,26 @@
 									</li>
 									<li class="order__item">
 										<div class="order__item-title">
-											<div class="order__item-title__text">2. Выберите  способ доставки</div><a href="#" class="order__item-title__link">
-												<div class="order__item-title__link-popup">После оформления заказа Вы получите квитанцию, которую можно будет распечатать и использовать при оплате в отделениях Сбербанка России. Уважаемые покупатели, просим обратить ваше внимание, что интернет-магазин не высылает посылки наложенным платежом.</div></a>
+											<div class="order__item-title__text">2. Выберите  способ доставки<a href="#" class="order__item-title__link">
+													<div class="order__item-title__link-popup">После оформления заказа Вы получите квитанцию, которую можно будет распечатать и использовать при оплате в отделениях Сбербанка России. Уважаемые покупатели, просим обратить ваше внимание, что интернет-магазин не высылает посылки наложенным платежом.</div></a></div>
 										</div>
 										<div class="order-tabs">
 											<ul class="order-tabs__list">
-												<li class="order-tabs__item"><a href="#" class="order-tabs__link">
-														<div class="order-tabs__big-text">Бесплатно с примеркой</div>
-														<div class="order-tabs__small-text">От 3 000 руб.</div></a></li>
-												<li class="order-tabs__item active"><a href="#" class="order-tabs__link">
-														<div class="order-tabs__big-text">С примеркой</div>
-														<div class="order-tabs__small-text">Постоплата</div></a></li>
-												<li class="order-tabs__item"><a href="#" class="order-tabs__link">
-														<div class="order-tabs__big-text">Без примерки</div>
-														<div class="order-tabs__small-text">Он-лайн оплата</div></a></li>
+												<li class="order-tabs__item">
+													<div class="order-tabs__wrapp"><a href="#" class="order-tabs__link">
+															<div class="order-tabs__big-text">Бесплатно с примеркой</div>
+															<div class="order-tabs__small-text">От 3 000 руб.</div></a></div>
+												</li>
+												<li class="order-tabs__item active">
+													<div class="order-tabs__wrapp"><a href="#" class="order-tabs__link">
+															<div class="order-tabs__big-text">С примеркой</div>
+															<div class="order-tabs__small-text">Постоплата</div></a></div>
+												</li>
+												<li class="order-tabs__item">
+													<div class="order-tabs__wrapp"><a href="#" class="order-tabs__link">
+															<div class="order-tabs__big-text">Без примерки</div>
+															<div class="order-tabs__small-text">Он-лайн оплата</div></a></div>
+												</li>
 											</ul>
 										</div>
 										<div class="order-content">
@@ -366,7 +381,7 @@
 																<input type="radio" name="orderGet" class="order-get__checkbox-input checkbox__input">
 																<div class="order-get__checkbox-fake checkbox__fake"></div>
 																<div class="order-get__checkbox-title">
-																	<div class="order-get__checkbox__big-text">1 Курьером СДЭК до двери</div>
+																	<div class="order-get__checkbox__big-text">Курьером СДЭК до двери</div>
 																	<div class="order-get__checkbox__small-text">2-3 рабочих дня от 150 руб.</div>
 																</div>
 															</label>
@@ -376,7 +391,7 @@
 																<input type="radio" name="orderGet" class="order-get__checkbox-input checkbox__input">
 																<div class="order-get__checkbox-fake checkbox__fake"></div>
 																<div class="order-get__checkbox-title">
-																	<div class="order-get__checkbox__big-text">1 Получение на складе СДЭК</div>
+																	<div class="order-get__checkbox__big-text">Получение на складе СДЭК</div>
 																	<div class="order-get__checkbox__small-text">2-5 рабочих дня от 100 руб.</div>
 																</div>
 															</label>
@@ -386,7 +401,7 @@
 																<input type="radio" name="orderGet" class="order-get__checkbox-input checkbox__input">
 																<div class="order-get__checkbox-fake checkbox__fake"></div>
 																<div class="order-get__checkbox-title">
-																	<div class="order-get__checkbox__big-text">1 Получение на складе СДЭК</div>
+																	<div class="order-get__checkbox__big-text">Получение на складе СДЭК</div>
 																	<div class="order-get__checkbox__small-text">4-12 рабочих дня от 120 руб.</div>
 																</div>
 															</label>
@@ -410,7 +425,7 @@
 																<input type="radio" name="orderGet" class="order-get__checkbox-input checkbox__input">
 																<div class="order-get__checkbox-fake checkbox__fake"></div>
 																<div class="order-get__checkbox-title">
-																	<div class="order-get__checkbox__big-text">2 Курьером СДЭК до двери</div>
+																	<div class="order-get__checkbox__big-text">Курьером СДЭК до двери</div>
 																	<div class="order-get__checkbox__small-text">2-3 рабочих дня от 150 руб.</div>
 																</div>
 															</label>
@@ -420,7 +435,7 @@
 																<input type="radio" name="orderGet" class="order-get__checkbox-input checkbox__input">
 																<div class="order-get__checkbox-fake checkbox__fake"></div>
 																<div class="order-get__checkbox-title">
-																	<div class="order-get__checkbox__big-text">2 Получение на складе СДЭК</div>
+																	<div class="order-get__checkbox__big-text">Получение на складе СДЭК</div>
 																	<div class="order-get__checkbox__small-text">2-5 рабочих дня от 100 руб.</div>
 																</div>
 															</label>
@@ -430,7 +445,7 @@
 																<input type="radio" name="orderGet" class="order-get__checkbox-input checkbox__input">
 																<div class="order-get__checkbox-fake checkbox__fake"></div>
 																<div class="order-get__checkbox-title">
-																	<div class="order-get__checkbox__big-text">2 Получение на складе СДЭК</div>
+																	<div class="order-get__checkbox__big-text">Получение на складе СДЭК</div>
 																	<div class="order-get__checkbox__small-text">4-12 рабочих дня от 120 руб.</div>
 																</div>
 															</label>
@@ -454,7 +469,7 @@
 																<input type="radio" name="orderGet" class="order-get__checkbox-input checkbox__input">
 																<div class="order-get__checkbox-fake checkbox__fake"></div>
 																<div class="order-get__checkbox-title">
-																	<div class="order-get__checkbox__big-text">3 Курьером СДЭК до двери</div>
+																	<div class="order-get__checkbox__big-text">Курьером СДЭК до двери</div>
 																	<div class="order-get__checkbox__small-text">2-3 рабочих дня от 150 руб.</div>
 																</div>
 															</label>
@@ -464,7 +479,7 @@
 																<input type="radio" name="orderGet" class="order-get__checkbox-input checkbox__input">
 																<div class="order-get__checkbox-fake checkbox__fake"></div>
 																<div class="order-get__checkbox-title">
-																	<div class="order-get__checkbox__big-text">3 Получение на складе СДЭК</div>
+																	<div class="order-get__checkbox__big-text">Получение на складе СДЭК</div>
 																	<div class="order-get__checkbox__small-text">2-5 рабочих дня от 100 руб.</div>
 																</div>
 															</label>
@@ -474,7 +489,7 @@
 																<input type="radio" name="orderGet" class="order-get__checkbox-input checkbox__input">
 																<div class="order-get__checkbox-fake checkbox__fake"></div>
 																<div class="order-get__checkbox-title">
-																	<div class="order-get__checkbox__big-text">3 Получение на складе СДЭК</div>
+																	<div class="order-get__checkbox__big-text">Получение на складе СДЭК</div>
 																	<div class="order-get__checkbox__small-text">4-12 рабочих дня от 120 руб.</div>
 																</div>
 															</label>
@@ -489,14 +504,14 @@
 											<div class="order__item-title__text">3. Введите Персональные данные</div>
 										</div>
 										<div class="order__item-desc"><span class="order__item-desc__text">Если вы уже зарегистрированы, пожалуйста</span><a href="#" class="order__item-desc__link">Войдите</a></div>
-										<div class="order-data">
-											<div class="order-data__left">
+										<div class="order-name">
+											<div class="order-name__left">
 												<div class="order__label">
 													<input type="text" required placeholder="ФИО*" class="order__input input">
 													<label class="label">ФИО*</label>
 												</div>
 											</div>
-											<div class="order-data__right">
+											<div class="order-name__right">
 												<div class="order__label">
 													<input type="text" required placeholder="Телефон*" class="order__input input">
 													<label class="label">Телефон*</label>
@@ -632,7 +647,7 @@
 										</div>
 									</li>
 								</ul>
-								<form class="form__basket">
+								<form class="form__basket form__basket--order">
 									<div class="form__basket-sale">
 										<input class="form__basket-sale_input"><a href="#" class="form__basket-sale_btn form__btn">Рассчитать скидку</a>
 									</div>

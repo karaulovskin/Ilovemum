@@ -150,6 +150,12 @@
 	}
 }
 
+@mixin bigphone {
+	@media screen and (max-width: 660px) {
+		@content;
+	}
+}
+
 @mixin phones {
 	@media screen and (max-width: 480px) {
 		@content;

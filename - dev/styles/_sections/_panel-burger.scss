@@ -109,6 +109,14 @@
 	text-transform: uppercase;
 	font-size: rem(14px);
 	color: $black;
+
+	&.width-100 {
+		width: 100%;
+	}
+
+	&.margin-top {
+		margin-top: 10px;
+	}
 }
 
 .panel-topburger__link.margin-bottom {

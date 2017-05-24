@@ -12,9 +12,17 @@
 	padding: 25px 45px;
 	background: #f0f0f0;
 
+	@include top {
+		padding: 25px 35px;
+	}
+
 	@include tablets {
 		float: none;
 		width: 100%;
+	}
+
+	@include laptop {
+		padding: 25px 25px;
 	}
 
 	@include phones {
@@ -27,10 +35,30 @@
 	width: 35%;
 	padding: 0 36px 0 54px;
 
+	@include top {
+		padding: 0 36px 0 35px;
+
+		.panel__basket-price_discount,
+		.panel__basket-price_value {
+			font-size: 14px;
+		}
+	}
+
+	@include desktop {
+		.panel__basket-price_discount,
+		.panel__basket-price_value {
+			font-size: 13px;
+		}
+	}
+
+	@include laptop {
+		padding: 0 36px 0 25px;
+	}
+
 	@include tablets {
 		float: none;
 		width: 100%;
-		padding: 36px 0 0 0;
+		padding: 36px 0 20px 0;
 	}
 
 	@include phones {
@@ -47,6 +75,7 @@
 	position: relative;
 	display: inline-block;
 	margin-bottom: 16px;
+	padding-right: 22px;
 	text-transform: uppercase;
 	font-size: rem(18px);
 	color: $black;
@@ -54,9 +83,10 @@
 }
 
 .order__item-title__link {
+	display: block;
 	position: absolute;
 	top: -4px;
-	right: -22px;
+	right: 0px;
 	width: 16px;
 	height: 16px;
 
@@ -81,12 +111,6 @@
 		text-align: center;
 		font-size: 12px;
 		color: $pink;
-	}
-
-	&:hover {
-		.order__item-popup {
-			
-		}
 	}
 }
 
@@ -122,6 +146,10 @@
 		border-bottom: 1px solid transparent;
 		@include transform(rotate(-135deg));
 	}
+
+	&.show {
+		display: block;
+	}
 }
 
 // .order__item-popup {
@@ -142,19 +170,49 @@
 .order-country {
 	position: relative;
     margin: 0 0 28px 0;
+    @extend %clearfix;
 
     @include phones {
-    	margin: 0 0 14px 0;
+    	margin: 0 0 26px 0;
     } 
+}
+
+.order-country-left {
+	position: relative;
+	float: left;
+	width: 66%;
+	padding-right: 14px;
+
+	@include top {
+		padding-right: 8px;
+	}
+
+	@include laptop {
+		padding-right: 6px;
+	}
+}
+
+.order-country-right {
+	float: right;
+	width: 34%;
+	padding-left: 14px;
+
+	@include top {
+		padding-left: 8px;
+	}
+
+	@include laptop {
+		padding-left: 6px;
+	}
 }
 
 .order-country__value {
 	position: absolute;
 	top: 0;
 	left: 0;
-	right: 0;
+	right: 14px;
 	padding: 10px;
-	font-size: rem(14px);
+	font-size: 14px;
 	border: 1px solid $grey-line;
 
 	&:after {
@@ -167,11 +225,19 @@
 		background: url(../img/decor/select-arrow.png)no-repeat;
 		@include transform(translateY(-50%));
 	}
+
+	@include top {
+		right: 8px;
+	}
+
+	@include top {
+		right: 6px;
+	}
 }
 
 .order-country__select {
 	width: 100%;
-	padding: 12px;
+	padding: 12px 0 13px;
 	background: inherit;
 	border: none;
 	opacity: 0;
@@ -182,7 +248,7 @@
 	margin: 28px 0 0 0;
 
 	@include phones {
-		margin: 14px 0 0 0;
+		margin: 26px 0 0 0;
 	}
 }
 
@@ -220,8 +286,12 @@
 	margin: 0 -14px;
 	font-size: 0;
 
-	@include phones {
+	@include top {
 		margin: 0 -8px;
+	}
+
+	@include laptop {
+		margin: 0 -6px;
 	}
 }
 
@@ -229,12 +299,13 @@
 	@include inline-block(top);
 	width: 33.3%;
 	padding: 0 14px;
+	text-align: center;
 	font-size: rem(16px);
 
 	&.active {
-		
-		.order-tabs__link {
-			color: #fff;
+
+		.order-tabs__wrapp {
+			position: relative;
 			background: $blue;
 
 			&:after {
@@ -251,40 +322,71 @@
 				@include transform(translate(50%, -50%));
 			}
 		}
+
+		.order-tabs__link {
+			color: #fff;
+		}
 	}
 
-	@include tablets {
+	@include top {
 		padding: 0 8px;
+
+		&.active {
+		
+			.order-tabs__wrapp {
+
+				&:after {
+					width: 20px;
+					height: 20px;
+				}
+			}
+		}
+	}
+
+	@include laptop {
+		padding: 0 6px;
+
+		&.active {
+		
+			.order-tabs__wrapp {
+
+				&:after {
+					width: 16px;
+					height: 16px;
+				}
+			}
+		}
+	}
+}
+
+.order-tabs__wrapp {
+	height: 70px;
+    padding: 0 6px;
+	border: 1px solid $blue;
+
+	&:before {
+	    content: "";
+	    display: inline-block;
+	    vertical-align: middle;
+	    height: 100%;
+	}
+
+	@include laptop {
+		height: 60px;
 	}
 }
 
 .order-tabs__link {
 	position: relative;
-	display: block;
-	padding: 10px 0;
+	@include inline-block(middle);
+	// padding: 10px 0;
 	text-align: center;
 	font-size: rem(14px);
 	color: $blue;
-	border: 1px solid $blue;
 
-	// &.active {
-	// 	color: #fff;
-	// 	background: $blue;
-
-	// 	&:after {
-	// 		content: "";
-	// 		position: absolute;
-	// 		top: 0;
-	// 		right: 0;
-	// 		width: 23px;
-	// 		height: 23px;
-	// 		border: 1px solid #fff;
-	// 		background: url(../img/decor/cheked.png)no-repeat center;
-	// 		background-color: $blue;
-	// 		@include border-radius(50%);
-	// 		@include transform(translate(50%, -50%));
-	// 	}
-	// }
+	@include laptop {
+		font-size: 11px;
+	}
 
 	@include phones {
 		font-size: 10px;
@@ -311,6 +413,15 @@
 	margin: 0 -14px 26px;
 	font-size: 0;
 
+	@include top {
+		margin: 0 -8px 26px;
+	}
+
+
+	@include laptop {
+		margin: 0 -6px 26px;
+	}
+
 	@include phones {
 		margin: 0 -8 26px;
 	}
@@ -322,6 +433,15 @@
 	padding: 0 14px;
 	font-size: rem(14px);
 	overflow: hidden;
+
+	@include top {
+		padding: 0 8px;
+	}
+
+
+	@include laptop {
+		padding: 0 6px;
+	}
 
 	@include phones {
 		padding: 0 8px;
@@ -336,6 +456,10 @@
 
 .order-get__checkbox-title {
 	margin: 0 0 0 17px;
+
+	@include laptop {
+		font-size: 11px;
+	}
 }
 
 .order-get__checkbox__big-text {
@@ -377,6 +501,14 @@
 		left: -9999px;
 	}
 
+	@include laptop {
+		span {
+			display: block;
+			margin-bottom: 4px;
+			font-size: 11px;
+		}
+	}
+
 	@include phones {
 
 		span {
@@ -387,6 +519,14 @@
 
 .order-get__options-checkbox {
 	margin: 0 0 0 50px;
+
+	@include top {
+		margin: 0 0 0 30px;
+	}
+
+	@include laptop {
+		margin: 0;
+	}
 
 	@include phones {
 		margin: 0;
@@ -422,13 +562,21 @@
 	@extend %clearfix;
 }
 
+.order-data--full {
+
+}
+
 .order-data__left {
 	float: left;
-	width: 42%;
+	width: 66%;
 	padding: 0 14px 0 0;
 
-	@include tablets {
+	@include top {
 		padding: 0 8px 0 0;
+	}
+
+	@include laptop {
+		padding: 0 6px 0 0;
 	}
 
 	@include phones {
@@ -441,12 +589,92 @@
 
 .order-data__right {
 	float: right;
-	width: 58%;
+	width: 34%;
 	padding: 0 0 0 14px;
 	font-size: 0;
 	@extend %clearfix;
 
 	.order__label {
+		width: 100%;
+
+		// &:first-child {
+		// 	float: left;
+		// 	padding-right: 14px;
+		// }
+
+		// &:last-child {
+		// 	float: right;
+		// 	padding-left: 14px;
+		// }
+	}
+
+	@include top {
+		padding: 0 0 0 8px;
+
+		.order__label {
+			// width: 50%;
+
+			// &:first-child {
+			// 	float: left;
+			// 	padding-right: 8px;
+			// }
+
+			// &:last-child {
+			// 	float: right;
+			// 	padding-left: 8px;
+			// }
+		}
+	}
+
+	@include laptop {
+		padding: 0 0 0 6px;
+
+		// .order__label {
+		// 	width: 50%;
+
+		// 	&:first-child {
+		// 		float: left;
+		// 		padding-right: 6px;
+		// 	}
+
+		// 	&:last-child {
+		// 		float: right;
+		// 		padding-left: 6px;
+		// 	}
+		// }
+	}
+
+	@include phones {
+		float: none;
+		width: 100%;
+		padding: 0;
+	}
+}
+
+.order-name {
+	@extend %clearfix;
+}
+
+.order-name__left {
+	float: left;
+	width: 42%;
+    padding: 0 14px 0 0;
+
+    @include phones {
+    	width: 100%;
+    	margin-bottom: 26px;
+    	padding: 0;
+    }
+}
+
+.order-name__right {
+	float: right;
+	width: 58%;
+    padding: 0 0 0 14px;
+    font-size: 0;
+    @extend %clearfix;
+
+    .order__label {
 		width: 50%;
 
 		&:first-child {
@@ -460,11 +688,10 @@
 		}
 	}
 
-	@include tablets {
+	@include top {
 		padding: 0 0 0 8px;
 
 		.order__label {
-			width: 50%;
 
 			&:first-child {
 				float: left;
@@ -474,6 +701,23 @@
 			&:last-child {
 				float: right;
 				padding-left: 8px;
+			}
+		}
+	}
+
+	@include laptop {
+		padding: 0 0 0 6px;
+
+		.order__label {
+
+			&:first-child {
+				float: left;
+				padding-right: 6px;
+			}
+
+			&:last-child {
+				float: right;
+				padding-left: 6px;
 			}
 		}
 	}
@@ -493,8 +737,12 @@
 	margin: 0 -14px;
 	font-size: 0;
 
-	@include phones {
+	@include top {
 		margin: 0 -8px;
+	}
+
+	@include laptop {
+		margin: 0 -6px;
 	}
 }
 
@@ -505,8 +753,12 @@
 	font-size: rem(16px);
 	overflow: hidden;
 
-	@include tablets {
+	@include top {
 		padding: 8px;
+	}
+
+	@include laptop {
+		padding: 6px;
 	}
 
 	@include phones {
@@ -520,7 +772,7 @@
 
 .order-pay__checkbox-fake {
 	position: relative;
-	height: 60px;
+	height: 70px;
 	text-align: center;
 	border: 1px solid $blue;
 	cursor: pointer;
@@ -529,6 +781,10 @@
 		content: "";
 		@include inline-block(middle);
 		height: 100%;
+	}
+
+	@include laptop {
+		height: 60px;
 	}
 }
 
@@ -551,6 +807,18 @@
 		background-color: $blue;
 		@include border-radius(50%);
 		@include transform(translate(50%, -50%));
+
+		@include top {
+			top: 2px;
+			right: 2px;
+			width: 20px;
+			height: 20px;
+		}
+
+		@include laptop {
+			width: 16px;
+			height: 16px;
+		}
 	}
 
 	.order-pay__checkbox-text {
@@ -564,6 +832,10 @@
 	font-size: rem(14px);
 	color: $blue;
 
+	@include laptop {
+		font-size: 10px;
+	}
+
 	@include phones {
 		font-size: 10px;
 	}
@@ -572,6 +844,10 @@
 .order-info {
 	margin: 0 0 28px 0;
 	overflow: hidden;
+
+	@include laptop {
+		margin: 0 0 14px 0;
+	}
 }
 
 .order-info__checkbox {
@@ -581,7 +857,7 @@
 
 .order-info__checkbox-fake {
 	position: relative;
-	@include inline-block(middle);
+	@include inline-block(top);
 	width: 16px;
 	height: 16px;
 	background: #fff;
@@ -611,13 +887,21 @@
 }
 
 .order-info__checkbox-text {
-	@include inline-block(middle);
+	@include inline-block(top);
 	font-size: rem(12px);
+
+	@include laptop {
+		width: calc(100% - 20px);
+	}
 }
 
 .order__desc {
 	margin: 28px 0 0 0;
 	font-size: rem(12px);
+
+	@include laptop {
+		margin: 14px 0 0 0;
+	}
 }
 
 .order__basket-list {
@@ -655,6 +939,81 @@
 .order__basket-img_pic {
 	max-width: 100%;
 }
+
+.form__basket--order {
+	font-size: 16px;
+
+	.form__btn {
+		font-size: 12px;
+	}
+
+	.form__btns--order {
+		margin-bottom: 0;
+	}
+
+	@include top {
+		font-size: 14px;
+
+		.form__basket-sale_input {
+			height: 36px;
+		}
+
+		.form__btn {
+			font-size: 10px;
+		}
+
+		.panel__basket-price_discount {
+			margin-right: 6px;
+		}
+	}
+
+	@include desktop {
+		font-size: 13px;
+	}
+
+	@include laptop {
+		.form__basket-sale_input {
+			float: none;
+			width: 100%;
+			margin-bottom: 14px;
+		}
+
+		.form__basket-sale_btn {
+			float: none;
+			width: 100%;
+		}
+
+		.form__btn {
+			font-size: 12px;
+		}
+	}
+
+	@include tablets {
+		.form__basket-sale_input {
+			float: left;
+			width: 43%;
+			margin-bottom: 0;
+		}
+
+		.form__basket-sale_btn {
+			float: right;
+			width: 54%;
+			margin-top: 0;
+		}
+
+		.form__basket-total {
+			margin-top: 14px;
+		}
+	}
+}
+
+// .basket-sale__text--order,
+// .basket-coupon__text--order,
+// .basket-total__text--order,
+// .basket-order__text--order,
+// .basket-pay__text--order {
+
+// }
 
 
 // .order {

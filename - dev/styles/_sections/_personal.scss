@@ -91,10 +91,16 @@
 
 	&:last-child {
 		margin: 1px;
+		border-right: 1px solid #f0f0f0;
+    	box-sizing: content-box;
 	}
 
 	&.active {
 		background: #fff;
+
+		&:last-child {
+			border-right: none;
+		}
 
 		.personal__tabs-link {
 			color: $black;
@@ -122,6 +128,14 @@
 	width: 39%;
 }
 
+.personal__content-item {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+
 .personal__tabs-link {
 	display: block;
 	padding: 10px 0;
@@ -135,12 +149,12 @@
 	}
 }
 
-.personal__content-item {
+.personal__order-item {
 	margin-bottom: 20px;
 	background: #fff;
 }
 
-.personal__content-header {
+.personal__order-header {
 	text-transform: uppercase;
 	font-size: 14px;
 	font-family: 'Robotoregular';
@@ -148,43 +162,43 @@
 	@extend %clearfix;
 }
 
-.personal__content-body {
+.personal__order-body {
 	padding: 7px 0;
 	font-size: 12px;
 	@extend %clearfix;
 }
 
-.personal__content-order {
+.personal__order-order {
 	float: left;
 	width: 10%;
 	padding: 10px 0 10px 12px;
 }
 
-.personal__content-date {
+.personal__order-date {
 	float: left;
 	width: 12%;
 	padding: 10px 0 10px 12px;
 }
 
-.personal__content-payment {
+.personal__order-payment {
 	float: left;
 	width: 23%;
 	padding: 10px 0 10px 12px;
 }
 
-.personal__content-shipping {
+.personal__order-shipping {
 	float: left;
 	width: 26%;
 	padding: 10px 0 10px 12px;
 }
 
-.personal__content-amount {
+.personal__order-amount {
 	float: left;
 	width: 12%;
 	padding: 10px 0 10px 12px;
 }
 
-.personal__content-status {
+.personal__order-status {
 	float: right;
 	width: 15%;
 	padding: 10px 0 10px 12px;
@@ -210,7 +224,7 @@
 	}
 }
 
-.personal__content-status_buy {
+.personal__order-status_buy {
 	display: inline-block;
 	margin-top: 3px;
 	padding: 7px 11px;

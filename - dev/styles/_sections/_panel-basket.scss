@@ -132,7 +132,7 @@
 .panel__basket-price_value,
 .basket-order__value,
 .basket-pay__value {
-	font-weight: bold;
+	font-family: 'Robotomedium';
 }
 
 .form__basket {
@@ -159,7 +159,7 @@
 
 .form__basket-sale_btn {
 	float: right;
-	width: 52%;
+	width: 54%;
 
 	@include phones {
     	float: none;
@@ -186,13 +186,13 @@
 
 .basket-sale__text {
 	float: left;
-	font-size: rem(16px);
+	// font-size: rem(16px);
 }
 
 .basket-sale__value {
 	float: right;
 	font-weight: bold;
-	font-size: rem(18px);
+	// font-size: rem(18px);
 }
 
 .form__basket-total {

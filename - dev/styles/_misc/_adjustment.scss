@@ -76,8 +76,8 @@ footer {
 	}
 
 	@include phones {
-		height: 872px;
-		margin-top: -872px;
+		height: 850px;
+		margin-top: -850px;
 	}
 }
 
@@ -101,7 +101,7 @@ footer {
 		}
 
 		@include phones {
-			height: 872px;
+			height: 850px;
 		}
 	}
 }
