@@ -30,6 +30,12 @@
 	}
 }
 
+.accordion-sub__list {
+	&.margin-top {
+		margin-top: 8px;
+	}
+}
+
 .accordion-sub__item {
 	position: relative;
 }

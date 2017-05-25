@@ -265,3 +265,159 @@
 	margin-left: 6px;
 	font-family: 'Robotolight';
 }
+
+.personal__order-detail {
+	@include box-shadow(0 1px 10px rgba(0,0,0, .25));
+}
+
+.personal-details__section {
+	padding: 10px 12px;
+	font-size: 14px;
+	@extend %clearfix;
+}
+
+.personal-details__header {
+	padding: 10px 0;
+	text-transform: uppercase;
+	@extend %clearfix;
+	font-family: 'Robotomedium';
+
+	&.color {
+		color: $grey;
+	}
+}
+
+.personal-details__wrapp {
+	padding: 10px 0;
+	@extend %clearfix;
+}
+
+.personal-details__section-left,
+.personal-details__section-right {
+	float: left;
+	width: 50%;
+}
+
+.personal-details__section-right {
+	padding-left: 12px;
+}
+
+.personal-details__title,
+.personal-details__status-key {
+	text-transform: uppercase;
+	font-family: 'Robotoregular';
+}
+
+.personal-details__title {
+	margin-bottom: 6px;
+}
+
+.personal-details__desc {
+	margin-bottom: 4px;
+}
+
+.personal-details__status-value {
+	font-size: 12px;
+	color: #45e9d0;
+}
+
+.personal-details__pay-status {
+	font-size: 12px;
+	color: #45e9d0;
+}
+
+.personal-details__shipping-text {
+	margin-right: 14px;
+	font-size: 12px;
+	color: #f26c63;
+}
+
+.personal-details__shipping-btn {
+	padding: 7px 11px;
+	text-transform: uppercase;
+	font-size: 12px;
+	color: #fff;
+	background: $blue;
+	border: none;
+	@include border-radius(20px);
+}
+
+.personal-details__checkbox {
+	overflow: hidden;
+}
+
+.personal-details__coments {
+	margin-top: 25px;
+}
+
+.personal-details__list {
+
+}
+
+.personal-details__item {
+	padding: 16px 12px;
+	@extend %clearfix;
+
+	&:nth-child(2n) {
+		background: #fff;
+	}
+
+	&:nth-child(2n+1) {
+		background: #f5f5f5;
+	}
+}
+
+.personal-details__name {
+	float: left;
+	width: 55%;
+}
+
+.personal-details__size {
+	float: left;
+	width: 15%;
+	text-align: center;
+}
+
+.personal-details__price {
+	float: left;
+	width: 15%;
+	text-align: center;
+}
+
+.personal-details__number {
+	float: right;
+	width: 10%;
+	text-align: center;
+}
+
+.personal-details__total {
+	float: right;
+	width: 50%;
+	padding-bottom: 45px;
+	font-size: 16px;
+}
+
+.personal-details__total-sale,
+.personal-details__total-weight,
+.personal-details__total-price,
+.personal-details__total-shipping,
+.personal-details__total-pay {
+	margin-bottom: 10px;
+	@extend %clearfix;
+}
+
+.personal-details__total__key {
+	float: left;
+	width: 50%;
+}
+
+.personal-details__total__value {
+	float: right;
+	width: 50%;
+	font-family: 'Robotomedium';
+	text-align: right;
+
+	span {
+		font-family: 'Robotolight';
+	}
+}

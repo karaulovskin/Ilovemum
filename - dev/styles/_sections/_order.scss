@@ -52,13 +52,13 @@
 	}
 
 	@include laptop {
-		padding: 0 36px 0 25px;
+		padding: 0 36px 0 36px;
 	}
 
 	@include tablets {
 		float: none;
 		width: 100%;
-		padding: 36px 0 20px 0;
+		padding: 36px 0 36px 0;
 	}
 
 	@include phones {
@@ -149,6 +149,37 @@
 
 	&.show {
 		display: block;
+	}
+
+	@include top {
+		font-size: 15px; 
+	}
+
+	@include laptop {
+		font-size: 14px;
+	}
+
+	@include tablets {
+		width: 480px;
+	}
+
+	@include bigphone {
+		width: 420px;
+		@include transform(translateX(-64%));
+
+		&:after {
+			left: 64%;
+		}
+	}
+
+	@include phones {
+		width: 290px;
+		@include transform(translateX(-95%));
+		font-size: 12px;
+
+		&:after {
+			left: 90%;
+		}
 	}
 }
 
@@ -951,6 +982,14 @@
 		margin-bottom: 0;
 	}
 
+	.basket-sale,
+	.basket-total,
+	.basket-coupon,
+	.basket-order,
+	.basket-pay {
+		margin-bottom: 16px;
+	}
+
 	@include top {
 		font-size: 14px;
 
@@ -969,6 +1008,14 @@
 
 	@include desktop {
 		font-size: 13px;
+
+		.basket-sale,
+		.basket-total,
+		.basket-coupon,
+		.basket-order,
+		.basket-pay {
+			margin-bottom: 14px;
+		}
 	}
 
 	@include laptop {
@@ -1003,6 +1050,16 @@
 
 		.form__basket-total {
 			margin-top: 14px;
+		}
+	}
+
+	@include phones {
+		.basket-sale,
+		.basket-total,
+		.basket-coupon,
+		.basket-order,
+		.basket-pay {
+			margin-bottom: 12px;
 		}
 	}
 }

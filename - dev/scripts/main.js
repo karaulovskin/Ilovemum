@@ -708,7 +708,7 @@ $(window).resize(function(){
 
 	(function(){
 		// меняю блоки местами 
-		if($(window).width() <= '768'){
+		if($(window).width() <= '750'){
 			$('.order__right').insertBefore($('.order__left'));
 
 	    } else {
