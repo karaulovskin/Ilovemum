@@ -150,13 +150,14 @@
 					a.order__item-desc__link(href="#") Войдите
 				.order-name
 					.order-name__left
-						.order__label
+						.order__label.validation
 							input.order__input.input(type="text" required placeholder="ФИО*")
 							label.label ФИО*
 					.order-name__right
-						.order__label
+						.order__label.no-validation
 							input.order__input.input(type="text" required placeholder="Телефон*")
 							label.label Телефон*
+							.validation-text неверный формат телефона
 						.order__label
 							input.order__input.input(type="text" required placeholder="E-Mail*")
 							label.label E-Mail*

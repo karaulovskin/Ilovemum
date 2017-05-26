@@ -711,6 +711,10 @@
 		&:first-child {
 			float: left;
 			padding-right: 14px;
+
+			&:before {
+				right: 24px!important;
+			}
 		}
 
 		&:last-child {
@@ -762,6 +766,51 @@
 
 .order__label {
 	position: relative;
+
+	&.validation {
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			@include transform(translateY(-50%));
+			width: 22px;
+			height: 22px;
+			background: url(../img/icons/valid.png) no-repeat;
+			background-size: contain;
+		}
+
+		.order__input {
+			border: 1px solid $blue;
+		}
+	}
+
+	&.no-validation {
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			@include transform(translateY(-50%));
+			width: 22px;
+			height: 22px;
+			background: url(../img/icons/no-valid.png) no-repeat;
+			background-size: contain;
+		}
+
+		.order__input {
+			border: 1px solid $pink;
+		}
+	}
+}
+
+.validation-text {
+	position: absolute;
+	top: 100%;
+	font-size: 12px;
+	color: $pink;
 }
 
 .order-pay__list {

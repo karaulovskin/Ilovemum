@@ -19,168 +19,268 @@
 					li.personal__content-item.active
 						ul.personal__order-list
 							li.personal__order-item
-								.personal__order-header
-									.personal__order-order Заказ
-									.personal__order-date Дата
-									.personal__order-payment Оплата
-									.personal__order-shipping Доставка
-									.personal__order-amount Сумма 
-									.personal__order-status Статус
-								.personal__order-body
-									.personal__order-order #136003
-									.personal__order-date 01.22.2017
-									.personal__order-payment VISA/MC через интернет
-									.personal__order-shipping СДЕК (получение на складе)
-									.personal__order-amount 12 0000 руб.
-									.personal__order-status.take Принят
-								.personal__order-detail.personal-detailss
-									section.personal-details__section
-										.personal-details__header Заказ № 136003 от 10.11.2017 @ 13:50
-										.personal-details__body
-											.personal-details__wrapp
-												.personal-details__section-left
-													.personal-details__status
-														span.personal-details__status-key Статус — 
-														span.personal-details__status-value Принят
-												.personal-details__section-right
-													.personal-details__checkbox
-														label.order-info__checkbox
-															input.order-info__checkbox-input.checkbox__input(type="checkbox" name="orderPay")
-															.order-info__checkbox-fake.checkbox__fake
-															.order-info__checkbox-text Информировать по СМС о статусе заказа
-											.personal-details__wrapp
-												.personal-details__section-left
-													.personal-details__data
-														.personal-details__title Персональные данные
-														.personal-details__desc Баталова Татьяна Геннадьевна
-														.personal-details__desc +7 (965) 215-55-99
-														.personal-details__desc gordtat@mail.ru
-												.personal-details__section-right
-													.personal-details__address
-														.personal-details__title Адрес
-														.personal-details__desc 124365, Москва, Солнечногорский район, г. Зеленоград, ул. Андреевка, д 31/2, кв.45
-											.personal-details__wrapp
-												.personal-details__section-left
-													.personal-details__pay
-														.personal-details__title Оплата
-														.personal-details__desc Банковской картой MasterCard 
-														.personal-details__pay-status Оплачено
-												.personal-details__section-right
-													.personal-details__shipping
-														.personal-details__title Доставка на склад сдэк 
-														.personal-details__desc ZLN1, ул. Андреевка, д. 31/2
-														.personal-details__shipping-pay
-															spaan.personal-details__shipping-text Ожидается оплата
-															input.personal-details__shipping-btn(type="submit" value="Оплатить")
-													.personal-details__coments
-														.personal-details__title Комментарий
-														.personal-details__desc Дозаказ к заказу 167954
-									section.personal-details__section
-										.personal-details__header.color
-											.personal-details__name Наименование
-											.personal-details__size Размер
-											.personal-details__price Цена
-											.personal-details__number Количество
-										.personal-details__body
-											ul.personal-details__list
-												li.personal-details__item
-													.personal-details__name Футболка «ФЗВ» для кормящих, цвет синий (SS17) 
-													.personal-details__size 44
-													.personal-details__price 567 руб.
-													.personal-details__number 1
-												li.personal-details__item
-													.personal-details__name Футболка «ФЗВ» для кормящих, цвет синий (SS17) 
-													.personal-details__size 44
-													.personal-details__price 567 руб.
-													.personal-details__number 1
-												li.personal-details__item
-													.personal-details__name Футболка «ФЗВ» для кормящих, цвет синий (SS17) 
-													.personal-details__size 44
-													.personal-details__price 567 руб.
-													.personal-details__number 1
-												li.personal-details__item
-													.personal-details__name Футболка «ФЗВ» для кормящих, цвет синий (SS17) 
-													.personal-details__size 44
-													.personal-details__price 567 руб.
-													.personal-details__number 1
-									section.personal-details__section
-										.personal-details__total
-												.personal-details__total-sale
-													.personal-details__total__key Скидка VIP:
-													.personal-details__total__value 24% (650 <span>руб.</span>)
-												.personal-details__total-weight
-													.personal-details__total__key Общий вес:
-													.personal-details__total__value 328 <span>г.</span>
-												.personal-details__total-price
-													.personal-details__total__key Цена:
-													.personal-details__total__value 2 265 <span>руб.</span>
-												.personal-details__total-shipping
-													.personal-details__total__key Стоимость доставки:
-													.personal-details__total__value 265 <span>руб.</span>
-												.personal-details__total-pay
-													.personal-details__total__key Итого:
-													.personal-details__total__value 2 265 <span>руб.</span>
+								.personal__order-block
+									.personal__order-header
+										.personal__order-order Заказ
+										.personal__order-date Дата
+										.personal__order-payment Оплата
+										.personal__order-shipping Доставка
+										.personal__order-amount Сумма 
+										.personal__order-status Статус
+									.personal__order-body
+										.personal__order-order #136003
+										.personal__order-date 01.22.2017
+										.personal__order-payment VISA/MC через интернет
+										.personal__order-shipping СДЕК (получение на складе)
+										.personal__order-amount 12 0000 руб.
+										.personal__order-status.take Принят
+								.personal__order-detail.personal-details
+									.personal-details__head
+										.personal-details__head-title Заказ № 136003 от 10.11.2017 @ 13:50
+										.personal-details__close 
+											a.personal-details__close-link(href="#") Закрыть
+									.personal-details__content
+										section.personal-details__section
+											.personal-details__body
+												.personal-details__wrapp
+													.personal-details__section-left
+														.personal-details__status
+															span.personal-details__status-key Статус — 
+															span.personal-details__status-value Принят
+													.personal-details__section-right
+														.personal-details__checkbox
+															label.order-info__checkbox
+																input.order-info__checkbox-input.checkbox__input(type="checkbox" name="orderPay")
+																.order-info__checkbox-fake.checkbox__fake
+																.order-info__checkbox-text Информировать по СМС о статусе заказа
+												.personal-details__wrapp
+													.personal-details__section-left
+														.personal-details__data
+															.personal-details__title Персональные данные
+															.personal-details__desc Баталова Татьяна Геннадьевна
+															.personal-details__desc +7 (965) 215-55-99
+															.personal-details__desc gordtat@mail.ru
+													.personal-details__section-right
+														.personal-details__address
+															.personal-details__title Адрес
+															.personal-details__desc 124365, Москва, Солнечногорский район, г. Зеленоград, ул. Андреевка, д 31/2, кв.45
+												.personal-details__wrapp
+													.personal-details__section-left
+														.personal-details__pay
+															.personal-details__title Оплата
+															.personal-details__desc Банковской картой MasterCard 
+															.personal-details__pay-status Оплачено
+													.personal-details__section-right
+														.personal-details__shipping
+															.personal-details__title Доставка на склад сдэк 
+															.personal-details__desc ZLN1, ул. Андреевка, д. 31/2
+															.personal-details__shipping-pay
+																spaan.personal-details__shipping-text Ожидается оплата
+																input.personal-details__shipping-btn(type="submit" value="Оплатить")
+														.personal-details__coments
+															.personal-details__title Комментарий
+															.personal-details__desc Дозаказ к заказу 167954
+										section.personal-details__section
+											.personal-details__header
+												.personal-details__name Наименование
+												.personal-details__size Размер
+												.personal-details__price Цена
+												.personal-details__number Количество
+											.personal-details__body
+												ul.personal-details__list
+													li.personal-details__item
+														.personal-details__name Футболка «ФЗВ» для кормящих, цвет синий (SS17) 
+														.personal-details__size 44
+														.personal-details__price 112 567 руб.
+														.personal-details__number 1
+													li.personal-details__item
+														.personal-details__name Футболка «ФЗВ» для кормящих, цвет синий (SS17) 
+														.personal-details__size 44
+														.personal-details__price 567 руб.
+														.personal-details__number 1
+													li.personal-details__item
+														.personal-details__name Футболка «ФЗВ» для кормящих, цвет синий (SS17) 
+														.personal-details__size 44
+														.personal-details__price 567 руб.
+														.personal-details__number 1
+													li.personal-details__item
+														.personal-details__name Футболка «ФЗВ» для кормящих, цвет синий (SS17) 
+														.personal-details__size 44
+														.personal-details__price 567 руб.
+														.personal-details__number 1
+										section.personal-details__section
+											.personal-details__total
+													.personal-details__total-sale
+														.personal-details__total__key Скидка VIP:
+														.personal-details__total__value 24% (650 <span>руб.</span>)
+													.personal-details__total-weight
+														.personal-details__total__key Общий вес:
+														.personal-details__total__value 328 <span>г.</span>
+													.personal-details__total-price
+														.personal-details__total__key Цена:
+														.personal-details__total__value 2 265 <span>руб.</span>
+													.personal-details__total-shipping
+														.personal-details__total__key Стоимость доставки:
+														.personal-details__total__value 265 <span>руб.</span>
+													.personal-details__total-pay
+														.personal-details__total__key Итого:
+														.personal-details__total__value 2 265 <span>руб.</span>
 							li.personal__order-item
-								.personal__order-header
-									.personal__order-order Заказ
-									.personal__order-date Дата
-									.personal__order-payment Оплата
-									.personal__order-shipping Доставка
-									.personal__order-amount Сумма 
-									.personal__order-status Статус
-								.personal__order-body
-									.personal__order-order #136003
-									.personal__order-date 01.22.2017
-									.personal__order-payment VISA/MC через интернет
-									.personal__order-shipping СДЕК (получение на складе)
-									.personal__order-amount 12 0000 руб.
-									.personal__order-status.picked Скомплектован
+								.personal__order-block
+									.personal__order-header
+										.personal__order-order Заказ
+										.personal__order-date Дата
+										.personal__order-payment Оплата
+										.personal__order-shipping Доставка
+										.personal__order-amount Сумма 
+										.personal__order-status Статус
+									.personal__order-body
+										.personal__order-order #136003
+										.personal__order-date 01.22.2017
+										.personal__order-payment VISA/MC через интернет
+										.personal__order-shipping СДЕК (получение на складе)
+										.personal__order-amount 12 0000 руб.
+										.personal__order-status.picked Скомплектован
+								.personal__order-detail.personal-details
+									.personal-details__head
+										.personal-details__head-title Заказ № 136003 от 10.11.2017 @ 13:50
+										.personal-details__close 
+											a.personal-details__close-link(href="#") Закрыть
+									.personal-details__content
+										section.personal-details__section
+											.personal-details__body
+												.personal-details__wrapp
+													.personal-details__section-left
+														.personal-details__status
+															span.personal-details__status-key Статус — 
+															span.personal-details__status-value Принят
+													.personal-details__section-right
+														.personal-details__checkbox
+															label.order-info__checkbox
+																input.order-info__checkbox-input.checkbox__input(type="checkbox" name="orderPay")
+																.order-info__checkbox-fake.checkbox__fake
+																.order-info__checkbox-text Информировать по СМС о статусе заказа
+												.personal-details__wrapp
+													.personal-details__section-left
+														.personal-details__data
+															.personal-details__title Персональные данные
+															.personal-details__desc Баталова Татьяна Геннадьевна
+															.personal-details__desc +7 (965) 215-55-99
+															.personal-details__desc gordtat@mail.ru
+													.personal-details__section-right
+														.personal-details__address
+															.personal-details__title Адрес
+															.personal-details__desc 124365, Москва, Солнечногорский район, г. Зеленоград, ул. Андреевка, д 31/2, кв.45
+												.personal-details__wrapp
+													.personal-details__section-left
+														.personal-details__pay
+															.personal-details__title Оплата
+															.personal-details__desc Банковской картой MasterCard 
+															.personal-details__pay-status Оплачено
+													.personal-details__section-right
+														.personal-details__shipping
+															.personal-details__title Доставка на склад сдэк 
+															.personal-details__desc ZLN1, ул. Андреевка, д. 31/2
+															.personal-details__shipping-pay
+																spaan.personal-details__shipping-text Ожидается оплата
+																input.personal-details__shipping-btn(type="submit" value="Оплатить")
+														.personal-details__coments
+															.personal-details__title Комментарий
+															.personal-details__desc Дозаказ к заказу 167954
+										section.personal-details__section
+											.personal-details__header
+												.personal-details__name Наименование
+												.personal-details__size Размер
+												.personal-details__price Цена
+												.personal-details__number Количество
+											.personal-details__body
+												ul.personal-details__list
+													li.personal-details__item
+														.personal-details__name Футболка «ФЗВ» для кормящих, цвет синий (SS17) 
+														.personal-details__size 44
+														.personal-details__price 112 567 руб.
+														.personal-details__number 1
+													li.personal-details__item
+														.personal-details__name Футболка «ФЗВ» для кормящих, цвет синий (SS17) 
+														.personal-details__size 44
+														.personal-details__price 567 руб.
+														.personal-details__number 1
+													li.personal-details__item
+														.personal-details__name Футболка «ФЗВ» для кормящих, цвет синий (SS17) 
+														.personal-details__size 44
+														.personal-details__price 567 руб.
+														.personal-details__number 1
+													li.personal-details__item
+														.personal-details__name Футболка «ФЗВ» для кормящих, цвет синий (SS17) 
+														.personal-details__size 44
+														.personal-details__price 567 руб.
+														.personal-details__number 1
+										section.personal-details__section
+											.personal-details__total
+													.personal-details__total-sale
+														.personal-details__total__key Скидка VIP:
+														.personal-details__total__value 24% (650 <span>руб.</span>)
+													.personal-details__total-weight
+														.personal-details__total__key Общий вес:
+														.personal-details__total__value 328 <span>г.</span>
+													.personal-details__total-price
+														.personal-details__total__key Цена:
+														.personal-details__total__value 2 265 <span>руб.</span>
+													.personal-details__total-shipping
+														.personal-details__total__key Стоимость доставки:
+														.personal-details__total__value 265 <span>руб.</span>
+													.personal-details__total-pay
+														.personal-details__total__key Итого:
+														.personal-details__total__value 2 265 <span>руб.</span>
 							li.personal__order-item
-								.personal__order-header
-									.personal__order-order Заказ
-									.personal__order-date Дата
-									.personal__order-payment Оплата
-									.personal__order-shipping Доставка
-									.personal__order-amount Сумма 
-									.personal__order-status Статус
-								.personal__order-body
-									.personal__order-order #136003
-									.personal__order-date 01.22.2017
-									.personal__order-payment VISA/MC через интернет
-									.personal__order-shipping СДЕК (получение на складе)
-									.personal__order-amount 12 0000 руб.
-									.personal__order-status.cancel Отменен
+								.personal__order-block
+									.personal__order-header
+										.personal__order-order Заказ
+										.personal__order-date Дата
+										.personal__order-payment Оплата
+										.personal__order-shipping Доставка
+										.personal__order-amount Сумма 
+										.personal__order-status Статус
+									.personal__order-body
+										.personal__order-order #136003
+										.personal__order-date 01.22.2017
+										.personal__order-payment VISA/MC через интернет
+										.personal__order-shipping СДЕК (получение на складе)
+										.personal__order-amount 12 0000 руб.
+										.personal__order-status.cancel Отменен
 							li.personal__order-item
-								.personal__order-header
-									.personal__order-order Заказ
-									.personal__order-date Дата
-									.personal__order-payment Оплата
-									.personal__order-shipping Доставка
-									.personal__order-amount Сумма 
-									.personal__order-status Статус
-								.personal__order-body
-									.personal__order-order #136003
-									.personal__order-date 01.22.2017
-									.personal__order-payment VISA/MC через интернет
-									.personal__order-shipping СДЕК (получение на складе)
-									.personal__order-amount 12 0000 руб.
-									.personal__order-status.sent Отправлен
+								.personal__order-block
+									.personal__order-header
+										.personal__order-order Заказ
+										.personal__order-date Дата
+										.personal__order-payment Оплата
+										.personal__order-shipping Доставка
+										.personal__order-amount Сумма 
+										.personal__order-status Статус
+									.personal__order-body
+										.personal__order-order #136003
+										.personal__order-date 01.22.2017
+										.personal__order-payment VISA/MC через интернет
+										.personal__order-shipping СДЕК (получение на складе)
+										.personal__order-amount 12 0000 руб.
+										.personal__order-status.sent Отправлен
 							li.personal__order-item
-								.personal__order-header
-									.personal__order-order Заказ
-									.personal__order-date Дата
-									.personal__order-payment Оплата
-									.personal__order-shipping Доставка
-									.personal__order-amount Сумма 
-									.personal__order-status Статус
-								.personal__order-body
-									.personal__order-order #136003
-									.personal__order-date 01.22.2017
-									.personal__order-payment VISA/MC через интернет
-									.personal__order-shipping СДЕК (получение на складе)
-									.personal__order-amount 12 0000 руб.
-									.personal__order-status.buy
-										a.personal__order-status_buy(href="#") Оплатить
+								.personal__order-block
+									.personal__order-header
+										.personal__order-order Заказ
+										.personal__order-date Дата
+										.personal__order-payment Оплата
+										.personal__order-shipping Доставка
+										.personal__order-amount Сумма 
+										.personal__order-status Статус
+									.personal__order-body
+										.personal__order-order #136003
+										.personal__order-date 01.22.2017
+										.personal__order-payment VISA/MC через интернет
+										.personal__order-shipping СДЕК (получение на складе)
+										.personal__order-amount 12 0000 руб.
+										.personal__order-status.buy
+											input.personal__order-status_buy(type="submit" value="Оплатить")
 					li.personal__content-item
 						ul.personal__order-list
 							li.personal__order-item

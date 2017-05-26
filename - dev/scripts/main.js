@@ -352,6 +352,10 @@ $(document).ready(function(){
 	// CATALOG SLICK
 	(function(){
 		$('.catalog__img-list').slick();
+
+		// BX.addCustomEvent('onAjaxSuccess', function(){
+		//    $('.catalog__img-list').slick();
+	 //  	});
 	}());
 
 
@@ -672,6 +676,47 @@ $(document).ready(function(){
 	    } else {
 	    	$('.order__left').insertBefore($('.order__right'));
 	    };
+
+    	// отоброжение заказа-детальное
+	    $('.personal__order-block').on('click', function(e){
+			e.preventDefault();
+
+			var 
+				$this = $(this),
+				container = $this.closest('.personal__order-list'),
+				item = $this.closest('.personal__order-item'),
+				head = item.find('.personal__order-block'),
+				content = item.find('.personal-details');
+				// currentContent = item.find('.card__accordion-content');
+
+			if (!content.hasClass('show')) {
+				head.hide();
+				content.addClass('show');
+			} else {
+				content.removeClass('show');
+			};
+		});
+
+		$('.personal-details__close-link').on('click', function(e){
+			e.preventDefault();
+			console.log('!!!');
+			var 
+				$this = $(this),
+				container = $this.closest('.personal__order-list'),
+				item = $this.closest('.personal__order-item'),
+				head = item.find('.personal__order-block'),
+				content = item.find('.personal-details');
+
+			if (!content.hasClass('show')) {
+				head.hide();
+				content.addClass('show');
+			} else {
+				head.show();
+				content.removeClass('show');
+			};
+		});
+
+
 	}());
 
 });
