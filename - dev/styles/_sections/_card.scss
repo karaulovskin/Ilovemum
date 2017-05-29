@@ -576,7 +576,7 @@
 	}
 
 	@include tablets {
-		padding-right: 10%;
+		// padding-right: 10%;
 	}
 
 	@include phones {
@@ -648,6 +648,10 @@
 	// width: 480px;
 	width: 90%;
 
+	@include tablets {
+		width: 100%;
+	}
+
 	@include phones {
 		display: none;
 	}
@@ -661,7 +665,7 @@
 	}
 
 	@include tablets {
-		padding-right: 34px;
+		// padding-right: 34px;
 	}
 }
 
@@ -674,8 +678,59 @@
 	display: block;
 }
 
+#iblock_add {
+	margin-top: 40px;
+	font-size: 14px;
+
+	table {
+		width: 100%;
+		margin-bottom: 12px;
+	}
+
+	tr {
+		margin-bottom: 10px;
+	}
+
+	textarea {
+		height: 80px;
+	}
+
+	.well {
+		@extend %clearfix;
+
+		span {
+			float: left;
+			width: 200px;
+		}
+
+		.input-btn {
+			float: right;
+			padding: 12px 0;
+			text-align: center;
+			cursor: pointer;
+		}
+	}
+
+	@include tablets {
+		.well {
+
+			span {
+				width: auto;
+			}
+		}
+	}
+
+	@include phones {
+		margin-top: 6px;
+	}
+}
+
 .card__desc-list {
 	margin-bottom: 14px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .card__desc-item {
@@ -706,6 +761,7 @@
 }
 
 .card__features-list {
+	margin-bottom: 20px;
 	font-size: rem(14px);
 	@extend %clearfix;
 }
@@ -785,6 +841,7 @@
 
 .card__accordion-content {
 	display: none;
+	margin-bottom: 20px;
 }
 
 .card__socials {

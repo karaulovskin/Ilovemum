@@ -16,13 +16,13 @@
 		padding: 25px 35px;
 	}
 
+	@include laptop {
+		padding: 25px 25px;
+	}
+
 	@include tablets {
 		float: none;
 		width: 100%;
-	}
-
-	@include laptop {
-		padding: 25px 25px;
 	}
 
 	@include phones {

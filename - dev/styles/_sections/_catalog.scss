@@ -301,12 +301,16 @@
 
 }
 
-.catalog__stock-item--last {
+.catalog__stock-item--DAY_PRODUCT {
 	background: $green;
 }
 
-.catalog__stock-item--sale {
+.catalog__stock-item--FAMILY_LOOK {
 	background: $red;
+}
+
+.catalog__stock-item--TIP_ODEZHDY {
+	background: #a63cf0;
 }
 
 .catalog__desc-link {

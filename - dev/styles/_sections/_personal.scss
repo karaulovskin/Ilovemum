@@ -1,10 +1,22 @@
-
+.personal {
+	@include phones {
+		margin: 0 -15px;
+	}
+}
 
 .personal__left {
 	float: left;
 	width: 65%;
 	padding: 25px 45px;
 	background: #f0f0f0;
+
+	@include top {
+		padding: 25px 35px;
+	}
+
+	@include laptop {
+		padding: 25px 25px;
+	}
 
 	@include tablets {
 		float: none;
@@ -20,6 +32,14 @@
 	float: left;
 	width: 35%;
 	padding: 0 36px 0 54px;
+
+	@include top {
+		padding: 0 36px 0 35px;
+	}
+
+	@include laptop {
+		padding: 0 36px 0 36px;
+	}
 
 	@include tablets {
 		float: none;
@@ -126,6 +146,10 @@
 
 .personal__tabs-item--sale {
 	width: 39%;
+
+	@include phones {
+		width: 38%;
+	}
 }
 
 .personal__content-item {
@@ -146,6 +170,10 @@
 
 	&.active {
 		color: $black;
+	}
+
+	@include phones {
+		font-size: 10px;
 	}
 }
 
@@ -349,6 +377,10 @@
 	&:first-child {
 		border-top: none;
 	}
+
+	@include phones {
+		font-size: 12px;
+	}
 }
 
 .personal-details__header {
@@ -462,12 +494,20 @@
 .personal-details__name {
 	float: left;
 	width: 55%;
+
+	@include phones {
+		width: 40%;
+	}
 }
 
 .personal-details__size {
 	float: left;
 	width: 15%;
 	text-align: center;
+
+	@include phones {
+		width: 20%;
+	}
 }
 
 .personal-details__price {
@@ -480,6 +520,10 @@
 	float: right;
 	width: 10%;
 	text-align: center;
+
+	@include phones {
+		width: 20%;
+	}
 }
 
 .personal-details__total {
@@ -487,6 +531,10 @@
 	width: 50%;
 	padding: 10px 0 45px;
 	font-size: 16px;
+
+	@include tablets {
+		width: 100%;
+	}
 }
 
 .personal-details__total-sale,

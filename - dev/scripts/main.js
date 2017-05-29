@@ -734,6 +734,17 @@ $(document).ready(function(){
 
 	}());
 
+	// Личный кабинет
+	(function(){
+		// меняю блоки местами 
+		if($(window).width() <= '480'){
+			document.getElementsByClassName('personal-details__number').innerHTML='Кол-во';
+			console.log('!!!');
+	    } else {
+	    	
+	    };
+    }());
+
 });
 
 

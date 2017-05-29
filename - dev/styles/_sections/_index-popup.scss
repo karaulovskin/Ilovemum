@@ -29,12 +29,24 @@
 		width: 600px;
 		height: 428px;
 	}
+
+	@include bigphone {
+		width: 300px;
+		height: 428px;
+		background-image: none;
+	}
+
+
 }
 
 .index-popup__left {
 	float: left;
 	width: 50%;
 	height: 100%;
+
+	@include bigphone {
+		display: none;
+	}
 }
 
 .index-popup__right {
@@ -47,6 +59,10 @@
 	@include tablets {
     	padding: 25px;
     }
+
+    @include bigphone {
+		width: 100%;
+	}
 }
 
 .index-popup__block {
@@ -87,6 +103,17 @@
 
 	&:after {
 		@include transform(rotate(-45deg));
+	}
+
+	@include bigphone {
+		width: 20px;
+		height: 20px;
+
+		&:before,&:after {
+			width: 20px;
+			height: 2px;
+			background: #fff;
+		}
 	}
 }
 
