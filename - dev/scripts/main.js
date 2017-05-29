@@ -649,6 +649,21 @@ $(document).ready(function(){
 
 	}());
 
+	// Главная страница
+	(function(){
+		$('.index-popup__close-link').on('click', function(e){
+			e.preventDefault();
+
+			var
+				popup = $('.index-popup');
+
+			if(popup.hasClass('open'))
+				$('.overlay').fadeOut();
+				$(popup).removeClass('open');
+		});
+	}());
+
+
 	// Страница оплата
 	(function(){
 		$('#paySb').on('click', function(e){
