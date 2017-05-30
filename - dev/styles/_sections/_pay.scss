@@ -212,6 +212,10 @@
 
 .pay__return-list {
 	font-size: 0;
+
+	@include phones {
+		margin: 0 20px;
+	}
 }
 
 .pay__return-item {

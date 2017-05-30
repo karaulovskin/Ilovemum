@@ -329,7 +329,7 @@
 .order-tabs__item {
 	@include inline-block(top);
 	width: 33.3%;
-	padding: 0 14px;
+	padding: 14px;
 	text-align: center;
 	font-size: rem(16px);
 
@@ -360,7 +360,7 @@
 	}
 
 	@include top {
-		padding: 0 8px;
+		padding: 8px;
 
 		&.active {
 		
@@ -375,7 +375,7 @@
 	}
 
 	@include laptop {
-		padding: 0 6px;
+		padding: 6px;
 
 		&.active {
 		

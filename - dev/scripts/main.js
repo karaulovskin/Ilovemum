@@ -114,6 +114,7 @@ $(document).ready(function(){
 			$('.header').removeClass('header--panel-open');
 			$('.main').removeClass('main--panel-open');
 			$('.sidebar').removeClass('sidebar--panel-open');
+			$('.language-popup').removeClass('open');
 		});
 
 		$(overlay).click( function(e){
@@ -657,9 +658,39 @@ $(document).ready(function(){
 			var
 				popup = $('.index-popup');
 
-			if(popup.hasClass('open'))
+			if(popup.hasClass('open')) {
 				$('.overlay').fadeOut();
 				$(popup).removeClass('open');
+			}
+		});
+
+
+		$('.sidebar__link--language').on('click', function(e){
+			e.preventDefault();
+
+			var
+				popupLang = $('.language-popup');
+
+			if(!popupLang.hasClass('open')) {
+				$('.overlay').fadeIn();
+				$(popupLang).addClass('open');
+			} else {
+				$('.overlay').fadeOut();
+				$(popupLang).removeClass('open');
+			}
+		});
+
+
+		$('.language-popup__close-link').on('click', function(e){
+			e.preventDefault();
+
+			var
+				popupLang = $('.language-popup');
+
+			if(popupLang.hasClass('open')) {
+				$('.overlay').fadeOut();
+				$(popupLang).removeClass('open');
+			}
 		});
 	}());
 
@@ -736,13 +767,14 @@ $(document).ready(function(){
 
 	// Личный кабинет
 	(function(){
-		// меняю блоки местами 
-		if($(window).width() <= '480'){
-			document.getElementsByClassName('personal-details__number').innerHTML='Кол-во';
-			console.log('!!!');
+
+		// меняю текс
+		if($(window).width() <= '660'){
+			$('.personal-details__number--text').text('Кол-во');
 	    } else {
-	    	
+	    	$('.personal-details__number--text').text('Количество');
 	    };
+
     }());
 
 });
@@ -785,6 +817,18 @@ $(window).resize(function(){
 	    } else {
 	    	$('.order__left').insertBefore($('.order__right'));
 	    };
+    }());
+
+    // Личный кабинет
+	(function(){
+
+		// меняю текст
+		if($(window).width() <= '660'){
+			$('.personal-details__number--text').text('Кол-во');
+	    } else {
+	    	$('.personal-details__number--text').text('Количество');
+	    };
+
     }());
 });
 
