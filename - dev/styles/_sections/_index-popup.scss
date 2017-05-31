@@ -26,8 +26,8 @@
 	:-ms-input-placeholder      {color: #fff; font-size: 14px; font-family: 'Robotolight';}
 
 	@include tablets {
-		width: 600px;
-		height: 428px;
+		width: 605px;
+		height: 430px;
 	}
 
 	@include bigphone {
@@ -141,7 +141,7 @@
 	font-size: 14px;
 
 	@include tablets {
-		margin-bottom: 35px;
+		margin-bottom: 10px;
 		font-size: 11px;
 	}
 }
@@ -159,6 +159,25 @@
 
 	&:first-child {
 		margin-bottom: 10px;
+	}
+}
+
+.index-popup__form-wrapp--date {
+	position: relative;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		width: 25px;
+		height: 21px;
+		@include transform(translateY(-50%));
+		background: url(../img/icons/calendar.png)no-repeat;
+	}
+
+	@include tablets {
+		margin-bottom: 6px;
 	}
 }
 

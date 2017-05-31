@@ -775,6 +775,48 @@ $(document).ready(function(){
 	    	$('.personal-details__number--text').text('Количество');
 	    };
 
+
+	    // табы
+		$('.personal__tabs-view').on('click', function(e){
+			e.preventDefault();
+
+			var
+				tabs = $('.personal__tabs-list'),
+				view = $('.personal__tabs-view'),
+				tabActive = document.querySelector('.personal__tabs-item.active'),
+				linkActive = tabActive.children;
+				
+				console.log(linkActive);
+
+			if(!tabs.hasClass('open')) {
+				tabs.addClass('open');
+			} else {
+				tabs.removeClass('open');
+			};
+		});
+
+		// производим выбор размера
+		// $('.size-value').on('click', function(e){
+		// 	e.preventDefault();
+
+		// 	var
+		// 		$this   = $(this),
+		// 		size    = $this.closest('.size-value'),
+		// 		sizeBox = size.closest('.size-box'),
+		// 		title   = sizeBox.find('.size-choice');
+		// 	$(title).text('выбран размер ' + $(this).attr('rel'));
+		// });
+
+		// $('.catalog__buy').click(function(e){
+		// 	e.preventDefault();
+		// 	$('.catalog__img-bg').fadeIn()
+		// });
+
+		// $('.catalog__buy').click(function(e){
+		// 	e.preventDefault();
+		// 	$('.catalog__img-bg').fadeIn()
+		// });
+
     }());
 
 });

@@ -30,9 +30,13 @@
 	}
 }
 
-.accordion-sub__list {
-	&.margin-top {
-		margin-top: 8px;
+.specialfilters {
+	margin-top: 8px;
+
+	a {
+		display: inline-block;
+	    font-size: 14px;
+	    color: #252525;
 	}
 }
 

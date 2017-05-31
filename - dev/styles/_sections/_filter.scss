@@ -296,6 +296,11 @@
 	opacity: 0;
 }
 
+.filtr__dropdown {
+	max-height: 300px;
+    overflow: auto;
+}
+
 .filtr__dropdown-title {
 	margin-bottom: 8px;
 	padding-left: 16px;
@@ -460,6 +465,60 @@
 .filtr-color__input--black:checked + .filtr-color__desc {
 	color: #fff;
 	background: #252525;
+
+	&:before, &:after {
+		display: block;
+	}
+}
+
+.filtr-color__input--skyblue:checked + .filtr-color__desc {
+	color: #fff;
+	background: $blue;
+
+	&:before, &:after {
+		display: block;
+	}
+}
+
+.filtr-color__input--brown:checked + .filtr-color__desc {
+	color: #fff;
+	background: #7d4900;
+
+	&:before, &:after {
+		display: block;
+	}
+}
+
+.filtr-color__input--grey:checked + .filtr-color__desc {
+	color: #fff;
+	background: #ccc;
+
+	&:before, &:after {
+		display: block;
+	}
+}
+
+.filtr-color__input--blue:checked + .filtr-color__desc {
+	color: #fff;
+	background: #1800ff;
+
+	&:before, &:after {
+		display: block;
+	}
+}
+
+.filtr-color__input--black-brown:checked + .filtr-color__desc {
+	color: #fff;
+	background: #533100;
+
+	&:before, &:after {
+		display: block;
+	}
+}
+
+.filtr-color__input--other:checked + .filtr-color__desc {
+	color: #fff;
+	background: url(../img/decor/other.png)repeat;
 
 	&:before, &:after {
 		display: block;

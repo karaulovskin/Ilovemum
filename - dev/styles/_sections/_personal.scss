@@ -105,9 +105,47 @@
 	}
 }
 
+.personal__tabs {
+	position: relative;
+}
+
+.personal__tabs-view {
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-family: 'Robotoregular';
+	color: $black;
+	background: #fff;
+	cursor: pointer;
+}
+
 .personal__tabs-list {
+	display: none;
 	font-size: 0;
 	background: #fff;
+
+	&.open {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 1325px) {
+	.personal__tabs-list {
+    	display: none;
+
+    	&.open {
+    		display: block;
+    	}
+	}
+
+	.personal__tabs-item {
+		width: 100%!important;
+		text-align: left!important;
+	}
+
+	.personal__tabs-link {
+		padding: 10px 20px!important;
+	}
 }
 
 .personal__tabs-item {
@@ -160,14 +198,6 @@
 	}
 }
 
-.personal__content-item {
-	display: none;
-
-	&.active {
-		display: block;
-	}
-}
-
 .personal__tabs-link {
 	display: block;
 	padding: 10px 0;
@@ -182,6 +212,46 @@
 
 	@include phones {
 		font-size: 10px;
+	}
+}
+
+.personal__tabs-list_select {
+	position: absolute;
+	top: 100%;
+	left: 0;
+}
+
+.personal__tabs-item_select {
+	background: #fff;
+}
+
+.personal__tabs-link_select {
+	display: block;
+	padding: 10px 0;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-family: 'Robotoregular';
+	color: $blue;
+
+	&.active {
+		color: $black;
+	}
+
+	&:hover {
+		color: $black;
+		background: #fff;
+	}
+
+	@include phones {
+		font-size: 10px;
+	}
+}
+
+.personal__content-item {
+	display: none;
+
+	&.active {
+		display: block;
 	}
 }
 
@@ -208,18 +278,44 @@
 	float: left;
 	width: 12%;
 	padding: 10px 0 10px 12px;
+
+	@include bigphone {
+		width: 22%;
+	}
+
+	@include phones {
+		padding: 10px 0 10px 6px;
+	}
 }
 
 .personal__order-date {
 	float: left;
 	width: 14%;
 	padding: 10px 0 10px 12px;
+
+	@include bigphone {
+		width: 23%;
+	}
+
+	@include phones {
+		padding: 10px 0 10px 6px;
+		width: 25%;
+	}
 }
 
 .personal__order-payment {
 	float: left;
 	width: 19%;
 	padding: 10px 0 10px 12px;
+
+	@include bigphone {
+		display: none;
+	}
+
+	@include phones {
+		padding: 10px 0 10px 6px;
+		width: 22%;
+	}
 }
 
 .personal__order-shipping {
@@ -230,12 +326,30 @@
 	@include top {
 		width: 21%;
 	}
+
+	@include bigphone {
+		display: none;
+	}
+
+	@include phones {
+		padding: 10px 0 10px 6px;
+		width: 22%;
+	}
 }
 
 .personal__order-amount {
 	float: left;
 	width: 12%;
 	padding: 10px 0 10px 12px;
+
+	@include bigphone {
+		width: 25%;
+	}
+
+	@include phones {
+		padding: 10px 0 10px 6px;
+		width: 23%;
+	}
 }
 
 .personal__order-status {
@@ -266,6 +380,22 @@
 	@include top {
 		width: 22%; 
 	}
+
+	@include bigphone {
+		width: 30%;
+	}
+
+	@include phones {
+		padding: 10px 0 10px 6px;
+
+		&.buy {
+			padding: 3px 0 0 0;
+		}
+
+		&.picked {
+			word-wrap: break-word;
+		}
+	}
 }
 
 .personal__order-status_buy {
@@ -279,6 +409,10 @@
 	outline: none;
 	@include border-radius(20px);
 	cursor: pointer;
+
+	@include phones {
+		font-size: 10px;
+	}
 }
 
 .personal__right-item {
