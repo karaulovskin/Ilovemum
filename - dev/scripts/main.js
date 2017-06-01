@@ -768,7 +768,7 @@ $(document).ready(function(){
 	// Личный кабинет
 	(function(){
 
-		// меняю текс
+		// меняю текст
 		if($(window).width() <= '660'){
 			$('.personal-details__number--text').text('Кол-во');
 	    } else {
@@ -781,12 +781,7 @@ $(document).ready(function(){
 			e.preventDefault();
 
 			var
-				tabs = $('.personal__tabs-list'),
-				view = $('.personal__tabs-view'),
-				tabActive = document.querySelector('.personal__tabs-item.active'),
-				linkActive = tabActive.children;
-				
-				console.log(linkActive);
+				tabs = $('.personal__tabs-list');
 
 			if(!tabs.hasClass('open')) {
 				tabs.addClass('open');
@@ -795,28 +790,24 @@ $(document).ready(function(){
 			};
 		});
 
-		// производим выбор размера
-		// $('.size-value').on('click', function(e){
-		// 	e.preventDefault();
+		$('.personal__tabs-link').on('click', function(e){
+			e.preventDefault();
 
-		// 	var
-		// 		$this   = $(this),
-		// 		size    = $this.closest('.size-value'),
-		// 		sizeBox = size.closest('.size-box'),
-		// 		title   = sizeBox.find('.size-choice');
-		// 	$(title).text('выбран размер ' + $(this).attr('rel'));
-		// });
+			var
+				view = $('.personal__tabs-view'),
+				tabs = $('.personal__tabs-list'),
+				view = $('.personal__tabs-view'),
+				tab = $('.personal__tabs-item.active'),
+				text = $(this)
 
-		// $('.catalog__buy').click(function(e){
-		// 	e.preventDefault();
-		// 	$('.catalog__img-bg').fadeIn()
-		// });
+			$(view).text($(this).html());
 
-		// $('.catalog__buy').click(function(e){
-		// 	e.preventDefault();
-		// 	$('.catalog__img-bg').fadeIn()
-		// });
-
+			if(!tabs.hasClass('open')) {
+				tabs.addClass('open');
+			} else {
+				tabs.removeClass('open');
+			};
+		});
     }());
 
 });

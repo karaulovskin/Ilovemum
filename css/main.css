@@ -1230,6 +1230,9 @@ footer {
   font-size: 0.75rem;
   border-bottom: 1px solid #b5b5b5;
 }
+.card__shipping-text a {
+  color: #252525;
+}
 @media screen and (max-width: 480px) {
   .card__shipping-text {
     float: right;
@@ -1421,7 +1424,6 @@ footer {
 
 .card__shops {
   margin-bottom: 20px;
-  padding-right: 10%;
   font-size: 0;
 }
 @media screen and (max-width: 992px) {
@@ -1629,7 +1631,6 @@ footer {
 
 .card__tabs {
   margin-bottom: 12px;
-  padding-right: 10%;
 }
 @media screen and (max-width: 992px) {
   .card__tabs {
@@ -1715,7 +1716,7 @@ footer {
 }
 
 .card__content {
-  width: 90%;
+  width: 100%;
 }
 @media screen and (max-width: 768px) {
   .card__content {
@@ -1728,18 +1729,10 @@ footer {
   }
 }
 
-.card__content-list {
-  padding-right: 34px;
-}
-@media screen and (max-width: 992px) {
-  .card__content-list {
-    padding-right: 0;
-  }
-}
-
 .card__content-item {
   display: none;
   min-height: 368px;
+  padding-bottom: 15px;
 }
 
 .card__content-item.active {
@@ -1747,7 +1740,6 @@ footer {
 }
 
 #iblock_add {
-  margin-top: 40px;
   font-size: 14px;
 }
 #iblock_add table {
@@ -1830,7 +1822,6 @@ footer {
 
 .card__features-desc {
   float: right;
-  margin-right: 34px;
 }
 
 .card__accordion {
@@ -2331,8 +2322,6 @@ footer {
 }
 
 .card-look__desc-name {
-  display: inline-block;
-  width: 66%;
   margin-top: 8px;
   font-size: 1rem;
   font-size: 0.875rem;
@@ -2346,8 +2335,6 @@ footer {
 }
 
 .card-look__desc-price {
-  display: inline-block;
-  width: 32%;
   text-align: right;
   font-size: 0.875rem;
 }
@@ -2792,10 +2779,10 @@ footer {
 }
 
 .catalog__preloader {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   margin: 26px auto;
-  background: url(../img/decor/preloader.png) no-repeat;
+  background: url(../img/decor/Loading.gif) no-repeat;
 }
 
 .logo__link {
@@ -7232,7 +7219,8 @@ body.panel-blocking {
 }
 
 .personal__tabs-view {
-  padding: 10px 20px;
+  margin-bottom: 20px;
+  padding: 10px 12px;
   text-transform: uppercase;
   font-size: 14px;
   font-family: 'Robotoregular';
@@ -7859,7 +7847,7 @@ body.panel-blocking {
 }
 
 .sidebar {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 50px;
   height: 750px;
@@ -8072,9 +8060,9 @@ body.panel-blocking {
 }
 
 .developer {
-  position: absolute;
-  bottom: 65px;
-  left: -52px;
+  position: fixed;
+  bottom: 100px;
+  right: -52px;
   width: 150px;
   -moz-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);

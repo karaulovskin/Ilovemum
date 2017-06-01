@@ -188,10 +188,15 @@
 }
 
 .card__shipping-text {
+
 	@include inline-block(middle);
 	margin-left: 50px;
 	font-size: rem(12px);
 	border-bottom: 1px solid $grey;
+
+	a {
+		color: $black;
+	}
 
 	@include phones {
 		float: right;
@@ -376,7 +381,7 @@
 
 .card__shops {
 	margin-bottom: 20px;
-	padding-right: 10%;
+	// padding-right: 10%;
 	font-size: 0;
 	@extend %clearfix;
 
@@ -569,7 +574,7 @@
 .card__tabs {
 	// width: 480px;
 	margin-bottom: 12px;
-	padding-right: 10%;
+	// padding-right: 10%;
 
 	@include laptop {
 		padding-right: 0;
@@ -645,8 +650,7 @@
 }
 
 .card__content {
-	// width: 480px;
-	width: 90%;
+	width: 100%;
 
 	@include tablets {
 		width: 100%;
@@ -657,21 +661,22 @@
 	}
 }
 
-.card__content-list {
-	padding-right: 34px;
+// .card__content-list {
+// 	padding-right: 34px;
 
-	@include laptop {
-		padding-right: 0;
-	}
+// 	@include laptop {
+// 		padding-right: 0;
+// 	}
 
-	@include tablets {
-		// padding-right: 34px;
-	}
-}
+// 	@include tablets {
+// 		// padding-right: 34px;
+// 	}
+// }
 
 .card__content-item {
 	display: none;
 	min-height: 368px;
+	padding-bottom: 15px;
 }
 
 .card__content-item.active {
@@ -679,7 +684,7 @@
 }
 
 #iblock_add {
-	margin-top: 40px;
+	// margin-top: 40px;
 	font-size: 14px;
 
 	table {
@@ -776,7 +781,7 @@
 
 .card__features-desc {
 	float: right;
-	margin-right: 34px;
+	// margin-right: 34px;
 }
 
 .card__accordion {
@@ -1265,8 +1270,6 @@
 }
 
 .card-look__desc-name {
-	display: inline-block;
-	width: 66%;
 	margin-top: 8px;
 	font-size: rem(16px);
 	font-size: rem(14px);
@@ -1279,8 +1282,6 @@
 }
 
 .card-look__desc-price {
-	display: inline-block;
-	width: 32%;
 	text-align: right;
 	font-size: rem(14px);
 
