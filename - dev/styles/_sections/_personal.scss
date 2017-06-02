@@ -110,6 +110,8 @@
 }
 
 .personal__tabs-view {
+	position: relative;
+	display: none;
 	margin-bottom: 20px;
 	padding: 10px 12px;
 	text-transform: uppercase;
@@ -118,10 +120,43 @@
 	color: $black;
 	background: #fff;
 	cursor: pointer;
+	transition: .3s;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: 20px;
+		width: 8px;
+    	height: 18px;
+    	margin-top: -8px;
+		@include transform(rotate(-90deg));
+		background: url(../img/decor/arrow.png)no-repeat;
+		background-size: contain;
+
+	}
+
+	&:hover {
+		@include box-shadow(0 1px 10px rgba(0,0,0, .25));
+	}
+
+	@include phones {
+		padding: 10px 6px;
+
+		&:after {
+			right: 10px;
+	    	height: 14px;
+		}
+	}
+}
+
+@media screen and (max-width: 1325px) {
+  .personal__tabs-view {
+    display: block;
+  }
 }
 
 .personal__tabs-list {
-	display: none;
 	font-size: 0;
 	background: #fff;
 
@@ -133,6 +168,11 @@
 @media screen and (max-width: 1325px) {
 	.personal__tabs-list {
     	display: none;
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	right: 0;
+    	@include box-shadow(0 1px 10px rgba(0,0,0, .25));
 
     	&.open {
     		display: block;
@@ -141,11 +181,23 @@
 
 	.personal__tabs-item {
 		width: 100%!important;
+		margin: 0!important;
 		text-align: left!important;
+		background: #fff!important;
+
+		&.active {
+			background: #f0f0f0!important;
+			border: 1px solid #fff;
+		}
 	}
 
 	.personal__tabs-link {
-		padding: 10px 20px!important;
+		padding: 10px 14px!important;
+
+		&:hover {
+			background: #f0f0f0!important;
+			// border: 1px solid #fff;
+		}
 	}
 }
 
@@ -210,10 +262,6 @@
 	&.active {
 		color: $black;
 	}
-
-	@include phones {
-		font-size: 10px;
-	}
 }
 
 .personal__tabs-list_select {
@@ -259,6 +307,11 @@
 .personal__order-item {
 	margin-bottom: 20px;
 	background: #fff;
+	transition: .3s;
+
+	&:hover {
+		@include box-shadow(0 1px 10px rgba(0,0,0, .25));
+	}
 }
 
 .personal__order-header {
@@ -454,10 +507,6 @@
 
 .personal__order-block {
 	cursor: pointer;
-
-	&:hover {
-		@include box-shadow(0 1px 10px rgba(0,0,0, .25));
-	}
 }
 
 .personal__order-detail {

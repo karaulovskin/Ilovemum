@@ -1,6 +1,7 @@
 .panel-basket {
 	position: absolute;
     right: -9999px;
+    min-height: 662px;
 
     @include tablets {
     	overflow: auto;

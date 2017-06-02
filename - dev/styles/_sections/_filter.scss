@@ -117,7 +117,7 @@
 
 .filtr-apply__link {
 	display: block;
-	margin-top: 12px;
+	margin-top: 10px;
 	padding: 6px 0;
 	text-align: center;
 	text-transform: uppercase;
@@ -297,8 +297,11 @@
 }
 
 .filtr__dropdown {
-	max-height: 300px;
-    overflow: auto;
+	ul {
+		margin-right: -12px;
+		max-height: 240px;
+    	overflow: auto;
+	}	
 }
 
 .filtr__dropdown-title {
@@ -338,6 +341,7 @@
 .filtr-color__item,
 .filtr-size__item,
 .filtr-type__item {
+	margin-right: 12px;
 	margin-bottom: 5px;
 
 	&:last-child {

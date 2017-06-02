@@ -194,7 +194,8 @@
 .catalog__size-title {
 	position: relative;
 	padding: 15px 0;
-	padding-left: 20%;
+	// padding-left: 20%;
+	text-align: center;
 	text-transform: uppercase;
 	font-size: 14px;
 	// background: #fff;
@@ -205,7 +206,7 @@
 		content: "";
 		position:absolute;
 		top: 50%;
-		right: 44px;
+		right: 20px;
 		width: 10px;
 		height: 6px;
 		@include transform(translateY(-50%));
@@ -273,6 +274,12 @@
 	}
 }
 
+.size-value {
+	&:hover {
+		color: $blue;
+	}
+}
+
 .catalog__stock-list {
 	position: absolute;
 	bottom: 80px;
@@ -316,6 +323,13 @@
 .catalog__desc-link {
 	display: block;
 	color: $black;
+
+	&:hover {
+		.catalog__desc-name {
+			text-decoration: underline;
+			color: $blue;
+		}
+	}
 }
 
 .catalog__desc-name {
@@ -356,7 +370,7 @@
 	margin-left: 10px;
 
 	&:after {
-		content: "$";
+		content: "€";
 		font-size: 10px;
 	}
 }

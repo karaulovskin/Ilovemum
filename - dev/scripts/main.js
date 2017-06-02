@@ -586,6 +586,7 @@ $(document).ready(function(){
 		};
 	}());
 
+
 	// CARD
 	(function(){
 
@@ -673,7 +674,7 @@ $(document).ready(function(){
 
 			if(!popupLang.hasClass('open')) {
 				$('.overlay').fadeIn();
-				$(popupLang).addClass('open');
+				// $(popupLang).addClass('open');
 			} else {
 				$('.overlay').fadeOut();
 				$(popupLang).removeClass('open');
@@ -681,7 +682,7 @@ $(document).ready(function(){
 		});
 
 
-		$('.language-popup__close-link').on('click', function(e){
+		$('.language-popup__close-link, .language-popup__no-link').on('click', function(e){
 			e.preventDefault();
 
 			var
@@ -772,7 +773,7 @@ $(document).ready(function(){
 		if($(window).width() <= '660'){
 			$('.personal-details__number--text').text('Кол-во');
 	    } else {
-	    	$('.personal-details__number--text').text('Количество');
+	    	$('.personal-details__number--text').text('Количество'); // LANG
 	    };
 
 
@@ -859,7 +860,7 @@ $(window).resize(function(){
 		if($(window).width() <= '660'){
 			$('.personal-details__number--text').text('Кол-во');
 	    } else {
-	    	$('.personal-details__number--text').text('Количество');
+	    	$('.personal-details__number--text').text('Количество'); // LANG
 	    };
 
     }());

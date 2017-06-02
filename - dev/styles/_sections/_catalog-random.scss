@@ -43,4 +43,8 @@
 .catalog-random__link {
 	font-size: 14px;
 	color: $grey;
+
+	&:hover {
+		text-decoration: underline;
+	}
 }

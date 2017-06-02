@@ -64,6 +64,11 @@
 	font-size: rem(14px);
 	color: $black;
 
+	&:hover {
+		color: $blue;
+	    text-decoration: underline;
+	}
+
 	// @include top {
 	// 	font-size: rem(13px);
 	// }

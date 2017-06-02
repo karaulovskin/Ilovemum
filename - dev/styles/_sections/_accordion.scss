@@ -37,6 +37,11 @@
 		display: inline-block;
 	    font-size: 14px;
 	    color: #252525;
+
+	    &:hover {
+	    	text-decoration: underline;
+	    	color: $blue;
+	    }
 	}
 }
 
@@ -91,6 +96,11 @@
 	font-size: rem(14px);
 	color: $black;
 
+	&:hover {
+		color: $blue;
+		text-decoration: underline;
+	}
+
 	// &:before, &:after {
 	// 	content: "";
 	// 	position: absolute;
@@ -117,6 +127,11 @@
 	display: inline-block;
 	font-size: rem(14px);
 	color: $black;
+
+	&:hover {
+		color: $blue;
+		text-decoration: underline;
+	}
 }
 
 // .accordion-sub__link {

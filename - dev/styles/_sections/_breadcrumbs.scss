@@ -42,4 +42,8 @@
 .breadcrumbs__link {
 	color: $grey;
 	font-size: rem(12px);
+
+	&:hover {
+		text-decoration: underline;
+	}
 }
