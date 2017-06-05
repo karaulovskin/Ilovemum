@@ -23,7 +23,7 @@
 }
 /* --------- mixins --------- */
 /* --------- mixins --------- */
-.container:before, .card__wrapp:before, .gallery:before, .card__wrapp-price:before, .card__size:before, .card__size-watch-list:before, .card__shops:before, .card__wrapp-buy:before, .card__color:before, #iblock_add .well:before, .card__features-list:before, .card__features-item:before, .card__socials:before, .card-look__btns:before, .catalog:before, .catalog__btns:before, .nav:before, .filtr:before, .filtr__wrapp:before, .footer__socials:before, .index-popup:before, .banner:before, .order:before, .order-country:before, .order-city:before, .order-data:before, .order-data__right:before, .order-name:before, .order-name__right:before, .order__basket-item:before, .panel__basket-item:before, .form__basket-sale:before, .basket-sale:before,
+.container:before, .card__wrapp:before, .gallery:before, .card__wrapp-price:before, .card__size:before, .card__size-watch-list:before, .card__shops:before, .card__wrapp-buy:before, .card__color:before, #iblock_add .well:before, .card__features-list:before, .card__features-item:before, .card__socials:before, .card-look__btns:before, .catalog:before, .catalog__btns:before, .nav:before, .delivery__section-wrapp:before, .delivery-section__col-wrapp:before, .filtr:before, .filtr__wrapp:before, .footer__socials:before, .index-popup:before, .banner:before, .order:before, .order-country:before, .order-city:before, .order-data:before, .order-data__right:before, .order-name:before, .order-name__right:before, .order__basket-item:before, .panel__basket-item:before, .form__basket-sale:before, .basket-sale:before,
 .basket-total:before,
 .basket-coupon:before,
 .basket-order:before,
@@ -31,7 +31,7 @@
 .personal-details__total-weight:before,
 .personal-details__total-price:before,
 .personal-details__total-shipping:before,
-.personal-details__total-pay:before, .container:after, .card__wrapp:after, .gallery:after, .card__wrapp-price:after, .card__size:after, .card__size-watch-list:after, .card__shops:after, .card__wrapp-buy:after, .card__color:after, #iblock_add .well:after, .card__features-list:after, .card__features-item:after, .card__socials:after, .card-look__btns:after, .catalog:after, .catalog__btns:after, .nav:after, .filtr:after, .filtr__wrapp:after, .footer__socials:after, .index-popup:after, .banner:after, .order:after, .order-country:after, .order-city:after, .order-data:after, .order-data__right:after, .order-name:after, .order-name__right:after, .order__basket-item:after, .panel__basket-item:after, .form__basket-sale:after, .basket-sale:after,
+.personal-details__total-pay:before, .container:after, .card__wrapp:after, .gallery:after, .card__wrapp-price:after, .card__size:after, .card__size-watch-list:after, .card__shops:after, .card__wrapp-buy:after, .card__color:after, #iblock_add .well:after, .card__features-list:after, .card__features-item:after, .card__socials:after, .card-look__btns:after, .catalog:after, .catalog__btns:after, .nav:after, .delivery__section-wrapp:after, .delivery-section__col-wrapp:after, .filtr:after, .filtr__wrapp:after, .footer__socials:after, .index-popup:after, .banner:after, .order:after, .order-country:after, .order-city:after, .order-data:after, .order-data__right:after, .order-name:after, .order-name__right:after, .order__basket-item:after, .panel__basket-item:after, .form__basket-sale:after, .basket-sale:after,
 .basket-total:after,
 .basket-coupon:after,
 .basket-order:after,
@@ -43,7 +43,7 @@
   content: "";
   display: table;
 }
-.container:after, .card__wrapp:after, .gallery:after, .card__wrapp-price:after, .card__size:after, .card__size-watch-list:after, .card__shops:after, .card__wrapp-buy:after, .card__color:after, #iblock_add .well:after, .card__features-list:after, .card__features-item:after, .card__socials:after, .card-look__btns:after, .catalog:after, .catalog__btns:after, .nav:after, .filtr:after, .filtr__wrapp:after, .footer__socials:after, .index-popup:after, .banner:after, .order:after, .order-country:after, .order-city:after, .order-data:after, .order-data__right:after, .order-name:after, .order-name__right:after, .order__basket-item:after, .panel__basket-item:after, .form__basket-sale:after, .basket-sale:after,
+.container:after, .card__wrapp:after, .gallery:after, .card__wrapp-price:after, .card__size:after, .card__size-watch-list:after, .card__shops:after, .card__wrapp-buy:after, .card__color:after, #iblock_add .well:after, .card__features-list:after, .card__features-item:after, .card__socials:after, .card-look__btns:after, .catalog:after, .catalog__btns:after, .nav:after, .delivery__section-wrapp:after, .delivery-section__col-wrapp:after, .filtr:after, .filtr__wrapp:after, .footer__socials:after, .index-popup:after, .banner:after, .order:after, .order-country:after, .order-city:after, .order-data:after, .order-data__right:after, .order-name:after, .order-name__right:after, .order__basket-item:after, .panel__basket-item:after, .form__basket-sale:after, .basket-sale:after,
 .basket-total:after,
 .basket-coupon:after,
 .basket-order:after,
@@ -2888,6 +2888,134 @@ footer {
 .nav__link:hover {
   color: #7ac8f0;
   text-decoration: underline;
+}
+
+.delivery__banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: url(../img/delivery/banner-delivery.jpg) 50% 50%;
+  background-size: cover;
+}
+@media screen and (max-width: 768px) {
+  .delivery__banner {
+    height: 250px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .delivery__banner {
+    height: 180px;
+  }
+}
+
+.delivery__banner-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 400px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 768px) {
+  .delivery__banner-bg {
+    line-height: 250px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .delivery__banner-bg {
+    line-height: 180px;
+  }
+}
+
+.delivery__banner-title {
+  text-transform: uppercase;
+  font-size: 28px;
+  color: #fff;
+}
+
+.delivery__section {
+  padding: 65px 0 0 0;
+}
+
+.delivery__section--bg {
+  background: #f5f5f5;
+}
+
+.delivery__section-title {
+  margin-bottom: 100px;
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.delivery__left {
+  float: left;
+  width: 66%;
+}
+
+.delivery__right {
+  float: left;
+  width: 34%;
+}
+
+.delivery__section-header {
+  padding: 0 34px;
+}
+
+.delivery-section__col {
+  float: left;
+  width: 50%;
+  padding-right: 40px;
+}
+.delivery-section__col:last-child {
+  padding-left: 40px;
+}
+
+.delivery-section__img {
+  width: 210px;
+  height: 60px;
+  margin-bottom: 30px;
+}
+
+.delivery-section__title {
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: 'Robotomedium';
+}
+
+.delivery-section__desc {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.delivery-section__desc a {
+  display: inline-block;
+  color: #7ac8f0;
+}
+
+.delivery-section__text {
+  margin-top: 42px;
+}
+.delivery-section__text p {
+  margin-bottom: 20px;
+}
+.delivery-section__text a {
+  display: inline-block;
+  color: #7ac8f0;
+}
+.delivery-section__text.text-center {
+  text-align: center;
+}
+
+.delivery__section-col {
+  float: left;
+  width: 50%;
+}
+
+.delivery-section__attention {
+  margin: 0 0 0 -17px;
+  padding: 17px;
+  background: #fff;
 }
 
 .filtr {
