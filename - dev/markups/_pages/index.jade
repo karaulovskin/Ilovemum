@@ -3,6 +3,16 @@ extends ../main
 block title
 	| Главная страница
 
-block content
-	include ../_common/_index
-	include ../_common/_index-popup
+block wrapper
+	.wrapper
+		.maincontent
+			include ../_common/_header
+
+			main.main
+				.container
+					block content
+						include ../_common/_index
+						include ../_common/_index-popup
+
+block footer
+	include ../_common/_footer

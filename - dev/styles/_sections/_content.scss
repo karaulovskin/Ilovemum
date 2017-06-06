@@ -29,12 +29,8 @@
 .nav__item {
 	position: relative;
 	@include inline-block(middle);
-	margin-left: 22px;
+	margin: 0 11px;
 	font-size: rem(14px);
-
-	&:first-child {
-		margin-left: 0;
-	}
 
 	// * {
 	// 	line-height: 1.4;

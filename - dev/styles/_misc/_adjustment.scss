@@ -62,6 +62,7 @@ p {
 
 a {
 	text-decoration: none;
+	@include transition(.3s);
 }
 
 footer {
@@ -78,6 +79,23 @@ footer {
 	@include phones {
 		height: 850px;
 		margin-top: -850px;
+	}
+}
+
+.footer-min {
+	height: 355px;
+	margin-top: -355px;
+	padding-top: 58px!important;
+
+	@include tablets {
+		height: 300px;
+		margin-top: -300px;
+		padding-top: 30px!important;
+	}
+
+	@include phones {
+		height: 165px;
+		margin-top: -165px;
 	}
 }
 
@@ -104,6 +122,21 @@ footer {
 			height: 850px;
 		}
 	}
+
+	&.wrapper--footer-min {
+
+		&:after {
+			height: 355px;
+
+			@include tablets {
+				height: 300px;
+			}
+
+			@include phones {
+				height: 165px;
+			}
+		}
+	}
 }
 
 .container {
@@ -125,6 +158,8 @@ footer {
 }
 
 .main {
+	position: relative;
+	
 	@include phones {
 		margin-top: 72px;
 	}
@@ -210,8 +245,8 @@ footer {
 	padding: 10px 28px;
 	text-transform: uppercase;
 	font-size: rem(14px);
-	color: $blue;
-	border: 1px solid $blue;
+	// color: $blue;
+	// border: 1px solid $blue;
 	@include border-radius(20px);
 }
 
@@ -219,10 +254,33 @@ footer {
 	padding: 12px 28px;
 	text-transform: uppercase;
 	font-size: rem(14px);
-	color: #fff;
-	background: $blue;
+	// color: #fff;
+	// background: $blue;
 	border: none;
 	@include border-radius(20px);
+}
+
+.btn-blue {
+	color: #fff;
+	background: $blue;
+	border: 1px solid $blue;
+
+	&:hover {
+		color: $blue;
+		background: #fff;
+		border: 1px solid $blue;
+	}
+}
+
+.btn-white {
+	color: $blue;
+	background: #fff;
+	border: 1px solid $blue;
+
+	&:hover {
+		color: #fff;
+		background: $blue;
+	}
 }
 
 .overlay {

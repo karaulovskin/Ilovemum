@@ -26,16 +26,14 @@
 .container:before, .card__wrapp:before, .gallery:before, .card__wrapp-price:before, .card__size:before, .card__size-watch-list:before, .card__shops:before, .card__wrapp-buy:before, .card__color:before, #iblock_add .well:before, .card__features-list:before, .card__features-item:before, .card__socials:before, .card-look__btns:before, .catalog:before, .catalog__btns:before, .nav:before, .delivery__section-wrapp:before, .delivery-section__col-wrapp:before, .filtr:before, .filtr__wrapp:before, .footer__socials:before, .index-popup:before, .banner:before, .order:before, .order-country:before, .order-city:before, .order-data:before, .order-data__right:before, .order-name:before, .order-name__right:before, .order__basket-item:before, .panel__basket-item:before, .form__basket-sale:before, .basket-sale:before,
 .basket-total:before,
 .basket-coupon:before,
-.basket-order:before,
-.basket-pay:before, .form__login-checkbox:before, .form__login-btns:before, .personal__title-wrapp:before, .personal__order-header:before, .personal__order-body:before, .personal__status-item:before, .personal-details__section:before, .personal-details__header:before, .personal-details__wrapp:before, .personal-details__item:before, .personal-details__total-sale:before,
+.basket-order:before, .form__login-checkbox:before, .form__login-btns:before, .personal__title-wrapp:before, .personal__order-header:before, .personal__order-body:before, .personal__status-item:before, .personal-details__section:before, .personal-details__header:before, .personal-details__wrapp:before, .personal-details__item:before, .personal-details__total-sale:before,
 .personal-details__total-weight:before,
 .personal-details__total-price:before,
 .personal-details__total-shipping:before,
 .personal-details__total-pay:before, .container:after, .card__wrapp:after, .gallery:after, .card__wrapp-price:after, .card__size:after, .card__size-watch-list:after, .card__shops:after, .card__wrapp-buy:after, .card__color:after, #iblock_add .well:after, .card__features-list:after, .card__features-item:after, .card__socials:after, .card-look__btns:after, .catalog:after, .catalog__btns:after, .nav:after, .delivery__section-wrapp:after, .delivery-section__col-wrapp:after, .filtr:after, .filtr__wrapp:after, .footer__socials:after, .index-popup:after, .banner:after, .order:after, .order-country:after, .order-city:after, .order-data:after, .order-data__right:after, .order-name:after, .order-name__right:after, .order__basket-item:after, .panel__basket-item:after, .form__basket-sale:after, .basket-sale:after,
 .basket-total:after,
 .basket-coupon:after,
-.basket-order:after,
-.basket-pay:after, .form__login-checkbox:after, .form__login-btns:after, .personal__title-wrapp:after, .personal__order-header:after, .personal__order-body:after, .personal__status-item:after, .personal-details__section:after, .personal-details__header:after, .personal-details__wrapp:after, .personal-details__item:after, .personal-details__total-sale:after,
+.basket-order:after, .form__login-checkbox:after, .form__login-btns:after, .personal__title-wrapp:after, .personal__order-header:after, .personal__order-body:after, .personal__status-item:after, .personal-details__section:after, .personal-details__header:after, .personal-details__wrapp:after, .personal-details__item:after, .personal-details__total-sale:after,
 .personal-details__total-weight:after,
 .personal-details__total-price:after,
 .personal-details__total-shipping:after,
@@ -46,8 +44,7 @@
 .container:after, .card__wrapp:after, .gallery:after, .card__wrapp-price:after, .card__size:after, .card__size-watch-list:after, .card__shops:after, .card__wrapp-buy:after, .card__color:after, #iblock_add .well:after, .card__features-list:after, .card__features-item:after, .card__socials:after, .card-look__btns:after, .catalog:after, .catalog__btns:after, .nav:after, .delivery__section-wrapp:after, .delivery-section__col-wrapp:after, .filtr:after, .filtr__wrapp:after, .footer__socials:after, .index-popup:after, .banner:after, .order:after, .order-country:after, .order-city:after, .order-data:after, .order-data__right:after, .order-name:after, .order-name__right:after, .order__basket-item:after, .panel__basket-item:after, .form__basket-sale:after, .basket-sale:after,
 .basket-total:after,
 .basket-coupon:after,
-.basket-order:after,
-.basket-pay:after, .form__login-checkbox:after, .form__login-btns:after, .personal__title-wrapp:after, .personal__order-header:after, .personal__order-body:after, .personal__status-item:after, .personal-details__section:after, .personal-details__header:after, .personal-details__wrapp:after, .personal-details__item:after, .personal-details__total-sale:after,
+.basket-order:after, .form__login-checkbox:after, .form__login-btns:after, .personal__title-wrapp:after, .personal__order-header:after, .personal__order-body:after, .personal__status-item:after, .personal-details__section:after, .personal-details__header:after, .personal-details__wrapp:after, .personal-details__item:after, .personal-details__total-sale:after,
 .personal-details__total-weight:after,
 .personal-details__total-price:after,
 .personal-details__total-shipping:after,
@@ -116,6 +113,11 @@ p {
 
 a {
   text-decoration: none;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 footer {
@@ -134,6 +136,25 @@ footer {
   footer {
     height: 850px;
     margin-top: -850px;
+  }
+}
+
+.footer-min {
+  height: 355px;
+  margin-top: -355px;
+  padding-top: 58px !important;
+}
+@media screen and (max-width: 768px) {
+  .footer-min {
+    height: 300px;
+    margin-top: -300px;
+    padding-top: 30px !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer-min {
+    height: 165px;
+    margin-top: -165px;
   }
 }
 
@@ -161,6 +182,19 @@ footer {
     height: 850px;
   }
 }
+.wrapper.wrapper--footer-min:after {
+  height: 355px;
+}
+@media screen and (max-width: 768px) {
+  .wrapper.wrapper--footer-min:after {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .wrapper.wrapper--footer-min:after {
+    height: 165px;
+  }
+}
 
 .container {
   max-width: 1820px;
@@ -179,6 +213,9 @@ footer {
   }
 }
 
+.main {
+  position: relative;
+}
 @media screen and (max-width: 480px) {
   .main {
     margin-top: 72px;
@@ -266,8 +303,6 @@ footer {
   padding: 10px 28px;
   text-transform: uppercase;
   font-size: 0.875rem;
-  color: #7ac8f0;
-  border: 1px solid #7ac8f0;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
@@ -280,8 +315,6 @@ footer {
   padding: 12px 28px;
   text-transform: uppercase;
   font-size: 0.875rem;
-  color: #fff;
-  background: #7ac8f0;
   border: none;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -289,6 +322,27 @@ footer {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+}
+
+.btn-blue {
+  color: #fff;
+  background: #7ac8f0;
+  border: 1px solid #7ac8f0;
+}
+.btn-blue:hover {
+  color: #7ac8f0;
+  background: #fff;
+  border: 1px solid #7ac8f0;
+}
+
+.btn-white {
+  color: #7ac8f0;
+  background: #fff;
+  border: 1px solid #7ac8f0;
+}
+.btn-white:hover {
+  color: #fff;
+  background: #7ac8f0;
 }
 
 .overlay {
@@ -2873,11 +2927,8 @@ footer {
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
-  margin-left: 22px;
+  margin: 0 11px;
   font-size: 0.875rem;
-}
-.nav__item:first-child {
-  margin-left: 0;
 }
 
 .nav__link {
@@ -3751,15 +3802,6 @@ footer {
   cursor: pointer;
 }
 
-.footer {
-  padding: 0 0 2.8125rem;
-}
-@media screen and (max-width: 480px) {
-  .footer {
-    padding: 0 0 0.875rem;
-  }
-}
-
 .footer__top {
   margin-bottom: 40px;
 }
@@ -3984,7 +4026,7 @@ footer {
 }
 
 .footer__nav {
-  margin-bottom: 2.75rem;
+  margin-bottom: 44px;
 }
 .footer__nav .nav {
   width: 70%;
@@ -5241,6 +5283,27 @@ footer {
   background: #fff;
 }
 
+#order-errors {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 25px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  background: #f19da3;
+}
+@media screen and (max-width: 768px) {
+  #order-errors {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #order-errors {
+    font-size: 11px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .order {
     margin: 0 -15px;
@@ -5304,18 +5367,21 @@ footer {
   .order__right {
     float: none;
     width: 100%;
-    padding: 36px 0 36px 0;
+    padding: 0 0 36px 0;
   }
 }
 @media screen and (max-width: 480px) {
   .order__right {
-    padding: 25px 20px;
+    padding: 0 20px 25px;
   }
 }
 
 .order__item {
   position: relative;
   margin: 0 0 24px 0;
+}
+.order__item:last-child {
+  margin-bottom: 0;
 }
 
 .order__item-title {
@@ -5842,6 +5908,27 @@ footer {
   background: #fff;
 }
 
+@media screen and (max-width: 768px) {
+  .order-info__wrapp {
+    display: none;
+  }
+}
+
+.order-info__wrapp--table {
+  display: none;
+  margin-top: 20px;
+}
+@media screen and (max-width: 768px) {
+  .order-info__wrapp--table {
+    display: block;
+  }
+}
+@media screen and (max-width: 480px) {
+  .order-info__wrapp--table {
+    padding: 0 20px;
+  }
+}
+
 .order-info__checkbox-text,
 .order-get__options-desc {
   font-size: 0.75rem;
@@ -6070,23 +6157,18 @@ footer {
 
 .order-pay__checkbox {
   position: relative;
+  display: table;
+  width: 100%;
 }
 
 .order-pay__checkbox-fake {
+  display: table-cell;
+  vertical-align: middle;
   position: relative;
   height: 70px;
   text-align: center;
   border: 1px solid #7ac8f0;
   cursor: pointer;
-}
-.order-pay__checkbox-fake:before {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
-  height: 100%;
 }
 @media screen and (max-width: 992px) {
   .order-pay__checkbox-fake {
@@ -6159,7 +6241,7 @@ footer {
 }
 
 .order-info {
-  margin: 0 0 28px 0;
+  margin: 0 0 16px 0;
   overflow: hidden;
 }
 @media screen and (max-width: 992px) {
@@ -6242,6 +6324,9 @@ footer {
   padding: 1rem 0;
   border-bottom: 1px solid #ccccce;
 }
+.order__basket-item:last-child {
+  border-bottom: none;
+}
 
 .order__basket-left {
   float: left;
@@ -6257,83 +6342,80 @@ footer {
   max-width: 100%;
 }
 
-.form__basket--order {
+.form__basket-total--order {
   font-size: 16px;
 }
-.form__basket--order .form__btn {
+.form__basket-total--order .form__btn {
   font-size: 12px;
 }
-.form__basket--order .form__btns--order {
+.form__basket-total--order .form__btns--order {
   margin-bottom: 0;
 }
-.form__basket--order .basket-sale,
-.form__basket--order .basket-total,
-.form__basket--order .basket-coupon,
-.form__basket--order .basket-order,
-.form__basket--order .basket-pay {
+.form__basket-total--order .basket-sale,
+.form__basket-total--order .basket-total,
+.form__basket-total--order .basket-coupon,
+.form__basket-total--order .basket-order {
   margin-bottom: 16px;
 }
 @media screen and (max-width: 1224px) {
-  .form__basket--order {
+  .form__basket-total--order {
     font-size: 14px;
   }
-  .form__basket--order .form__basket-sale_input {
+  .form__basket-total--order .form__basket-sale_input {
     height: 36px;
   }
-  .form__basket--order .form__btn {
+  .form__basket-total--order .form__btn {
     font-size: 10px;
   }
-  .form__basket--order .panel__basket-price_discount {
+  .form__basket-total--order .panel__basket-price_discount {
     margin-right: 6px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .form__basket--order {
+  .form__basket-total--order {
     font-size: 13px;
   }
-  .form__basket--order .basket-sale,
-  .form__basket--order .basket-total,
-  .form__basket--order .basket-coupon,
-  .form__basket--order .basket-order,
-  .form__basket--order .basket-pay {
+  .form__basket-total--order .basket-sale,
+  .form__basket-total--order .basket-total,
+  .form__basket-total--order .basket-coupon,
+  .form__basket-total--order .basket-order {
     margin-bottom: 14px;
   }
 }
 @media screen and (max-width: 992px) {
-  .form__basket--order .form__basket-sale_input {
+  .form__basket-total--order .form__basket-sale_input {
     float: none;
     width: 100%;
     margin-bottom: 14px;
   }
-  .form__basket--order .form__basket-sale_btn {
+  .form__basket-total--order .form__basket-sale_btn {
     float: none;
     width: 100%;
   }
-  .form__basket--order .form__btn {
+  .form__basket-total--order .form__btn {
     font-size: 12px;
   }
 }
 @media screen and (max-width: 768px) {
-  .form__basket--order .form__basket-sale_input {
+  .form__basket-total--order .form__basket-sale_input {
     float: left;
     width: 43%;
     margin-bottom: 0;
   }
-  .form__basket--order .form__basket-sale_btn {
+  .form__basket-total--order .form__basket-sale_btn {
     float: right;
     width: 54%;
     margin-top: 0;
   }
-  .form__basket--order .form__basket-total {
+  .form__basket-total--order .form__basket-total {
     margin-top: 14px;
   }
 }
 @media screen and (max-width: 480px) {
-  .form__basket--order .basket-sale,
-  .form__basket--order .basket-total,
-  .form__basket--order .basket-coupon,
-  .form__basket--order .basket-order,
-  .form__basket--order .basket-pay {
+  .form__basket-total--order .basket-sale,
+  .form__basket-total--order .basket-total,
+  .form__basket-total--order .basket-coupon,
+  .form__basket-total--order .basket-order {
     margin-bottom: 12px;
   }
 }
@@ -6505,8 +6587,7 @@ footer {
 .basket-sale,
 .basket-total,
 .basket-coupon,
-.basket-order,
-.basket-pay {
+.basket-order {
   margin-bottom: 6px;
 }
 
@@ -6520,11 +6601,11 @@ footer {
 }
 
 .form__basket-total {
-  margin-top: 1rem;
+  margin: 16px 0;
 }
 @media screen and (max-width: 480px) {
   .form__basket-total {
-    margin-top: 1.875rem;
+    margin-top: 30px;
   }
 }
 
@@ -6966,18 +7047,12 @@ footer {
   text-align: center;
   text-transform: uppercase;
   font-size: 0.875rem;
-  color: #7ac8f0;
-  border: 1px solid #7ac8f0;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-}
-.form__btn:hover {
-  color: #fff;
-  background: #7ac8f0;
 }
 
 .form__btn--bottom {

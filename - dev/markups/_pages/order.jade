@@ -3,6 +3,16 @@ extends ../main
 block title
 	| Оформить заказ
 
-block content
-	include ../_common/_breadcrumbs
-	include ../_common/_order
+block wrapper
+	.wrapper.wrapper--footer-min
+		.maincontent
+			include ../_common/_header
+
+			main.main
+				.container
+					block content
+						include ../_common/_breadcrumbs
+						include ../_common/_order
+
+block footer
+	include ../_common/_footer-min

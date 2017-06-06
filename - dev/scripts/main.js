@@ -162,38 +162,38 @@ $(document).ready(function(){
 		});
 	}());
 
-	(function(){
-		$('.accordion-sub__link').on('click', function(e){
-			e.preventDefault();
+	// (function(){
+	// 	$('.accordion-sub__link').on('click', function(e){
+	// 		e.preventDefault();
 
-			var
-				$this = $(this),
-				container = $this.closest('.accordion-sub__list'),
-				item = $this.closest('.accordion-sub__item'),
-				currentContent = item.find('.accordion-sub-2__list'),
-				duration = 500;
+	// 		var
+	// 			$this = $(this),
+	// 			container = $this.closest('.accordion-sub__list'),
+	// 			item = $this.closest('.accordion-sub__item'),
+	// 			currentContent = item.find('.accordion-sub-2__list'),
+	// 			duration = 500;
 
-				// currentContent.slideToggle(duration);
+	// 			// currentContent.slideToggle(duration);
 
 
-			if(!item.hasClass('active')) {
+	// 		if(!item.hasClass('active')) {
 
-				item
-					.addClass('active')
-					.siblings()
-					.removeClass('active')
-					.find('.accordion-sub-2__list')
-					.stop(true, true)
-					.slideUp();
+	// 			item
+	// 				.addClass('active')
+	// 				.siblings()
+	// 				.removeClass('active')
+	// 				.find('.accordion-sub-2__list')
+	// 				.stop(true, true)
+	// 				.slideUp();
 
-				currentContent.stop(true, true).slideDown(duration);
-			} else {
+	// 			currentContent.stop(true, true).slideDown(duration);
+	// 		} else {
 
-				item.removeClass('active');
-				currentContent.stop(true, true).slideUp();
-			}
-		});
-	}());
+	// 			item.removeClass('active');
+	// 			currentContent.stop(true, true).slideUp();
+	// 		}
+	// 	});
+	// }());
 
 
 	// FILTER
@@ -274,57 +274,57 @@ $(document).ready(function(){
 
 
 	// CATALOG SIZE
-	(function(){
-		$('.size-box').on('click', function(e){
-			e.preventDefault();
+	// (function(){
+	// 	$('.size-box').on('click', function(e){
+	// 		e.preventDefault();
 
-			var
-				$this          = $(this),
-				list           = $this.closest('.catalog-list'),
-				otherContainer = list.find('.size-btns'),
-				container      = $this.closest('.size-btns'),
-				sizeBox        = $this.closest('.size-box'),
-				otherContent   = list.find('.size-list'),
-				choice         = $('.catalog__size-link'),
-				title          = sizeBox.closest('.catalog__size-title'),
-				titleIndicator = $('.catalog__size-title:after'),
-				content        = sizeBox.find('.size-list');
+	// 		var
+	// 			$this          = $(this),
+	// 			list           = $this.closest('.catalog-list'),
+	// 			otherContainer = list.find('.size-btns'),
+	// 			container      = $this.closest('.size-btns'),
+	// 			sizeBox        = $this.closest('.size-box'),
+	// 			otherContent   = list.find('.size-list'),
+	// 			choice         = $('.catalog__size-link'),
+	// 			title          = sizeBox.closest('.catalog__size-title'),
+	// 			titleIndicator = $('.catalog__size-title:after'),
+	// 			content        = sizeBox.find('.size-list');
 				
 
-			if(!container.hasClass('active')) {
-				otherContainer.removeClass('active'),
-				otherContent.fadeOut(),
-				container.addClass('active'),
-				content.fadeIn();
-				titleIndicator.css();
-			} else {
-				container.removeClass('active'),
-				content.fadeOut();
-			};
-		});
+	// 		if(!container.hasClass('active')) {
+	// 			otherContainer.removeClass('active'),
+	// 			otherContent.fadeOut(),
+	// 			container.addClass('active'),
+	// 			content.fadeIn();
+	// 			titleIndicator.css();
+	// 		} else {
+	// 			container.removeClass('active'),
+	// 			content.fadeOut();
+	// 		};
+	// 	});
 
-		// производим выбор размера
-		$('.size-value').on('click', function(e){
-			e.preventDefault();
+	// 	// производим выбор размера
+	// 	$('.size-value').on('click', function(e){
+	// 		e.preventDefault();
 
-			var
-				$this   = $(this),
-				size    = $this.closest('.size-value'),
-				sizeBox = size.closest('.size-box'),
-				title   = sizeBox.find('.size-choice');
-			$(title).text('выбран размер ' + $(this).attr('rel'));
-		});
+	// 		var
+	// 			$this   = $(this),
+	// 			size    = $this.closest('.size-value'),
+	// 			sizeBox = size.closest('.size-box'),
+	// 			title   = sizeBox.find('.size-choice');
+	// 		$(title).text('выбран размер ' + $(this).attr('rel'));
+	// 	});
 
-		$('.catalog__buy').click(function(e){
-			e.preventDefault();
-			$('.catalog__img-bg').fadeIn()
-		});
+	// 	$('.catalog__buy').click(function(e){
+	// 		e.preventDefault();
+	// 		$('.catalog__img-bg').fadeIn()
+	// 	});
 
-		$('.catalog__buy').click(function(e){
-			e.preventDefault();
-			$('.catalog__img-bg').fadeIn()
-		});
-	}());
+	// 	$('.catalog__buy').click(function(e){
+	// 		e.preventDefault();
+	// 		$('.catalog__img-bg').fadeIn()
+	// 	});
+	// }());
 
 
 	// CARD SIZE
@@ -845,7 +845,7 @@ $(window).resize(function(){
 
 	(function(){
 		// меняю блоки местами 
-		if($(window).width() <= '750'){
+		if($(window).width() <= '768'){
 			$('.order__right').insertBefore($('.order__left'));
 
 	    } else {

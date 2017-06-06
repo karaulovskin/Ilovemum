@@ -3,6 +3,16 @@ extends ../main
 block title
 	| Каталог
 
-block content
-	include ../_common/_breadcrumbs
-	include ../_common/_catalog
+block wrapper
+	.wrapper
+		.maincontent
+			include ../_common/_header
+
+			main.main
+				.container
+					block content
+						include ../_common/_breadcrumbs
+						include ../_common/_catalog
+
+block footer
+	include ../_common/_footer

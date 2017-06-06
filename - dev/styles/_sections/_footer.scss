@@ -1,10 +1,10 @@
-.footer {
-	padding: 0 0 rem(45px);
+// .footer {
+// 	padding: 0 0 rem(45px);
 
-	@include phones {
-		padding: 0 0 rem(14px);
-	}
-}
+// 	@include phones {
+// 		padding: 0 0 rem(14px);
+// 	}
+// }
 
 .footer__top {
     margin-bottom: 40px;
@@ -235,7 +235,7 @@
 }
 
 .footer__nav {
-	margin-bottom: rem(44px);
+	margin-bottom: 44px;
 
 	.nav {
 		width: 70%;

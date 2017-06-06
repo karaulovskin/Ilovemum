@@ -22,19 +22,11 @@ html
         <!--[if lt IE 8]>
         <p class="chromeframe">Похоже, что ты используешь устаревший браузер, друг. Пожалуйста, <a href="http://browsehappy.com/">скачай новый браузер абсолютно бесплатно</a> или <a href="http://www.google.com/chromeframe/?redirect=true">активируй Google Chrome Frame</a></p>
         <![endif]-->
+        
+        block wrapper
 
-        .wrapper
-            .maincontent
-                include _common/_header
+        block footer
 
-                main.main
-                    .container
-                        block content
-                //- block sidebar
-                //-     include _common/_sidebar
-
-
-        include _common/_footer
         include _common/_language-popup
         .overlay
 

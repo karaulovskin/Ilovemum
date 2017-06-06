@@ -172,8 +172,7 @@
 .basket-sale,
 .basket-total,
 .basket-coupon,
-.basket-order,
-.basket-pay {
+.basket-order {
 	@extend %clearfix;
 	margin-bottom: 6px;
 }
@@ -197,10 +196,10 @@
 }
 
 .form__basket-total {
-	margin-top: rem(16px);
+	margin: 16px 0;
 
 	@include phones {
-		margin-top: rem(30px);
+		margin-top: 30px;
 	}
 }
 

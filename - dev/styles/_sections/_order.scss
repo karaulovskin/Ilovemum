@@ -1,3 +1,22 @@
+#order-errors {
+	display: inline-block;
+	margin-bottom: 20px;
+	padding: 10px 25px;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	background: $pink;
+
+	@include tablets {
+		font-size: 12px;
+	}
+
+	@include phones {
+		font-size: 11px;
+	}
+}
+
 .order {
 	@extend %clearfix;
 
@@ -58,17 +77,21 @@
 	@include tablets {
 		float: none;
 		width: 100%;
-		padding: 36px 0 36px 0;
+		padding: 0 0 36px 0;
 	}
 
 	@include phones {
-		padding: 25px 20px;
+		padding: 0 20px 25px;
 	}
 }
 
 .order__item {
 	position: relative;
 	margin: 0 0 24px 0;
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .order__item-title {
@@ -569,6 +592,26 @@
 	background: #fff;
 }
 
+.order-info__wrapp {
+
+	@include tablets {
+		display: none;
+	}
+}
+
+.order-info__wrapp--table {
+	display: none;
+	margin-top: 20px;
+
+	@include tablets {
+		display: block;
+	}
+
+	@include phones {
+		padding: 0 20px;
+	}
+}
+
 .order-info__checkbox-text,
 .order-get__options-desc {
 	font-size: rem(12px);
@@ -848,20 +891,24 @@
 
 .order-pay__checkbox {
 	position: relative;
+	display: table;
+	width: 100%;
 }
 
 .order-pay__checkbox-fake {
+    display: table-cell;
+    vertical-align: middle;
 	position: relative;
 	height: 70px;
 	text-align: center;
 	border: 1px solid $blue;
 	cursor: pointer;
 
-	&:before {
-		content: "";
-		@include inline-block(middle);
-		height: 100%;
-	}
+	// &:before {
+	// 	content: "";
+	// 	@include inline-block(middle);
+	// 	height: 100%;
+	// }
 
 	@include laptop {
 		height: 60px;
@@ -922,7 +969,7 @@
 }
 
 .order-info {
-	margin: 0 0 28px 0;
+	margin: 0 0 16px 0;
 	overflow: hidden;
 
 	@include laptop {
@@ -996,6 +1043,10 @@
     padding: 1rem 0;
     border-bottom: 1px solid #ccccce;
 	@extend %clearfix;
+
+	&:last-child {
+		border-bottom: none;
+	}
 }
 
 .order__basket-left {
@@ -1020,7 +1071,7 @@
 	max-width: 100%;
 }
 
-.form__basket--order {
+.form__basket-total--order {
 	font-size: 16px;
 
 	.form__btn {
@@ -1034,8 +1085,7 @@
 	.basket-sale,
 	.basket-total,
 	.basket-coupon,
-	.basket-order,
-	.basket-pay {
+	.basket-order {
 		margin-bottom: 16px;
 	}
 
@@ -1061,8 +1111,7 @@
 		.basket-sale,
 		.basket-total,
 		.basket-coupon,
-		.basket-order,
-		.basket-pay {
+		.basket-order {
 			margin-bottom: 14px;
 		}
 	}
@@ -1085,6 +1134,8 @@
 	}
 
 	@include tablets {
+		// font-size: 16px;
+
 		.form__basket-sale_input {
 			float: left;
 			width: 43%;
@@ -1106,8 +1157,7 @@
 		.basket-sale,
 		.basket-total,
 		.basket-coupon,
-		.basket-order,
-		.basket-pay {
+		.basket-order {
 			margin-bottom: 12px;
 		}
 	}

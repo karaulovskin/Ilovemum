@@ -3,6 +3,16 @@ extends ../main
 block title
 	| О нас
 
-block content
-	include ../_common/_breadcrumbs
-	include ../_common/_about
+block wrapper
+	.wrapper
+		.maincontent
+			include ../_common/_header
+
+			main.main
+				.container
+					block content
+						include ../_common/_breadcrumbs
+						include ../_common/_about
+
+block footer
+	include ../_common/_footer

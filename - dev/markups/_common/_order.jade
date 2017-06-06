@@ -1,3 +1,4 @@
+#order-errors Этот адрес находится вне зоны, обслуживаемой нашими курьерами.
 .order
 	.order__left
 		ul.order__list
@@ -140,8 +141,6 @@
 										.order-get__checkbox-title
 											.order-get__checkbox__big-text Получение на складе СДЭК
 											.order-get__checkbox__small-text 4-12 рабочих дня от 120 руб.
-						
-					
 			li.order__item
 				.order__item-title
 					.order__item-title__text 3. Введите Персональные данные
@@ -161,7 +160,6 @@
 						.order__label
 							input.order__input.input(type="text" required placeholder="E-Mail*")
 							label.label E-Mail*
-
 			li.order__item
 				.order__item-title
 					.order__item-title__text 4. Выберите способ оплаты
@@ -199,7 +197,20 @@
 								input.order-pay__checkbox-input.checkbox__input(type="radio" name="orderPay")
 								.order-pay__checkbox-fake.checkbox__fake
 									.order-pay__checkbox-text Платежные<br> терминалы
-					
+	.order-info__wrapp--table
+		.order-info
+			label.order-info__checkbox
+				input.order-info__checkbox-input.checkbox__input(type="checkbox" name="orderPay")
+				.order-info__checkbox-fake.checkbox__fake
+				.order-info__checkbox-text Информировать по СМС о статусе заказа
+		.order-info
+			label.order-info__checkbox
+				input.order-info__checkbox-input.checkbox__input(type="checkbox" name="orderPay")
+				.order-info__checkbox-fake.checkbox__fake
+				.order-info__checkbox-text Даю согласие на обработку Персональных данных
+		.form__btns.form__btns--order
+			a.form__btn.form__btn--bottom.btn-blue(href="personal.html") Оформить заказ
+		.order__desc Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки
 	.order__right
 		.order__item-title Ваш заказ
 		ul.order__basket-list
@@ -271,33 +282,38 @@
 				.order__basket-right
 					.order__basket-img
 						img.order__basket-img_pic(src="./img/card/card-model-1.jpeg")
-		form.form__basket.form__basket--order
-			.form__basket-sale
-				input.form__basket-sale_input
-				a.form__basket-sale_btn.form__btn(href="#") Рассчитать скидку
-			.form__basket-total
-				.basket-sale
-					.basket-sale__text Скидка VIP:
-					.basket-sale__value 24% (650 руб.)
-				.basket-coupon
-					.basket-coupon__text Купон (день рождения):
-					.basket-coupon__value 10% (265 руб.)
-				.basket-total
-					.basket-total__text Итого (3 товара):
-					.basket-total__value
-						span.panel__basket-price_discount 1850 руб.
-						span.panel__basket-price_value 1650 руб.
-				.basket-order
-					.basket-order__text Доставка:
-					.basket-order__value 265 руб.
-				.basket-pay
-					.basket-pay__text К оплате:
-					.basket-pay__value 2 265 руб.
+		.form__basket-sale
+			input.form__basket-sale_input
+			a.form__basket-sale_btn.form__btn.btn-white(href="#") Рассчитать скидку
+		.form__basket-total.form__basket-total--order
+			.basket-sale
+				.basket-sale__text Скидка VIP:
+				.basket-sale__value 24% (650 руб.)
+			.basket-coupon
+				.basket-coupon__text Купон (день рождения):
+				.basket-coupon__value 10% (265 руб.)
+			.basket-total
+				.basket-total__text Итого (3 товара):
+				.basket-total__value
+					span.panel__basket-price_discount 1850 руб.
+					span.panel__basket-price_value 1650 руб.
+			.basket-order
+				.basket-order__text Доставка:
+				.basket-order__value 265 руб.
+			.basket-pay
+				.basket-pay__text К оплате:
+				.basket-pay__value 2 265 руб.
+		.order-info__wrapp
 			.order-info
 				label.order-info__checkbox
 					input.order-info__checkbox-input.checkbox__input(type="checkbox" name="orderPay")
 					.order-info__checkbox-fake.checkbox__fake
 					.order-info__checkbox-text Информировать по СМС о статусе заказа
+			.order-info
+				label.order-info__checkbox
+					input.order-info__checkbox-input.checkbox__input(type="checkbox" name="orderPay")
+					.order-info__checkbox-fake.checkbox__fake
+					.order-info__checkbox-text Даю согласие на обработку Персональных данных
 			.form__btns.form__btns--order
-				a.form__btn.form__btn--bottom(href="personal.html") Оформить заказ
-		.order__desc Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки
+				a.form__btn.form__btn--bottom.btn-blue(href="personal.html") Оформить заказ
+			.order__desc Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки осуществляется Оплата на сайте при выборе данного вида доставки
