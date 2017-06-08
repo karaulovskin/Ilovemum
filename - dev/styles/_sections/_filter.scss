@@ -2,8 +2,8 @@
 	margin-bottom: 16px;
 	@extend %clearfix;
 
-	@include tablets {
-	
+	@include laptop {
+		display: none;
 	}
 }
 
@@ -36,6 +36,10 @@
 	float: left;
 	width: 74%;
 	@extend %clearfix;
+
+	@include top {
+		width: 71%;
+	}
 
 	@include tablets {
 		position: absolute;
@@ -104,6 +108,10 @@
 		background: url(../img/icons/catalog/filter.png) no-repeat;
 	}
 
+	@include top {
+		width: 16%;
+	}
+
 	@include tablets {
 		margin: 0;
 		width: 100%;
@@ -137,28 +145,36 @@
 .filtr-color {
 	position: relative;
 	float: left;
-	width: 16%;
 	width: 22%;
+
+	@include top {
+		width: 16%;
+	}
 }
 
 .filtr-size {
 	position: relative;
 	float: left;
-	width: 16%;
 	width: 21%;
+
+	@include top {
+		width: 18%;
+	}
 }
 
 .filtr-type {
 	position: relative;
 	float: left;
-	width: 18%;
 	width: 23%;
+
+	@include top {
+		width: 27%;
+	}
 }
 
 .filtr-clear {
 	position: relative;
 	float: left;
-	width: 12%;
 	width: 20%;
 
 	@include tablets {
@@ -184,110 +200,72 @@
 .filtr-size__link, 
 .filtr-type__link {
 	position: relative;
-	display: block;
+	display: inline-block;
 	// width: 140px;
 	text-transform: uppercase;
 	font-size: rem(14px);
 	color: $black;
 	cursor: pointer;
 
-	&:before, &:after {
-		content: "";
-		position: absolute;
-		top: 50%;
-		width: 7px;
-		height: 1px;
-		background: $grey;
-	}
-
-	&:before {
-		@include transform(rotate(45deg));
-	}
-
-	&:after {
-		@include transform(rotate(-45deg));
-	}
-
-	@include tablets {
-		margin: 0 !important;
-		padding: 16px 20px !important;
-
-		&:before {
-			right: 20px !important;
-		}
-
 		&:after {
-			right: 25px !important;
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: -16px;
+			width: 10px;
+			height: 6px;
+			margin-top: -3px;
+			background: url(../img/decor/filter-arrow.png) no-repeat;
+			@include transform(rotate(180deg));
 		}
-	}
+
+	// &:before, &:after {
+	// 	content: "";
+	// 	position: absolute;
+	// 	top: 50%;
+	// 	width: 7px;
+	// 	height: 1px;
+	// 	background: $grey;
+	// }
+
+	// &:before {
+	// 	@include transform(rotate(45deg));
+	// }
+
+	// &:after {
+	// 	@include transform(rotate(-45deg));
+	// }
+
+	// @include tablets {
+	// 	margin: 0 !important;
+	// 	padding: 16px 20px !important;
+
+	// 	&:before {
+	// 		right: 20px !important;
+	// 	}
+
+	// 	&:after {
+	// 		right: 25px !important;
+	// 	}
+	// }
 }
 
-.filtr-color__link {
-	margin-left: 26px;
-
-	&:before {
-		right: 37px;
-	}
-
-	&:after {
-		right: 42px;
-	}
-}
-
-.filtr-color__link.active {
-
-	&:before {
-		@include transform(rotate(-45deg));
-	}
-
-	&:after {
-		@include transform(rotate(45deg));
-	}
-}
-
-.filtr-size__link {
-	margin-left: 26px;
-
-	&:before {
-		right: 19px;
-	}
-
-	&:after {
-		right: 24px;
-	}
-}
-
-.filtr-size__link.active {
-
-	&:before {
-		@include transform(rotate(-45deg));
-	}
-
-	&:after {
-		@include transform(rotate(45deg));
-	}
-}
-
+.filtr-color__link,
+.filtr-size__link,
 .filtr-type__link {
 	margin-left: 26px;
 
-	&:before {
-		right: 72px;
-	}
-
-	&:after {
-		right: 67px;
+	@include top {
+		margin-left: 16px;
 	}
 }
 
+.filtr-color__link.active,
+.filtr-size__link.active,
 .filtr-type__link.active {
 
-	&:before {
-		@include transform(rotate(-45deg));
-	}
-
 	&:after {
-		@include transform(rotate(45deg));
+		@include transform(rotate(0deg));
 	}
 }
 
@@ -296,12 +274,15 @@
 	opacity: 0;
 }
 
-.filtr__dropdown {
-	ul {
-		margin-right: -12px;
-		max-height: 240px;
-    	overflow: auto;
-	}	
+.scroll-pane {
+	margin-right: -12px;
+	width: 120px;
+	height: 240px;
+	overflow: auto!important;
+
+	.jspContainer {
+		overflow: auto!important;
+	}
 }
 
 .filtr__dropdown-title {
@@ -666,6 +647,10 @@
 	&:after {
 		right: 0px;
 		@include transform(rotate(-45deg));
+	}
+
+	@include top {
+		width: 29%;
 	}
 
 	@include tablets {

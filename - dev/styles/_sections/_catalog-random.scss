@@ -1,7 +1,7 @@
 .catalog-random {
 	margin-bottom: 16px;
 
-	@include tablets {
+	@include laptop {
 		display: none;
 	}
 }

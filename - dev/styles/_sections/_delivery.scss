@@ -1,3 +1,9 @@
+.delivery {
+	// @include phones {
+	// 	margin: 0 -15px;
+	// }
+}
+
 .delivery__banner {
 	position: relative;
 	width: 100%;
@@ -14,31 +20,12 @@
 	}
 }
 
-.delivery__banner-bg {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	line-height: 400px;
-	text-align: center;
-	background: rgba(0, 0, 0, .3);
-
-	@include tablets {
-		line-height: 250px;
-	}
-
-	@include phones {
-		line-height: 180px;
-	}
-}
-
-.delivery__banner-title {
-	text-transform: uppercase;
-	font-size: 28px;
-	color: #fff;
-}
-
 .delivery__section {
 	padding: 65px 0;
+
+	@include phones {
+		margin: 0 -15px;
+	}
 }
 
 .delivery__section--bg {
@@ -46,7 +33,7 @@
 }
 
 .delivery__section-title {
-	margin-bottom: 100px;
+	margin-bottom: 60px;
 	font-size: 28px;
 	text-transform: uppercase;
 	text-align: center;
@@ -59,11 +46,20 @@
 .delivery__left {
 	float: left;
 	width: 66%;
+
+	@include laptop {
+		width: 100%;
+		margin-bottom: 30px;
+	}
 }
 
 .delivery__right {
 	float: left;
 	width: 34%;
+
+	@include laptop {
+		width: 100%;
+	}
 }
 
 .delivery__section-header,
@@ -87,12 +83,30 @@
 	&:last-child {
 		padding-left: 40px;
 	}
+
+	@include tablets {
+		padding-right: 30px;
+		&:last-child {
+			padding-left: 30px;
+			padding-right: 0;
+		}
+	}
+
+	@include phones {
+		width: 100%;
+		padding: 0!important;
+	}
 }
 
 .delivery-section__img {
 	width: 210px;
 	height: 60px;
 	margin-bottom: 30px;
+
+	@include bigphone {
+		width: 155px;
+		height: 42px;
+	}
 }
 
 .delivery-section__title {
@@ -145,20 +159,40 @@
 	}
 
 	&.width {
-		width: 60%;
+		width: 65%;
 		margin: auto;
+	}
+
+	@include tablets {
+
+		&.text-center {
+			text-align: left;
+		}
+
+		&.width {
+			width: 100%;
+			margin: auto;
+		}
 	}
 }
 
 .delivery__section-col {
 	float: left;
 	width: 50%;
+
+	@include phones {
+		width: 100%;
+	}
 }
 
 .delivery-section__attention {
 	margin: 0 0 20px -17px;
 	padding: 17px;
 	background: #fff;
+
+	@include phones {
+		margin: 0 -17px 20px -17px;
+	}
 }
 
 .delivery-section__list {

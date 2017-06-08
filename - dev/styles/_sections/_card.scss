@@ -284,15 +284,29 @@
 	font-size: rem(14px);
 	border: 1px solid $grey;
 	cursor: pointer;
+}
 
-	&:after {
-		content: "";
-		position:absolute;
-		top: 22px;
-		right: 42px;
-		width: 10px;
-		height: 6px;
-		background: url(../img/icons/catalog/size_arrow.png)
+.size-choice__text,
+.size-choice__size,
+.size-choice__arrow {
+	@include inline-block(middle);
+}
+
+.size-choice__size {
+	@include inline-block(middle);
+	margin-left: 6px;
+}
+
+.size-choice__arrow {
+	width: 10px;
+	height: 6px;
+	margin-left: 10px;
+	background: url(../img/icons/catalog/size_arrow.png)no-repeat;
+
+	@include phones {
+		right: 12px;
+		width: 8px;
+		height: 5px;
 	}
 }
 
@@ -516,7 +530,8 @@
 	// width: 240px;
 	width: 50%;
 	margin-top: 12px;
-	padding: 0 0 0 14px;
+	padding: 0 0 0 2px;
+	// text-align: right;
 	@extend %clearfix;
 
 	@include phones {
@@ -528,29 +543,34 @@
 
 .card__color-title {
 	float: left;
+	width: 40%;
 	// @include inline-block(middle);
 	text-transform: uppercase;
 	font-size: rem(14px);
 }
 
 .card__color-list {
-	float: right;
+	float: left;
+	width: 60%;
 	// @include inline-block(middle);
 	// margin-left: 42px;
+	// margin: 0 -8px 0 0;
 	font-size: 0;
 }
 
 .card__color-item {
 	@include inline-block(middle);
-	margin-left: 8px;
+	margin: 0 4px 8px;
+	// margin-bottom: 8px;
 
 	&:first-child {
-		margin-left: 0;
+		// margin-left: 0;
 	}
 }
 
 .card__color-link {
 	display: block;
+	// padding: 0 4px;
 }
 
 .card__color-value {

@@ -7,7 +7,7 @@
 	float: left;
 	width: 23%;
 
-	@include tablets {
+	@include laptop {
 		float: none;
 		position: absolute;
 		left: -9999px;
@@ -23,7 +23,7 @@
 	float: right;
 	width: 77%;
 
-	@include tablets {
+	@include laptop {
 		float: none;
 		width: 100%;
 	}
@@ -137,11 +137,8 @@
 .catalog__btns.active {
 	display: block;
 
-	.catalog__size-title {
-
-		&:after {
-			@include transform(rotate(-180deg));
-		}
+	.size-choice__arrow {
+		@include transform(rotate(-180deg));
 	}
 }
 
@@ -193,7 +190,7 @@
 
 .catalog__size-title {
 	position: relative;
-	padding: 15px 0;
+	padding: 14px 0;
 	// padding-left: 20%;
 	text-align: center;
 	text-transform: uppercase;
@@ -202,29 +199,29 @@
 	border: 1px solid #b7b7b7;
 	// border-bottom: transparent;
 
-	&:after {
-		content: "";
-		position:absolute;
-		top: 50%;
-		right: 20px;
-		width: 10px;
-		height: 6px;
-		@include transform(translateY(-50%));
-		background: url(../img/icons/catalog/size_arrow.png)no-repeat;
-		background-size: contain;
-		@include transition(.3s);
-	}
+	// &:after {
+	// 	content: "";
+	// 	position:absolute;
+	// 	top: 50%;
+	// 	right: 20px;
+	// 	width: 10px;
+	// 	height: 6px;
+	// 	@include transform(translateY(-50%));
+	// 	background: url(../img/icons/catalog/size_arrow.png)no-repeat;
+	// 	background-size: contain;
+	// 	@include transition(.3s);
+	// }
 
 	@include phones {
 	    padding: 10px 10px 9px 0;
 	    text-align: center;
 		font-size: 8px;
 
-		&:after {
-			right: 12px;
-			width: 8px;
-			height: 5px;
-		}
+		// &:after {
+		// 	right: 12px;
+		// 	width: 8px;
+		// 	height: 5px;
+		// }
 	}
 }
 

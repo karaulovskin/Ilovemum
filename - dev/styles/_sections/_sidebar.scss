@@ -45,15 +45,15 @@
 	}
 }
 
-.sidebar__list--left {
-	position: fixed;
-	left: 25px;
-}
+// .sidebar__list--left {
+// 	position: fixed;
+// 	left: 25px;
+// }
 
-.sidebar__list--right {
-	position: fixed;
-	right: 25px;
-}
+// .sidebar__list--right {
+// 	position: fixed;
+// 	right: 25px;
+// }
 
 .sidebar__item {
 	height: 50px;
@@ -76,7 +76,7 @@
 .basket-value {
 	position: absolute;
 	bottom: 8px;
-	right: -16px;
+	right: 8px;
 	width: 17px;
 	height: 17px;
 	text-align: center;

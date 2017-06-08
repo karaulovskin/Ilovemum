@@ -177,6 +177,10 @@
 	margin-bottom: 6px;
 }
 
+.basket-pay {
+	@extend %clearfix;
+}
+
 // .basket-sale,
 // .basket-coupon,
 // .basket-order,

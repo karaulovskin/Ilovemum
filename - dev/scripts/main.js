@@ -249,6 +249,11 @@ $(document).ready(function(){
 			}
 		});
 
+		// стилизация скролла
+		$(function() {
+			$('.scroll-pane').jScrollPane();
+		});
+
 
 		// $(document).on('click', function(e) {
 		//  	if (!$(e.target).allDropdown) {
