@@ -160,7 +160,7 @@ footer {
 .main {
 	position: relative;
 	
-	@include phones {
+	@include tablets {
 		margin-top: 72px;
 	}
 }

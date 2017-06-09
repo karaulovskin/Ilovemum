@@ -837,14 +837,14 @@ $(window).resize(function(){
 	(function(){
 
 		// меняю блоки местами
-		if($(window).width() <= '768'){
-			$('.sidebar__item--login').insertBefore($('.sidebar__item--basket'));
-			$('.sidebar__item--address').insertBefore($('.sidebar__item--login'));
+		// if($(window).width() <= '768'){
+		// 	$('.sidebar__item--login').insertBefore($('.sidebar__item--basket'));
+		// 	$('.sidebar__item--address').insertBefore($('.sidebar__item--login'));
 
-	    } else {
-	    	$('.sidebar__item--basket').insertBefore($('.sidebar__item--address'));
-			$('.sidebar__item--login').insertBefore($('.sidebar__item--address'));
-	    };
+	 //    } else {
+	 //    	$('.sidebar__item--basket').insertBefore($('.sidebar__item--address'));
+		// 	$('.sidebar__item--login').insertBefore($('.sidebar__item--address'));
+	 //    };
 
 	}());
 

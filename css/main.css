@@ -217,7 +217,7 @@ footer {
 .main {
   position: relative;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .main {
     margin-top: 72px;
   }
@@ -4426,7 +4426,7 @@ footer {
   background: #fff;
   z-index: 10;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .header {
     position: fixed;
     top: 0;
@@ -8247,6 +8247,27 @@ body.panel-blocking {
   }
 }
 
+.sidebar__list--left {
+  position: fixed;
+  width: 50px;
+}
+@media screen and (max-width: 768px) {
+  .sidebar__list--left {
+    position: static;
+  }
+}
+
+.sidebar__list--right {
+  position: fixed;
+  width: 50px;
+}
+@media screen and (max-width: 768px) {
+  .sidebar__list--right {
+    position: static;
+    width: auto;
+  }
+}
+
 .sidebar__item {
   height: 50px;
 }
@@ -8272,8 +8293,8 @@ body.panel-blocking {
 
 .basket-value {
   position: absolute;
-  bottom: 8px;
-  right: 8px;
+  bottom: -4px;
+  right: -4px;
   width: 17px;
   height: 17px;
   text-align: center;
@@ -8300,14 +8321,6 @@ body.panel-blocking {
 .sidebar__link {
   position: relative;
   display: block;
-  width: 100%;
-  height: 100%;
-}
-.sidebar__link:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
 }
 
 @media screen and (max-width: 768px) {
@@ -8317,14 +8330,10 @@ body.panel-blocking {
   }
 }
 
-.sidebar__link--burger:after {
+.sidebar__link--burger {
   width: 24px;
   height: 16px;
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  margin: auto;
   background: url(../img/icons/sidebar/burger.png) no-repeat;
   background-size: contain;
 }
@@ -8334,82 +8343,56 @@ body.panel-blocking {
   }
 }
 
-.sidebar__link--basket:after {
+.sidebar__link--basket {
   width: 22px;
   height: 28px;
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  margin: auto;
   background: url(../img/icons/sidebar/basket.png) no-repeat;
   background-size: contain;
 }
 
-.sidebar__link--login:after {
+.sidebar__link--login {
   width: 28px;
   height: 28px;
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  margin: auto;
   background: url(../img/icons/sidebar/login.png) no-repeat;
   background-size: contain;
 }
-@media screen and (max-width: 480px) {
-  .sidebar__link--login {
-    width: 28px;
-    height: 28px;
-  }
-}
 
-.sidebar__link--search:after {
+.sidebar__link--search {
   width: 28px;
   height: 28px;
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  margin: auto;
   background: url(../img/icons/sidebar/search.png) no-repeat;
   background-size: contain;
 }
 
-.sidebar__link--address:after {
+.sidebar__link--address {
   width: 24px;
   height: 28px;
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  margin: auto;
   background: url(../img/icons/sidebar/address.png) no-repeat;
   background-size: contain;
 }
 
-.sidebar__link--language:after {
+.sidebar__link--language {
   width: 24px;
   height: 18px;
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  margin: auto;
 }
-.sidebar__link--language.en:after {
+.sidebar__link--language.en {
   background: url(../img/icons/sidebar/language-en.png) no-repeat;
   background-size: contain;
 }
-.sidebar__link--language.ru:after {
+.sidebar__link--language.ru {
   background: url(../img/icons/sidebar/language-ru.png) no-repeat;
   background-size: contain;
 }
 
 .developer {
-  position: fixed;
-  bottom: 100px;
-  right: -52px;
+  position: absolute;
+  top: 450px;
+  left: -52px;
   width: 150px;
   -moz-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
