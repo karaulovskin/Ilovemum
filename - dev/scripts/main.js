@@ -333,26 +333,26 @@ $(document).ready(function(){
 
 
 	// CARD SIZE
-	(function(){
-		$('.card__size-title').on('click', function(e){
-			e.preventDefault();
+	// (function(){
+	// 	$('.card__size-title').on('click', function(e){
+	// 		e.preventDefault();
 
-			$('.card__size-value-list').fadeToggle();
-		});
+	// 		$('.card__size-value-list').fadeToggle();
+	// 	});
 
-		// производим выбор размера
-		$('.card__size-value-link').on('click', function(e){
-			e.preventDefault();
-
-			var
-				$this   = $(this),
-				size    = $this.closest('.card__size-value-link'),
-				sizeBox = size.closest('.card__size-wrapp'),
-				title   = sizeBox.find('.card__size-title');
-			$(title).text('выбран размер ' + $(this).attr('rel'));
-			$('.card__size-value-list').fadeOut();
-		});
-	}());
+	// 	// производим выбор размера
+	// 	$('.card__size-value-link').on('click', function(e){
+	// 		e.preventDefault();
+ 
+	// 		var
+	// 			$this   = $(this),
+	// 			size    = $this.closest('.card__size-value-link'),
+	// 			sizeBox = size.closest('.card__size-wrapp'),
+	// 			title   = sizeBox.find('.card__size-title');
+	// 		$(title).text('выбран размер ' + $(this).attr('rel'));
+	// 		$('.card__size-value-list').fadeOut();
+	// 	});
+	// }());
 
 
 	// CATALOG SLICK
@@ -474,45 +474,45 @@ $(document).ready(function(){
 
 
 	// CARD SLICK
-	(function(){
+	// (function(){
 
-		if($(window).width() > '480'){
+	// 	if($(window).width() > '480'){
 
-			$('.gallery-prev__list').slick({
-				asNavFor: '.gallery__list',
-				vertical: true,
-				slidesToShow: 6,
-				focusOnSelect: true
-				// arrows: false
-			});
+	// 		$('.gallery-prev__list').slick({
+	// 			asNavFor: '.gallery__list',
+	// 			vertical: true,
+	// 			slidesToShow: 6,
+	// 			focusOnSelect: true
+	// 			// arrows: false
+	// 		});
 
-			$('.gallery__list').slick({
-				asNavFor: '.gallery-prev__list',
-				fade: true,
-				arrows: false,
-				dots: false
-			});
+	// 		$('.gallery__list').slick({
+	// 			asNavFor: '.gallery-prev__list',
+	// 			fade: true,
+	// 			arrows: false,
+	// 			dots: false
+	// 		});
 
-		} else if($(window).width() < '481') {
+	// 	} else if($(window).width() < '481') {
 
-			// $('.gallery-prev__list').slick({
-			// 	asNavFor: '.gallery__list',
-			// 	vertical: true,
-			// 	slidesToShow: 4,
-			// 	focusOnSelect: true,
-			// 	dots: true
-			// 	arrows: false
-			// });
+	// 		// $('.gallery-prev__list').slick({
+	// 		// 	asNavFor: '.gallery__list',
+	// 		// 	vertical: true,
+	// 		// 	slidesToShow: 4,
+	// 		// 	focusOnSelect: true,
+	// 		// 	dots: true
+	// 		// 	arrows: false
+	// 		// });
 
-			$('.gallery__list').slick({
-				// asNavFor: '.gallery-prev__list',
-				fade: true,
-				arrows: false,
-				dots: true
-			});
-		};
+	// 		$('.gallery__list').slick({
+	// 			// asNavFor: '.gallery-prev__list',
+	// 			fade: true,
+	// 			arrows: false,
+	// 			dots: true
+	// 		});
+	// 	};
 
-	}());
+	// }());
 
 
 	// CARD ZOOM

@@ -1,0 +1,95 @@
+.howto__banner {
+	background: url(../img/howto/howto-banner.jpg)no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.howto__list {
+	margin-left: 60px;
+}
+
+.howto__item {
+	position: relative;
+	padding: 0 0 70px 112px;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 45px;
+		width: 1px;
+		height: 100%;
+		background-color: $blue;
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 90px;
+		height: 90px;
+		text-align: center;
+		font-size: 48px;
+		line-height: 90px;
+		color: $blue;
+		background: #fff;
+		border: 1px solid $blue;
+	}
+
+	&:last-child {
+
+		.howto__desc {
+			width: 60%;
+		}
+
+		&:before {
+			content: none;
+		}
+	}
+}
+
+.howto__item--first {
+	&:after {
+		content: "01";
+	}
+}
+
+.howto__item--second {
+	&:after {
+		content: "02";
+	}
+}
+
+.howto__item--third {
+	&:after {
+		content: "03";
+	}
+}
+
+.howto__item--fourth {
+	&:after {
+		content: "04";
+	}
+}
+
+.howto__item--fifth {
+	&:after {
+		content: "05";
+	}
+}
+
+.howto__desc {
+	margin-bottom: 60px;
+	a {
+		color: $blue;
+	}
+}
+
+.howto__img {
+	width: 934px;
+	height: 520px;
+}
+
+.howto__img--last {
+	height: 855px;
+}

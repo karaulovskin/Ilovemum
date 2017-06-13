@@ -23,14 +23,14 @@
 }
 /* --------- mixins --------- */
 /* --------- mixins --------- */
-.container:before, .card__wrapp:before, .gallery:before, .card__wrapp-price:before, .card__size:before, .card__size-watch-list:before, .card__shops:before, .card__wrapp-buy:before, .card__color:before, #iblock_add .well:before, .card__features-list:before, .card__features-item:before, .card__socials:before, .card-look__btns:before, .catalog:before, .catalog__btns:before, .nav:before, .delivery__section-wrapp:before, .delivery-section__col-wrapp:before, .filtr:before, .filtr__wrapp:before, .footer__socials:before, .index-popup:before, .banner:before, .order:before, .order-country:before, .order-city:before, .order-data:before, .order-data__right:before, .order-name:before, .order-name__right:before, .order__basket-item:before, .panel__basket-item:before, .form__basket-sale:before, .basket-sale:before,
+.container:before, .card__wrapp:before, .gallery:before, .card__wrapp-price:before, .card__size:before, .card__size-watch-list:before, .card__shops:before, .card__wrapp-buy:before, .card__color:before, #iblock_add .well:before, .card__features-list:before, .card__features-item:before, .card__socials:before, .card-look__btns:before, .catalog:before, .catalog__btns:before, .section-contacts:before, .nav:before, .delivery__section-wrapp:before, .delivery-section__col-wrapp:before, .filtr:before, .filtr__wrapp:before, .footer__socials:before, .index-popup:before, .banner:before, .order:before, .order-country:before, .order-city:before, .order-data:before, .order-data__right:before, .order-name:before, .order-name__right:before, .order__basket-item:before, .panel__basket-item:before, .form__basket-sale:before, .basket-sale:before,
 .basket-total:before,
 .basket-coupon:before,
 .basket-order:before, .basket-pay:before, .form__login-checkbox:before, .form__login-btns:before, .personal__title-wrapp:before, .personal__order-header:before, .personal__order-body:before, .personal__status-item:before, .personal-details__section:before, .personal-details__header:before, .personal-details__wrapp:before, .personal-details__item:before, .personal-details__total-sale:before,
 .personal-details__total-weight:before,
 .personal-details__total-price:before,
 .personal-details__total-shipping:before,
-.personal-details__total-pay:before, .container:after, .card__wrapp:after, .gallery:after, .card__wrapp-price:after, .card__size:after, .card__size-watch-list:after, .card__shops:after, .card__wrapp-buy:after, .card__color:after, #iblock_add .well:after, .card__features-list:after, .card__features-item:after, .card__socials:after, .card-look__btns:after, .catalog:after, .catalog__btns:after, .nav:after, .delivery__section-wrapp:after, .delivery-section__col-wrapp:after, .filtr:after, .filtr__wrapp:after, .footer__socials:after, .index-popup:after, .banner:after, .order:after, .order-country:after, .order-city:after, .order-data:after, .order-data__right:after, .order-name:after, .order-name__right:after, .order__basket-item:after, .panel__basket-item:after, .form__basket-sale:after, .basket-sale:after,
+.personal-details__total-pay:before, .container:after, .card__wrapp:after, .gallery:after, .card__wrapp-price:after, .card__size:after, .card__size-watch-list:after, .card__shops:after, .card__wrapp-buy:after, .card__color:after, #iblock_add .well:after, .card__features-list:after, .card__features-item:after, .card__socials:after, .card-look__btns:after, .catalog:after, .catalog__btns:after, .section-contacts:after, .nav:after, .delivery__section-wrapp:after, .delivery-section__col-wrapp:after, .filtr:after, .filtr__wrapp:after, .footer__socials:after, .index-popup:after, .banner:after, .order:after, .order-country:after, .order-city:after, .order-data:after, .order-data__right:after, .order-name:after, .order-name__right:after, .order__basket-item:after, .panel__basket-item:after, .form__basket-sale:after, .basket-sale:after,
 .basket-total:after,
 .basket-coupon:after,
 .basket-order:after, .basket-pay:after, .form__login-checkbox:after, .form__login-btns:after, .personal__title-wrapp:after, .personal__order-header:after, .personal__order-body:after, .personal__status-item:after, .personal-details__section:after, .personal-details__header:after, .personal-details__wrapp:after, .personal-details__item:after, .personal-details__total-sale:after,
@@ -41,7 +41,7 @@
   content: "";
   display: table;
 }
-.container:after, .card__wrapp:after, .gallery:after, .card__wrapp-price:after, .card__size:after, .card__size-watch-list:after, .card__shops:after, .card__wrapp-buy:after, .card__color:after, #iblock_add .well:after, .card__features-list:after, .card__features-item:after, .card__socials:after, .card-look__btns:after, .catalog:after, .catalog__btns:after, .nav:after, .delivery__section-wrapp:after, .delivery-section__col-wrapp:after, .filtr:after, .filtr__wrapp:after, .footer__socials:after, .index-popup:after, .banner:after, .order:after, .order-country:after, .order-city:after, .order-data:after, .order-data__right:after, .order-name:after, .order-name__right:after, .order__basket-item:after, .panel__basket-item:after, .form__basket-sale:after, .basket-sale:after,
+.container:after, .card__wrapp:after, .gallery:after, .card__wrapp-price:after, .card__size:after, .card__size-watch-list:after, .card__shops:after, .card__wrapp-buy:after, .card__color:after, #iblock_add .well:after, .card__features-list:after, .card__features-item:after, .card__socials:after, .card-look__btns:after, .catalog:after, .catalog__btns:after, .section-contacts:after, .nav:after, .delivery__section-wrapp:after, .delivery-section__col-wrapp:after, .filtr:after, .filtr__wrapp:after, .footer__socials:after, .index-popup:after, .banner:after, .order:after, .order-country:after, .order-city:after, .order-data:after, .order-data__right:after, .order-name:after, .order-name__right:after, .order__basket-item:after, .panel__basket-item:after, .form__basket-sale:after, .basket-sale:after,
 .basket-total:after,
 .basket-coupon:after,
 .basket-order:after, .basket-pay:after, .form__login-checkbox:after, .form__login-btns:after, .personal__title-wrapp:after, .personal__order-header:after, .personal__order-body:after, .personal__status-item:after, .personal-details__section:after, .personal-details__header:after, .personal-details__wrapp:after, .personal-details__item:after, .personal-details__total-sale:after,
@@ -113,11 +113,6 @@ p {
 
 a {
   text-decoration: none;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
 }
 
 footer {
@@ -232,9 +227,13 @@ footer {
 
 .title-page {
   text-transform: uppercase;
-  font-size: 18px;
-  font-family: 'Robotomedium';
+  font-size: 28px;
   color: #252525;
+}
+
+.title-page--big {
+  text-transform: uppercase;
+  font-size: 48px;
 }
 
 .page-banner {
@@ -1102,6 +1101,7 @@ footer {
 
 .breadcrumbs {
   margin-bottom: 30px;
+  text-align: left;
 }
 @media screen and (max-width: 480px) {
   .breadcrumbs {
@@ -2921,6 +2921,148 @@ footer {
   background: url(../img/decor/Loading.gif) no-repeat;
 }
 
+.contacts__banner {
+  background: url(../img/ban/banner-contacts.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.contacts__section {
+  padding: 60px 60px 15px 60px;
+  border-bottom: 1px solid #b5b5b5;
+}
+
+.section-contacts__left,
+.section-contacts__right {
+  float: left;
+  width: 50%;
+}
+
+.section-contacts__right {
+  padding-left: 70px;
+}
+
+.contacts__title {
+  margin-bottom: 28px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: 'Robotomedium';
+}
+.contacts__title span {
+  text-transform: lowercase;
+  font-family: 'Robotolight';
+}
+
+.stores-contacts__list {
+  font-size: 0;
+}
+
+.stores-contacts__item {
+  display: inline-block;
+  vertical-align: top;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 50%;
+  margin-bottom: 45px;
+  font-size: 18px;
+}
+.stores-contacts__item:nth-child(2n) {
+  padding-left: 70px;
+}
+
+.contacts__block {
+  font-size: 18px;
+  margin-bottom: 45px;
+}
+.contacts__block .stores-contacts__phone:last-child {
+  margin-bottom: 0;
+}
+.contacts__block .stores-contacts__time:last-child {
+  margin-bottom: 0;
+}
+
+.stores-contacts__mail {
+  color: #7ac8f0;
+}
+
+.stores-contacts__name,
+.stores-contacts__point,
+.stores-contacts__time,
+.stores-contacts__phone {
+  margin-bottom: 22px;
+}
+
+.stores-contacts__name,
+.stores-contacts__point,
+.stores-contacts__time,
+.stores-contacts__phone,
+.stores-contacts__link {
+  position: relative;
+  margin-left: 45px;
+}
+.stores-contacts__name:before,
+.stores-contacts__point:before,
+.stores-contacts__time:before,
+.stores-contacts__phone:before,
+.stores-contacts__link:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40px;
+}
+
+.stores-contacts__name {
+  text-transform: uppercase;
+}
+.stores-contacts__name:before {
+  width: 33px;
+  height: 24px;
+  left: -44px;
+  background: url(../img/icons/contacts/cont-name.png) no-repeat;
+  background-size: contain;
+}
+
+.stores-contacts__point {
+  text-transform: uppercase;
+}
+.stores-contacts__point:before {
+  width: 23px;
+  height: 28px;
+  background: url(../img/icons/contacts/cont-point.png) no-repeat;
+  background-size: contain;
+}
+
+.stores-contacts__time {
+  text-transform: uppercase;
+}
+.stores-contacts__time:before {
+  width: 25px;
+  height: 25px;
+  background: url(../img/icons/contacts/cont-time.png) no-repeat;
+  background-size: contain;
+}
+
+.stores-contacts__phone {
+  text-transform: uppercase;
+}
+.stores-contacts__phone:before {
+  width: 25px;
+  height: 25px;
+  background: url(../img/icons/contacts/cont-phone.png) no-repeat;
+  background-size: contain;
+}
+
+.stores-contacts__link {
+  text-transform: uppercase;
+  color: #7ac8f0;
+}
+.stores-contacts__link:before {
+  width: 25px;
+  height: 30px;
+  background: url(../img/icons/contacts/cont-link.png) no-repeat;
+  background-size: contain;
+}
+
 .logo__link {
   display: inline-block;
   width: 100%;
@@ -4603,6 +4745,85 @@ footer {
   }
 }
 
+.howto__banner {
+  background: url(../img/howto/howto-banner.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.howto__list {
+  margin-left: 60px;
+}
+
+.howto__item {
+  position: relative;
+  padding: 0 0 70px 112px;
+}
+.howto__item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 45px;
+  width: 1px;
+  height: 100%;
+  background-color: #7ac8f0;
+}
+.howto__item:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  font-size: 48px;
+  line-height: 90px;
+  color: #7ac8f0;
+  background: #fff;
+  border: 1px solid #7ac8f0;
+}
+.howto__item:last-child .howto__desc {
+  width: 60%;
+}
+.howto__item:last-child:before {
+  content: none;
+}
+
+.howto__item--first:after {
+  content: "01";
+}
+
+.howto__item--second:after {
+  content: "02";
+}
+
+.howto__item--third:after {
+  content: "03";
+}
+
+.howto__item--fourth:after {
+  content: "04";
+}
+
+.howto__item--fifth:after {
+  content: "05";
+}
+
+.howto__desc {
+  margin-bottom: 60px;
+}
+.howto__desc a {
+  color: #7ac8f0;
+}
+
+.howto__img {
+  width: 934px;
+  height: 520px;
+}
+
+.howto__img--last {
+  height: 855px;
+}
+
 .index-popup {
   display: none;
   position: fixed;
@@ -5304,6 +5525,31 @@ footer {
   margin: 0 0 0 15px;
   color: #7ac8f0;
   background: #fff;
+}
+
+.loyalty {
+  text-align: center;
+}
+
+.loyalty__banner-first {
+  background: url(../img/ban/banner-loyalty.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.loyalty__banner-sale {
+  background: url(../img/ban/banner-loyalty-sale.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.loyalty__sale {
+  text-align: center;
+  background: url(../img/about/banner-sale.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.loyalty__title {
+  width: 630px;
+  margin: auto;
 }
 
 #order-errors {

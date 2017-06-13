@@ -1,0 +1,17 @@
+extends ../main
+
+block title
+	| Контакты
+
+block wrapper
+	.wrapper.wrapper--footer-min
+		.maincontent
+			include ../_common/_header
+
+			main.main
+				.container
+					block content
+						include ../_common/_contacts
+
+block footer
+	include ../_common/_footer-min

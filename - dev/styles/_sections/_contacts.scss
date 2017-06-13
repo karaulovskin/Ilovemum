@@ -1,0 +1,153 @@
+.contacts__banner {
+    background: url(../img/ban/banner-contacts.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.contacts__section {
+	padding: 60px 60px 15px 60px;
+	border-bottom: 1px solid $grey;
+}
+
+.section-contacts {
+	@extend %clearfix;
+}
+
+.section-contacts__left,
+.section-contacts__right {
+	float: left;
+	width: 50%;
+}
+
+.section-contacts__right {
+	padding-left: 70px;
+}
+
+.contacts__title {
+    margin-bottom: 28px;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-family: 'Robotomedium';
+
+	span {
+		text-transform: lowercase;
+		font-family: 'Robotolight';
+	}
+}
+
+.stores-contacts__list {
+	font-size: 0;
+}
+
+.stores-contacts__item {
+	@include inline-block(top);
+	width: 50%;
+	margin-bottom: 45px;
+	font-size: 18px;
+
+	&:nth-child(2n) {
+		padding-left: 70px;
+	}
+}
+
+.contacts__block {
+	font-size: 18px;
+    margin-bottom: 45px;
+
+	.stores-contacts__phone {
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.stores-contacts__time {
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.stores-contacts__mail {
+	color: $blue;
+}
+
+.stores-contacts__name,
+.stores-contacts__point,
+.stores-contacts__time,
+.stores-contacts__phone {
+	margin-bottom: 22px;
+}
+
+.stores-contacts__name,
+.stores-contacts__point,
+.stores-contacts__time,
+.stores-contacts__phone,
+.stores-contacts__link {
+	position: relative;
+	margin-left: 45px;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -40px;
+	}
+}
+
+.stores-contacts__name {
+	text-transform: uppercase;
+
+	&:before {
+		width: 33px;
+		height: 24px;
+		left: -44px;
+		background: url(../img/icons/contacts/cont-name.png)no-repeat;
+		background-size: contain;
+	}
+}
+
+.stores-contacts__point {
+	text-transform: uppercase;
+
+	&:before {
+		width: 23px;
+		height: 28px;
+		background: url(../img/icons/contacts/cont-point.png)no-repeat;
+		background-size: contain;
+	}
+}
+
+.stores-contacts__time {
+	text-transform: uppercase;
+
+	&:before {
+		width: 25px;
+		height: 25px;
+		background: url(../img/icons/contacts/cont-time.png)no-repeat;
+		background-size: contain;
+	}
+}
+
+.stores-contacts__phone {
+	text-transform: uppercase;
+
+	&:before {
+		width: 25px;
+		height: 25px;
+		background: url(../img/icons/contacts/cont-phone.png)no-repeat;
+		background-size: contain;
+	}
+}
+
+.stores-contacts__link {
+	text-transform: uppercase;
+	color: $blue;
+
+	&:before {
+		width: 25px;
+		height: 30px;
+		background: url(../img/icons/contacts/cont-link.png)no-repeat;
+		background-size: contain;
+	}
+}
