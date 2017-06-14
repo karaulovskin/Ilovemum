@@ -6,20 +6,48 @@
 .contacts__section {
 	padding: 60px 60px 15px 60px;
 	border-bottom: 1px solid $grey;
+
+	@include laptop {
+		padding: 60px 0 15px 0;
+	}
 }
 
 .section-contacts {
 	@extend %clearfix;
+
+	@include laptop {
+		padding: 30px 0 15px 0;
+	}
 }
 
-.section-contacts__left,
+.section-contacts__left {
+	float: left;
+	width: 50%;
+
+	@include laptop {
+		padding-right: 25px;
+	}
+
+	@include phones {
+		float: none;
+		width: 100%;
+	}
+}
+
 .section-contacts__right {
 	float: left;
 	width: 50%;
-}
-
-.section-contacts__right {
 	padding-left: 70px;
+
+	@include laptop {
+		padding-left: 25px;
+	}
+
+	@include phones {
+		padding-left: 0;
+		float: none;
+		width: 100%;
+	}
 }
 
 .contacts__title {
@@ -31,6 +59,10 @@
 	span {
 		text-transform: lowercase;
 		font-family: 'Robotolight';
+	}
+
+	@include tablets {
+		font-size: 16px;
 	}
 }
 
@@ -46,6 +78,18 @@
 
 	&:nth-child(2n) {
 		padding-left: 70px;
+	}
+
+	@include tablets {
+		font-size: 16px;
+	}
+
+	@include phones {
+		width: 100%;
+
+		&:nth-child(2n) {
+			padding-left: 0;
+		}
 	}
 }
 
@@ -65,6 +109,10 @@
 		&:last-child {
 			margin-bottom: 0;
 		}
+	}
+
+	@include tablets {
+		font-size: 16px;
 	}
 }
 

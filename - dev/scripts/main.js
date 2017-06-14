@@ -356,13 +356,13 @@ $(document).ready(function(){
 
 
 	// CATALOG SLICK
-	(function(){
-		$('.catalog__img-list').slick();
+	// (function(){
+	// 	$('.catalog__img-list').slick();
 
-		// BX.addCustomEvent('onAjaxSuccess', function(){
-		//    $('.catalog__img-list').slick();
-	 //  	});
-	}());
+	// 	BX.addCustomEvent('onAjaxSuccess', function(){
+	// 	   $('.catalog__img-list').slick();
+	//   	});
+	// }());
 
 
 	// CATALOG FILTR
@@ -474,45 +474,45 @@ $(document).ready(function(){
 
 
 	// CARD SLICK
-	// (function(){
+	(function(){
 
-	// 	if($(window).width() > '480'){
+		if($(window).width() > '480'){
 
-	// 		$('.gallery-prev__list').slick({
-	// 			asNavFor: '.gallery__list',
-	// 			vertical: true,
-	// 			slidesToShow: 6,
-	// 			focusOnSelect: true
-	// 			// arrows: false
-	// 		});
+			$('.gallery-prev__list').slick({
+				asNavFor: '.gallery__list',
+				vertical: true,
+				slidesToShow: 6,
+				focusOnSelect: true
+				// arrows: false
+			});
 
-	// 		$('.gallery__list').slick({
-	// 			asNavFor: '.gallery-prev__list',
-	// 			fade: true,
-	// 			arrows: false,
-	// 			dots: false
-	// 		});
+			$('.gallery__list').slick({
+				asNavFor: '.gallery-prev__list',
+				fade: true,
+				arrows: false,
+				dots: false
+			});
 
-	// 	} else if($(window).width() < '481') {
+		} else if($(window).width() < '481') {
 
-	// 		// $('.gallery-prev__list').slick({
-	// 		// 	asNavFor: '.gallery__list',
-	// 		// 	vertical: true,
-	// 		// 	slidesToShow: 4,
-	// 		// 	focusOnSelect: true,
-	// 		// 	dots: true
-	// 		// 	arrows: false
-	// 		// });
+			// $('.gallery-prev__list').slick({
+			// 	asNavFor: '.gallery__list',
+			// 	vertical: true,
+			// 	slidesToShow: 4,
+			// 	focusOnSelect: true,
+			// 	dots: true
+			// 	arrows: false
+			// });
 
-	// 		$('.gallery__list').slick({
-	// 			// asNavFor: '.gallery-prev__list',
-	// 			fade: true,
-	// 			arrows: false,
-	// 			dots: true
-	// 		});
-	// 	};
+			$('.gallery__list').slick({
+				// asNavFor: '.gallery-prev__list',
+				fade: true,
+				arrows: false,
+				dots: true
+			});
+		};
 
-	// }());
+	}());
 
 
 	// CARD ZOOM

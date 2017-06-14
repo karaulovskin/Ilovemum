@@ -5,11 +5,66 @@
 	include _breadcrumbs
 	.loyalty__sale
 		.loyalty__title.title-page Для наших покупателей мы разработали систему скидок которая позволит вам покупать со скидками<br> <span class="title-page--big">до 17%<span>
+	.loyalty__section
+		.title-page Оплаченные заказы
+		.loyalty__table.table-loyalty
+			.table-loyalty__header
+				.table-loyalty__row.table-loyalty__row--header
+					.table-loyalty__col % Выкупа
+					.table-loyalty__col от 5 000 руб.
+					.table-loyalty__col от 15 000 руб.
+					.table-loyalty__col от 30 000 руб.
+					.table-loyalty__col от 50 000 руб.
+			.table-loyalty__body
+				.table-loyalty__row
+					.table-loyalty__col 0-29
+					.table-loyalty__col 0%
+					.table-loyalty__col 0%
+					.table-loyalty__col 3%
+					.table-loyalty__col 3%
+				.table-loyalty__row
+					.table-loyalty__col 30-49
+					.table-loyalty__col 3% 
+					.table-loyalty__col 5%
+					.table-loyalty__col 7%
+					.table-loyalty__col 7%
+				.table-loyalty__row
+					.table-loyalty__col 50-69
+					.table-loyalty__col 4%
+					.table-loyalty__col 7%
+					.table-loyalty__col 10%
+					.table-loyalty__col 15%
+				.table-loyalty__row
+					.table-loyalty__col 70-100
+					.table-loyalty__col 5%
+					.table-loyalty__col 10%
+					.table-loyalty__col 15%
+					.table-loyalty__col 17%
+		.loyalty-section__text
+			p Скидки суммируются с распродажами и при использовании промокодов.
+			p Суммы оплаченных заказов и % выкупа считается с 01.01.2016
+		.loyalty__calc
+			.loyalty__calc-first % Выкупа считается как
+			.loyalty__calc-second
+				.loyalty__calc-wrapp
+					.loyalty__calc-top Оплата
+					.loyalty__calc-bottom (оплата+возвраты)
+				.loyalty__calc-100 х100%
+		.loyalty-section__text
+			p Оплата включает в себя стоимость услуг доставки.
+		.loyalty-section__attention
+			p Внимание, для клиентов, у которых % выкупа 0-20% и сумма возвратов более 15 000 руб. <br>действует условие обязательной предварительной оплаты заказа.
+		.loyalty-section__text
+			p Сумма скидки будет отображена в корзине при оформлении заказа.
 	.loyalty__banner-sale.page-banner
-
-	.loyalty__code
-		.title-page Промокод
-		.delivery-section__text
+			.loyalty__title-wrapp
+				.title-page Распродажа
+				.loyalty-section__text
+					p Регулярно в нашем интернет магазине проводятся распродажи.
+					p Товар со скидкой можно увидеть в разделе <br>Распродажа.
+	.loyalty__code.loyalty__section
+		.title-page.loyalty__title Промокод
+		.loyalty-section__text
 			p В случае если у Вас есть промокод на скидку в нашем магазине Вам нужно его ввести на стадии оформления товара и сумма заказа будет пересчитана.
 			p Обратите внимание что Промокоды могут быть ограничены по времени использования.
 			p В случае если Вы применяете сразу несколько видов скидок то расчет стоимости будет последователен
