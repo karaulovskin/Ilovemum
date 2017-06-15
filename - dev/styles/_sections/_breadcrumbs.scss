@@ -3,7 +3,7 @@
 	text-align: left;
 
 	@include phones {
-		display: none;
+		// display: none;
 	}
 }
 
@@ -36,13 +36,20 @@
 
 	.breadcrumbs__link {
 		color: $black;
-		font-size: rem(16px);
+		font-size: 16px;
+	}
+
+	@include phones {
+
+		.breadcrumbs__link {
+			font-size: 14px;
+		}
 	}
 }
 
 .breadcrumbs__link {
 	color: $grey;
-	font-size: rem(12px);
+	font-size: 12px;
 
 	&:hover {
 		text-decoration: underline;

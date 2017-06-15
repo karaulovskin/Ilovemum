@@ -190,8 +190,10 @@
 
 .catalog__size-title {
 	position: relative;
-	padding: 14px 0;
+	// padding: 14px 0;
 	// padding-left: 20%;
+	height: 45px;
+	line-height: 45px;
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 14px;
@@ -213,7 +215,9 @@
 	// }
 
 	@include phones {
-	    padding: 10px 10px 9px 0;
+	    // padding: 10px 10px 9px 0;
+	    height: 32px;
+	    line-height: 32px;
 	    text-align: center;
 		font-size: 8px;
 
@@ -344,7 +348,7 @@
 .catalog__desc-price--en,
 .catalog__desc-price--ru {
 	@include inline-block(middle);
-	width: 50%;
+	// width: 50%;
 	font-size: 16px;
 }
 
@@ -388,8 +392,9 @@
 }
 
 .catalog__preloader {
-	width: 35px;
+	position: relative;
+	// width: 35px;
 	height: 35px;
 	margin: 26px auto;
-	background: url(../img/decor/Loading.gif)no-repeat;
+	// background: url(../img/decor/Loading.gif)no-repeat;
 }

@@ -302,11 +302,10 @@
 	height: 6px;
 	margin-left: 10px;
 	background: url(../img/icons/catalog/size_arrow.png)no-repeat;
+	background-size: contain;
 
 	@include phones {
-		right: 12px;
-		width: 8px;
-		height: 5px;
+		margin-left: 4px;
 	}
 }
 
@@ -1136,7 +1135,7 @@
 	display: block;
 	position: relative;
 	width: 50px;
-	height: rem(45px);
+	height: 45px;
 	text-indent: -9999px;
 	background: #b7b7b7;
 
@@ -1187,37 +1186,44 @@
 
 .card-look__size-title {
 	position: relative;
-	padding: 12px 0;
-	padding: rem(14px) 0 rem(13px) 0;
-	padding-left: 8%;
+	// padding: 12px 0;
+	// padding: 14px 0 13px 0;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
 	text-transform: uppercase;
-	font-size: rem(14px);
-	font-size: rem(12px);
+	font-size: 14px;
+	font-size: 12px;
 	border: 1px solid #b7b7b7;
 	// border-bottom: transparent;
 
-	&:after {
-		content: "";
-		position:absolute;
-		top: 50%;
-		right: 12px;
-		width: 10px;
-		height: 6px;
-		@include transform(translateY(-50%));
-		background: url(../img/icons/catalog/size_arrow.png)no-repeat;
-		background-size: contain;
+	// &:after {
+	// 	content: "";
+	// 	position:absolute;
+	// 	top: 50%;
+	// 	right: 12px;
+	// 	width: 10px;
+	// 	height: 6px;
+	// 	@include transform(translateY(-50%));
+	// 	background: url(../img/icons/catalog/size_arrow.png)no-repeat;
+	// 	background-size: contain;
+	// }
+
+	@include tablets {
+		font-size: 10px;
 	}
 
 	@include phones {
-		padding: 10px 10px 9px 0;
+		height: 32px;
+		line-height: 32px;
 		text-align: center;
 		font-size: 8px;
 
-		&:after {
-			right: 12px;
-			width: 8px;
-			height: 5px;
-		}
+		// &:after {
+		// 	right: 12px;
+		// 	width: 8px;
+		// 	height: 5px;
+		// }
 	}
 }
 
@@ -1232,6 +1238,7 @@
 	background: #fff;
 	border: 1px solid #b7b7b7;
 	border-top: transparent;
+	z-index: 1;
 
 	@include phones {
 		top: 30px;

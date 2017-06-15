@@ -115,6 +115,11 @@ a {
   text-decoration: none;
 }
 
+input,
+button {
+  -webkit-appearance: none;
+}
+
 footer {
   position: relative;
   max-width: 1920px;
@@ -415,6 +420,53 @@ footer {
   }
 }
 
+.loading_preloader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  height: 25px;
+  width: 10px;
+  border-radius: 10%;
+  background: #c1e7fa;
+  border-top-color: #2980b9;
+  animation: fade2 1s infinite;
+  transition: background .2s;
+}
+.loading_preloader:after, .loading_preloader:before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 10px;
+  background: #c1e7fa;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -15px;
+  border-radius: 10%;
+  animation: fade1 1s infinite;
+  transition: background .2s;
+}
+.loading_preloader:before {
+  left: 15px;
+  animation: fade3 1s infinite;
+}
+
+@keyframes fade1 {
+  0% {
+    background: #7ac8f0;
+  }
+}
+@keyframes fade2 {
+  33% {
+    background: #7ac8f0;
+  }
+}
+@keyframes fade3 {
+  66% {
+    background: #7ac8f0;
+  }
+}
 /*---------- placeholder  -----------*/
 ::-webkit-input-placeholder {
   color: #252525;
@@ -1108,11 +1160,6 @@ footer {
   margin-bottom: 30px;
   text-align: left;
 }
-@media screen and (max-width: 480px) {
-  .breadcrumbs {
-    display: none;
-  }
-}
 
 .breadcrumbs__list {
   font-size: 0;
@@ -1145,12 +1192,17 @@ footer {
 }
 .breadcrumbs__item.current .breadcrumbs__link {
   color: #252525;
-  font-size: 1rem;
+  font-size: 16px;
+}
+@media screen and (max-width: 480px) {
+  .breadcrumbs__item.current .breadcrumbs__link {
+    font-size: 14px;
+  }
 }
 
 .breadcrumbs__link {
   color: #b5b5b5;
-  font-size: 0.75rem;
+  font-size: 12px;
 }
 .breadcrumbs__link:hover {
   text-decoration: underline;
@@ -1481,12 +1533,11 @@ footer {
   height: 6px;
   margin-left: 10px;
   background: url(../img/icons/catalog/size_arrow.png) no-repeat;
+  background-size: contain;
 }
 @media screen and (max-width: 480px) {
   .size-choice__arrow {
-    right: 12px;
-    width: 8px;
-    height: 5px;
+    margin-left: 4px;
   }
 }
 
@@ -2307,7 +2358,7 @@ footer {
   display: block;
   position: relative;
   width: 50px;
-  height: 2.8125rem;
+  height: 45px;
   text-indent: -9999px;
   background: #b7b7b7;
 }
@@ -2364,39 +2415,25 @@ footer {
 
 .card-look__size-title {
   position: relative;
-  padding: 12px 0;
-  padding: 0.875rem 0 0.8125rem 0;
-  padding-left: 8%;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
   text-transform: uppercase;
-  font-size: 0.875rem;
-  font-size: 0.75rem;
+  font-size: 14px;
+  font-size: 12px;
   border: 1px solid #b7b7b7;
 }
-.card-look__size-title:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 12px;
-  width: 10px;
-  height: 6px;
-  -moz-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  background: url(../img/icons/catalog/size_arrow.png) no-repeat;
-  background-size: contain;
+@media screen and (max-width: 768px) {
+  .card-look__size-title {
+    font-size: 10px;
+  }
 }
 @media screen and (max-width: 480px) {
   .card-look__size-title {
-    padding: 10px 10px 9px 0;
+    height: 32px;
+    line-height: 32px;
     text-align: center;
     font-size: 8px;
-  }
-  .card-look__size-title:after {
-    right: 12px;
-    width: 8px;
-    height: 5px;
   }
 }
 
@@ -2411,6 +2448,7 @@ footer {
   background: #fff;
   border: 1px solid #b7b7b7;
   border-top: transparent;
+  z-index: 1;
 }
 @media screen and (max-width: 480px) {
   .card-look__size-list {
@@ -2770,7 +2808,8 @@ footer {
 
 .catalog__size-title {
   position: relative;
-  padding: 14px 0;
+  height: 45px;
+  line-height: 45px;
   text-align: center;
   text-transform: uppercase;
   font-size: 14px;
@@ -2778,7 +2817,8 @@ footer {
 }
 @media screen and (max-width: 480px) {
   .catalog__size-title {
-    padding: 10px 10px 9px 0;
+    height: 32px;
+    line-height: 32px;
     text-align: center;
     font-size: 8px;
   }
@@ -2879,7 +2919,6 @@ footer {
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
-  width: 50%;
   font-size: 16px;
 }
 
@@ -2920,10 +2959,9 @@ footer {
 }
 
 .catalog__preloader {
-  width: 35px;
+  position: relative;
   height: 35px;
   margin: 26px auto;
-  background: url(../img/decor/Loading.gif) no-repeat;
 }
 
 .contacts__banner {
@@ -7166,6 +7204,7 @@ footer {
   float: left;
   width: 43%;
   height: 40px;
+  padding: 12px;
   background-color: inherit;
   border: 1px solid #ccccce;
 }
@@ -8807,7 +8846,7 @@ body.panel-blocking {
 }
 @media screen and (max-width: 480px) {
   .sidebar-left {
-    padding-top: 20px;
+    padding-top: 27px;
   }
 }
 

@@ -356,13 +356,13 @@ $(document).ready(function(){
 
 
 	// CATALOG SLICK
-	// (function(){
-	// 	$('.catalog__img-list').slick();
+	(function(){
+		$('.catalog__img-list').slick();
 
-	// 	BX.addCustomEvent('onAjaxSuccess', function(){
-	// 	   $('.catalog__img-list').slick();
-	//   	});
-	// }());
+		// BX.addCustomEvent('onAjaxSuccess', function(){
+		//    $('.catalog__img-list').slick();
+	 //  	});
+	}());
 
 
 	// CATALOG FILTR
